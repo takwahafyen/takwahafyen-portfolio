@@ -14,7 +14,7 @@ const socialLink = [
   {
     icon: "fab fa-github",
     color: "github-color",
-    link: "https://github.com/takwa6",
+    link: "https://github.com/takwahafyen",
   },
   {
     icon: "fab fa-linkedin-in",

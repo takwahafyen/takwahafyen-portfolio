@@ -13,7 +13,7 @@ const social = [
   },
   {
     icon: "fab fa-github",
-    path: "https://github.com/takwa6",
+    path: "https://github.com/takwahafyen",
     aria: "GitHub",
   },
   {
