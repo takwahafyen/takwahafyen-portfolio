@@ -1,7 +1,10 @@
 "use client";
 import { skills } from "@/data/site";
+import { useTranslations } from "next-intl";
 
 export default function SkillArea() {
+    const t = useTranslations("skills");
+
     return (
         <div id="skills" className="skill-area over-hidden position-relative pt-130 pb-110">
             <style jsx>{`
@@ -37,7 +40,8 @@ export default function SkillArea() {
                     border-radius: 20px;
                     font-size: 13px;
                     font-weight: 500;
-                    margin: 5px 5px 0 0;
+                    margin-top: 5px;
+                    margin-inline-end: 5px;
                     border: 1px solid rgba(255, 255, 255, 0.2);
                     background: rgba(255, 255, 255, 0.05);
                     transition: all 0.3s ease;
@@ -54,9 +58,9 @@ export default function SkillArea() {
                     <div className="col-12">
                         <div className="title text-center mb-60">
                             <span className="theme-color text-uppercase d-block mb-6">
-                                Technical Skills
+                                {t("label")}
                             </span>
-                            <h2 className="text-white">My Tech Stack</h2>
+                            <h2 className="text-white">{t("title")}</h2>
                         </div>
                     </div>
                 </div>
@@ -72,7 +76,7 @@ export default function SkillArea() {
                         >
                             <div className="skill-card primary-bg shadow-hover">
                                 <i className={`${item.icon} skill-card-icon theme-color`} />
-                                <h3 className="skill-card-title">{item.title}</h3>
+                                <h3 className="skill-card-title">{t(`categories.${item.key}`)}</h3>
                                 <div>
                                     {item.items.map((tech, j) => (
                                         <span key={j} className="tech-badge">
@@ -88,7 +92,7 @@ export default function SkillArea() {
             </div>
             <div className="skill-text-style position-absolute d-none d-md-inline-block">
                 <span className="d-inline-block section-text-color">
-                    Skills
+                    {t("background")}
                 </span>
             </div>
         </div>

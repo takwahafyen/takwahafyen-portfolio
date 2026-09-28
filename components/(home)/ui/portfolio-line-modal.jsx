@@ -3,13 +3,17 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { Modal } from "react-bootstrap";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { clearPortfolioInfo } from "@/redux/features/portfolio/poftfolioSlice";
+import { useTranslations } from "next-intl";
 
 export default function PortfolioLineModal() {
+  const t = useTranslations("projects");
   const portfolioInfo = useSelector((state) =>
     state.portfolio ? state.portfolio.portfolioInfo : null
   );
 
+  const dispatch = useDispatch();
   const [show, setShow] = useState(false);
   const videoRef = useRef(null);
 
@@ -62,6 +66,8 @@ export default function PortfolioLineModal() {
     <Modal
       show={show}
       onHide={handleClose}
+      // Reset once closed, so the modal does not reopen after a language switch
+      onExited={() => dispatch(clearPortfolioInfo())}
       size="lg"
       aria-labelledby="portfolio-modal-title"
       centered
@@ -94,7 +100,7 @@ export default function PortfolioLineModal() {
             }}
             onMouseEnter={(e) => (e.target.style.background = "#b7f86a")}
             onMouseLeave={(e) => (e.target.style.background = "#9ef01a")}
-            aria-label="Close"
+            aria-label={t("close")}
           >
             ✕
           </button>
@@ -151,17 +157,17 @@ export default function PortfolioLineModal() {
           </h2>
 
           <p style={{ color: "#ccc", marginBottom: 6 }}>
-            <strong>Client :</strong> {client || "—"}
+            <strong>{t("client")} :</strong> {client || "—"}
           </p>
           <p style={{ color: "#ccc", marginBottom: 20 }}>
-            <strong>Duration :</strong> {duration || "—"}
+            <strong>{t("duration")} :</strong> {duration || "—"}
           </p>
 
           {/* Description */}
           {description?.length > 0 && (
             <div style={{ marginBottom: 20 }}>
-              <h5 style={{ color: "#9ef01a" }}>Description :</h5>
-              <ul style={{ color: "#ccc", paddingLeft: 20 }}>
+              <h5 style={{ color: "#9ef01a" }}>{t("description")} :</h5>
+              <ul style={{ color: "#ccc", paddingInlineStart: 20 }}>
                 {description.map((desc, i) => (
                   <li key={i}>{desc}</li>
                 ))}
@@ -172,8 +178,8 @@ export default function PortfolioLineModal() {
           {/* Réalisations clés */}
           {KeyAchievements?.length > 0 && (
             <div style={{ marginBottom: 20 }}>
-              <h5 style={{ color: "#9ef01a" }}>Key Achievements :</h5>
-              <ul style={{ color: "#ccc", paddingLeft: 20 }}>
+              <h5 style={{ color: "#9ef01a" }}>{t("keyAchievements")} :</h5>
+              <ul style={{ color: "#ccc", paddingInlineStart: 20 }}>
                 {KeyAchievements.map((ach, i) => (
                   <li key={i}>{ach}</li>
                 ))}
@@ -184,7 +190,7 @@ export default function PortfolioLineModal() {
           {/* Technologies */}
           {technologies?.length > 0 && (
             <div>
-              <h5 style={{ color: "#9ef01a" }}>Tools & Technologies :</h5>
+              <h5 style={{ color: "#9ef01a" }}>{t("tools")} :</h5>
               <div
                 style={{
                   display: "flex",

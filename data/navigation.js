@@ -1,35 +1,11 @@
+// Labels are translated with messages "nav.<key>"
 export default [
-    {
-        name: "Home",
-        path: "home",
-    },
-    {
-        name: "About Me",
-        path: "about",
-    },
-    {
-        name: "Skills",
-        path: "skills",
-    },
-    {
-        name: "Experience",
-        path: "experience",
-    },
-    {
-        name: "Projects",
-        path: "works",
-    },
-    {
-        name: "Education",
-        path: "education",
-    },
-  
-    {
-        name: "Certifications",
-        path: "blog",
-    },
-      {
-        name: "Contact",
-        path: "contact",
-    },
+    { key: "home", path: "home" },
+    { key: "about", path: "about" },
+    { key: "skills", path: "skills" },
+    { key: "experience", path: "experience" },
+    { key: "projects", path: "works" },
+    { key: "education", path: "education" },
+    { key: "certifications", path: "blog" },
+    { key: "contact", path: "contact" },
 ];

@@ -4,6 +4,8 @@ import navigation from "@/data/navigation";
 import { Link } from "react-scroll";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleSidebar } from "@/redux/features/toggle/toggleSlice";
+import { useTranslations } from "next-intl";
+import LanguageSwitcher from "./ui/language-switcher";
 
 const social = [
     {
@@ -38,6 +40,7 @@ export default function SidebarNavigation() {
     );
 
     const dispatch = useDispatch();
+    const t = useTranslations("nav");
 
     return (
         <div className={`ui-sidebar ${isSidebarActive ? "active" : ""}`}>
@@ -65,10 +68,12 @@ export default function SidebarNavigation() {
                             }
                             onClick={() => dispatch(toggleSidebar())}
                         >
-                            {item.name}
+                            {t(item.key)}
                         </MenuItem>
                     ))}
                 </Menu>
+
+                <LanguageSwitcher className="justify-content-center mt-30" />
 
                 {/* social link start */}
                 

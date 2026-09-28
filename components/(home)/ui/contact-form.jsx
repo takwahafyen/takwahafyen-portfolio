@@ -2,9 +2,11 @@
 import { useForm } from "react-hook-form";
 import emailjs from "emailjs-com";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 
 export default function ContactForm() {
-    const [success, setSuccess] = useState("");
+    const t = useTranslations("contact.form");
+    const [status, setStatus] = useState(null);
 
     const {
         register,
@@ -29,11 +31,11 @@ export default function ContactForm() {
                 "w9ZBf1nKfArcRxsNB"
             )
             .then(() => {
-                setSuccess("✅ Message envoyé avec succès !");
+                setStatus("success");
                 reset();
             })
             .catch(() => {
-                setSuccess("❌ Erreur lors de l'envoi !");
+                setStatus("error");
             });
     };
 
@@ -48,8 +50,8 @@ export default function ContactForm() {
                                 <input
                                     className="name w-100 theme-border form-color pl-20 pt-15 pb-15 pr-10 border-radius5"
                                     type="text"
-                                    placeholder="Your Name"
-                                    {...register("name", { required: "Name is required" })}
+                                    placeholder={t("name")}
+                                    {...register("name", { required: t("nameRequired") })}
                                 />
                                 {errors.name && <span className="ui-error">{errors.name.message}</span>}
                             </div>
@@ -58,12 +60,12 @@ export default function ContactForm() {
                                 <input
                                     className="email w-100 theme-border form-color pl-20 pt-15 pb-15 pr-10 border-radius5"
                                     type="email"
-                                    placeholder="Your Email"
+                                    placeholder={t("email")}
                                     {...register("email", {
-                                        required: "Email is required",
+                                        required: t("emailRequired"),
                                         validate: () => {
                                             const email = watch("email");
-                                            return email.includes("@") || "Invalid email";
+                                            return email.includes("@") || t("emailInvalid");
                                         },
                                     })}
                                 />
@@ -74,8 +76,8 @@ export default function ContactForm() {
                                 <input
                                     className="phone w-100 theme-border form-color pl-20 pt-15 pb-15 pr-10 border-radius5"
                                     type="text"
-                                    placeholder="Your Phone"
-                                    {...register("phone", { required: "Phone is required" })}
+                                    placeholder={t("phone")}
+                                    {...register("phone", { required: t("phoneRequired") })}
                                 />
                                 {errors.phone && <span className="ui-error">{errors.phone.message}</span>}
                             </div>
@@ -84,8 +86,8 @@ export default function ContactForm() {
                                 <input
                                     className="subject w-100 theme-border form-color pl-20 pt-15 pb-15 pr-10 border-radius5"
                                     type="text"
-                                    placeholder="Your Subject"
-                                    {...register("subject", { required: "Subject is required" })}
+                                    placeholder={t("subject")}
+                                    {...register("subject", { required: t("subjectRequired") })}
                                 />
                                 {errors.subject && <span className="ui-error">{errors.subject.message}</span>}
                             </div>
@@ -95,10 +97,10 @@ export default function ContactForm() {
                             <div className="col-12 mb-12">
                                 <textarea
                                     className="message w-100 theme-border form-color pl-20 pt-15 pr-10 border-radius5"
-                                    placeholder="Start writing message here"
+                                    placeholder={t("message")}
                                     {...register("msg", {
-                                        required: "Message is required",
-                                        minLength: { value: 10, message: "Minimum length is 10 characters" },
+                                        required: t("messageRequired"),
+                                        minLength: { value: 10, message: t("messageMinLength") },
                                     })}
                                 />
                                 {errors.msg && <span className="ui-error">{errors.msg.message}</span>}
@@ -109,14 +111,14 @@ export default function ContactForm() {
                             className="btn theme-bg text-white text-uppercase"
                             type="submit"
                         >
-                            Submit Now
+                            {t("submit")}
                         </button>
                     </div>
                 </form>
 
-                {success && (
-                    <p className="form-message mt-20" style={{ color: success.includes("✅") ? "green" : "red" }}>
-                        {success}
+                {status && (
+                    <p className="form-message mt-20" style={{ color: status === "success" ? "green" : "red" }}>
+                        {t(status)}
                     </p>
                 )}
             </div>

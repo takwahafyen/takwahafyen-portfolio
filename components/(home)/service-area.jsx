@@ -1,8 +1,12 @@
 import Image from "next/image";
 import ServiceAreaCard from "./ui/service-area-card";
 import { service } from "@/data/site";
+import { useTranslations } from "next-intl";
 
 export default function ServiceArea() {
+    const t = useTranslations("services");
+    const items = t.raw("items");
+
     return (
         <div
             id="service"
@@ -14,16 +18,20 @@ export default function ServiceArea() {
                         <div className="col-xl-12 col-lg-12  col-md-12  col-sm-12 col-12">
                             <div className="title text-center">
                                 <span className="theme-color text-uppercase d-block mb-6">
-                                    What I do
+                                    {t("label")}
                                 </span>
-                                <h2 className="text-white">Areas of Expertise</h2>
+                                <h2 className="text-white">{t("title")}</h2>
                             </div>
                         </div>
                     </div>
                     <div className="row service-wrappers mt-80">
                         {/* service card start */}
                         {service?.slice(0, 4).map((item, i) => (
-                            <ServiceAreaCard key={i} data={item} index={i} />
+                            <ServiceAreaCard
+                                key={i}
+                                data={{ ...item, ...items[i] }}
+                                index={i}
+                            />
                         ))}
                         {/* service card end */}
                     </div>

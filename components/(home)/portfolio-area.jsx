@@ -4,8 +4,12 @@ import { portfolioArea } from "@/data/site";
 import PortfolioLine from "./ui/portfolio-line";
 import PortfolioMarquee from "./ui/portfolio-marquee";
 import PortfolioLineModal from "./ui/portfolio-line-modal";
+import { useTranslations } from "next-intl";
 
 export default function PortfolioArea() {
+  const t = useTranslations("projects");
+  const items = t.raw("items");
+
   return (
     <div id="works" className="portfolio-area over-hidden pb-165">
       <PortfolioMarquee />
@@ -15,9 +19,9 @@ export default function PortfolioArea() {
             <div className="col-12 text-center">
               <div className="title">
                 <span className="theme-color text-uppercase d-block mb-2">
-                  Portfolio
+                  {t("label")}
                 </span>
-                <h2>My Recent Works</h2>
+                <h2>{t("title")}</h2>
               </div>
             </div>
           </div>
@@ -29,7 +33,13 @@ export default function PortfolioArea() {
                 className="col-xl-6 col-lg-6 col-md-6 col-sm-12 mb-4 d-flex align-items-stretch"
               >
                 <div className="portfolio-card w-100">
-                  <PortfolioLine data={item} />
+                  <PortfolioLine
+                    data={{
+                      ...item,
+                      ...items[i],
+                      KeyAchievements: items[i].achievements,
+                    }}
+                  />
                 </div>
               </div>
             ))}

@@ -1,8 +1,11 @@
 import { experience } from "@/data/site";
 import FactExperienceCard from "./ui/fact-experience-card";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export default function FunFact() {
+    const t = useTranslations("facts");
+
     return (
         <div
             className="fun-fact-area fun-fact-bg position-relative over-hidden pt-150 pb-120"
@@ -15,10 +18,10 @@ export default function FunFact() {
             
                 <div className="marquee marquee2 pb-1">
                     <span className="pl-4">
-                        I’m Open for new projects * Let’s Work Together *
+                        {t("marquee")}
                     </span>
                     <span className="pl-4">
-                        I’m Open for new projects * Let’s Work Together *
+                        {t("marquee")}
                     </span>
                 </div>
             </div>
@@ -28,17 +31,15 @@ export default function FunFact() {
                             <div className="position-relative">
                                 <div className="title">
                                    <span className="theme-color text-uppercase d-block mb-6">
-  Highlights & Achievements
+  {t("label")}
 </span>
 <h2 className="mb-30 text-white">
-  I Build Intelligent Solutions
+  {t("title")}
 </h2>
                                 </div>
                             </div>
                             <p>
-  Passionate about AI and software development, I design and develop 
-  applications that integrate machine learning models, automate workflows, 
-  and enhance user experiences.
+  {t("text")}
 </p>
                         </div>
                     </div>
@@ -50,7 +51,14 @@ export default function FunFact() {
                                     key={i}
                                     className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-10"
                                 >
-                                    <FactExperienceCard data={item} />
+                                    <FactExperienceCard
+                                        data={{
+                                            ...item,
+                                            title: t.rich(`stats.${i}`, {
+                                                br: () => <br />,
+                                            }),
+                                        }}
+                                    />
                                 </div>
                             ))}
                             {/* fun fact exp. card end */}

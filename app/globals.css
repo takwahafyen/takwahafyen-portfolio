@@ -158,3 +158,88 @@
 }
 /* scroll top end */
 
+
+/* header: 8 links + language switcher + CV button must fit on one line */
+.main-menu ul li {
+    margin-left: 0;
+    margin-inline-start: 26px;
+}
+
+@media (max-width: 1399px) {
+    .main-menu ul li {
+        margin-inline-start: 20px;
+    }
+
+    .main-menu ul li > a {
+        font-size: 16px;
+    }
+}
+
+.header-btn a {
+    white-space: nowrap;
+}
+
+/* ================= Arabic / RTL =================
+   Bootstrap 4 and the template are LTR-only: mirror the
+   direction-dependent utilities used on the page. */
+html[lang="ar"] body {
+    --font-jost-medium: var(--font-cairo);
+    --font-open-sans: var(--font-cairo);
+    font-family: var(--font-cairo), sans-serif;
+}
+
+[dir="rtl"] body {
+    text-align: right;
+}
+
+[dir="rtl"] .text-left {
+    text-align: right !important;
+}
+
+@media (min-width: 992px) {
+    [dir="rtl"] .text-lg-left {
+        text-align: right !important;
+    }
+}
+
+/* icons followed by text */
+[dir="rtl"] .experience-ser-icon.mr-30,
+[dir="rtl"] .contact-icon.mr-30 {
+    margin-right: 0 !important;
+    margin-left: 30px !important;
+}
+
+[dir="rtl"] .single-fact .mr-25 {
+    margin-right: 0 !important;
+    margin-left: 25px !important;
+}
+
+/* header */
+[dir="rtl"] .header-btn.pl-20,
+[dir="rtl"] .language-select.pl-20 {
+    padding-left: 0 !important;
+    padding-right: 20px !important;
+}
+
+[dir="rtl"] .header-btn .mr-2 {
+    margin-right: 0 !important;
+    margin-left: 0.5rem !important;
+}
+
+[dir="rtl"] .mobile-m-bar.ml-30 {
+    margin-left: 0 !important;
+    margin-right: 30px !important;
+}
+
+/* contact form fields */
+[dir="rtl"] .contact-form input,
+[dir="rtl"] .contact-form textarea {
+    padding-left: 10px !important;
+    padding-right: 20px !important;
+}
+
+/* keep phone numbers and e-mails readable left-to-right */
+[dir="rtl"] .contact-text p {
+    direction: ltr;
+    unicode-bidi: plaintext;
+}
