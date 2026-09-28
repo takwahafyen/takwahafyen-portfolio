@@ -1,8 +1,12 @@
 import Image from "next/image";
 import EducationList from "./ui/education-list";
 import { education } from "@/data/site";
+import { useTranslations } from "next-intl";
 
 export default function Education() {
+  const t = useTranslations("education");
+  const items = t.raw("items");
+
   return (
     <div className="education-area over-hidden">
       <div className="container">
@@ -11,16 +15,16 @@ export default function Education() {
             <div className="position-relative">
               <div className="title">
                 <span className="theme-color text-uppercase d-block mb-1">
-                  Education
+                  {t("label")}
                 </span>
-                <h2 className="mb-25">My Education</h2>
+                <h2 className="mb-25">{t("title")}</h2>
               </div>
             </div>
 
             <div className="education-wrapper mr-20 pt-25 mb-50">
               <ul className="education-content">
                 {education?.slice(0, 3).map((item, i) => (
-                  <EducationList key={i} data={item} />
+                  <EducationList key={i} data={{ ...item, ...items[i] }} />
                 ))}
               </ul>
             </div>
@@ -38,7 +42,7 @@ export default function Education() {
                 width={500}
                 className="border-radius10 h-auto w-auto"
                 src="/images/education/education-img.jpg"
-                alt="education image"
+                alt=""
               />
             </div>
           </div>

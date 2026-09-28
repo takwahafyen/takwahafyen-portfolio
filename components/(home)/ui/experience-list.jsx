@@ -1,15 +1,18 @@
 "use client";
+import { useTranslations } from "next-intl";
 
-export default function ExperienceList({ data }) {
-    const { start, end } = data.date || {};
+export default function ExperienceList({ data, text }) {
+    const t = useTranslations("experience");
+    const formatDate = ({ start, end }) =>
+        `${start} – ${end === "present" ? t("present") : end}`;
 
     return (
         <li className="mb-50 d-flex align-items-start rotate-hover">
             <style jsx>{`
                 .experience-project {
                     margin-top: 25px;
-                    padding-left: 20px;
-                    border-left: 2px solid rgba(255, 255, 255, 0.1);
+                    padding-inline-start: 20px;
+                    border-inline-start: 2px solid rgba(255, 255, 255, 0.1);
                 }
 
                 .experience-project h5 {
@@ -28,7 +31,7 @@ export default function ExperienceList({ data }) {
                 }
 
                 .experience-points {
-                    padding-left: 18px;
+                    padding-inline-start: 18px;
                     margin: 10px 0 0;
                 }
 
@@ -48,7 +51,8 @@ export default function ExperienceList({ data }) {
                     border-radius: 20px;
                     font-size: 13px;
                     font-weight: 500;
-                    margin: 5px 5px 0 0;
+                    margin-top: 5px;
+                    margin-inline-end: 5px;
                     border: 1px solid rgba(255, 255, 255, 0.2);
                     background: rgba(255, 255, 255, 0.05);
                 }
@@ -62,18 +66,20 @@ export default function ExperienceList({ data }) {
                 </span>
             </div>
             <div className="experience-service-text d-inline-block">
-                <h3 className="mb-2">{data.title}</h3>
+                <h3 className="mb-2">{text.title}</h3>
                 <h4>
                     {data.company}{" "}
                     <span className="meta-text-color openS-font-family">
-                        ( {start} - {end} )
+                        ( {formatDate(data.date)} )
                     </span>
                 </h4>
-                {data.description && (
-                    <p className="mb-0 mt-15">{data.description}</p>
+                {text.description && (
+                    <p className="mb-0 mt-15">{text.description}</p>
                 )}
 
-                {data.projects?.map((project, i) => (
+                {data.projects?.map((project, i) => {
+                    const projectText = text.projects[i];
+                    return (
                     <div key={i} className="experience-project">
                         <h5>
                             {project.link ? (
@@ -82,18 +88,18 @@ export default function ExperienceList({ data }) {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
-                                    {project.name}{" "}
+                                    {projectText.name}{" "}
                                     <i className="fas fa-external-link-alt" />
                                 </a>
                             ) : (
-                                project.name
+                                projectText.name
                             )}
                         </h5>
                         <span className="meta-text-color openS-font-family">
-                            {project.date}
+                            {formatDate(project.date)}
                         </span>
                         <ul className="experience-points">
-                            {project.points.map((point, j) => (
+                            {projectText.points.map((point, j) => (
                                 <li key={j}>{point}</li>
                             ))}
                         </ul>
@@ -105,7 +111,8 @@ export default function ExperienceList({ data }) {
                             ))}
                         </div>
                     </div>
-                ))}
+                    );
+                })}
 
                 {data.technologies && (
                     <div className="mt-10">

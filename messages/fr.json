@@ -1,0 +1,239 @@
+{
+    "metadata": {
+        "title": "Takwa Hafyen - Portfolio d’Ingénieure Logiciel Full-Stack",
+        "description": "Ingénieure logiciel full-stack qui conçoit des applications web en production avec React, Next.js, TypeScript et Node.js."
+    },
+    "nav": {
+        "home": "Accueil",
+        "about": "À propos",
+        "skills": "Compétences",
+        "experience": "Expérience",
+        "projects": "Projets",
+        "education": "Formation",
+        "certifications": "Certifications",
+        "contact": "Contact"
+    },
+    "header": {
+        "downloadCv": "Télécharger CV",
+        "language": "Langue"
+    },
+    "hero": {
+        "hello": "Bonjour, je suis",
+        "passionate": "Une",
+        "typed": ["Ingénieure Logiciel", "Passionnée d’IA"],
+        "cta": "Contactez-moi"
+    },
+    "about": {
+        "label": "À propos",
+        "title": "Transformer les idées en réalité digitale",
+        "text": "Ingénieure logiciel full-stack, je conçois et livre des applications web en production de bout en bout — des front-ends React/TypeScript aux back-ends Node.js, en passant par les API REST et les intégrations temps réel avec des bases de données relationnelles et des services d’IA."
+    },
+    "services": {
+        "label": "Ce que je fais",
+        "title": "Domaines d’expertise",
+        "items": [
+            {
+                "title": "Développement Full-Stack",
+                "description": "Création d’applications web évolutives, du frontend au backend"
+            },
+            {
+                "title": "IA & Machine Learning",
+                "description": "Conception de systèmes basés sur l’IA pour améliorer la prise de décision et l’automatisation."
+            },
+            {
+                "title": "Architecture logicielle",
+                "description": "Conception de systèmes logiciels robustes et maintenables"
+            },
+            {
+                "title": "Analyse de sécurité",
+                "description": "Mise en place de mesures de sécurité pour protéger les données et l’infrastructure"
+            }
+        ]
+    },
+    "skills": {
+        "label": "Compétences techniques",
+        "title": "Ma stack technique",
+        "background": "Skills",
+        "categories": {
+            "frontend": "Frontend",
+            "backend": "Backend",
+            "databases": "Bases de données & Intégration",
+            "practices": "Pratiques d’ingénierie",
+            "ai": "Développement assisté par l’IA"
+        }
+    },
+    "experience": {
+        "label": "Expérience professionnelle",
+        "title": "Mon expérience",
+        "present": "Aujourd’hui",
+        "items": [
+            {
+                "title": "Ingénieure Logiciel",
+                "description": "Les deux plateformes ci-dessous font partie d’un même monorepo Dockerisé, avec des packages partagés pour les fonctionnalités temps réel.",
+                "projects": [
+                    {
+                        "name": "Losange-TN — Plateforme éducative multi-tenant",
+                        "points": [
+                            "Prise en charge de fonctionnalités full-stack de bout en bout — architecture, développement et déploiement — pour une plateforme multi-tenant, dont un pipeline RAG en production reliant les ressources de cours à un service de génération de contenu basé sur un LLM.",
+                            "Développement de couches d’intégration temps réel (WebSocket via Centrifugo, LiveKit pour la vidéo) reliant les clients front-end aux services back-end pendant les cours en direct, avec persistance des snapshots dans PostgreSQL.",
+                            "Collaboration via des workflows Git/GitLab et des revues de code ; fonctionnalités couvertes par des tests automatisés (Vitest, Playwright) et livrées via GitLab CI/CD avec Docker."
+                        ]
+                    },
+                    {
+                        "name": "Study141 — Plateforme de tutorat individuel et de réservation",
+                        "points": [
+                            "Développement et intégration d’une couche de paiement (Stripe) et d’API REST (PostgreSQL) pour une plateforme de réservation, avec contrôle d’accès par rôles et une suite de tests Vitest + Playwright."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Stage de fin d’études",
+                "description": "Lessons Learned Smart Application — développement de modèles d’IA pour la reconnaissance des erreurs et la prédiction des actions correctives, intégrés dans une application de gestion des connaissances utilisée par les équipes de production."
+            },
+            {
+                "title": "Stage d’ingénieur",
+                "description": "Développement d’une application e-commerce full-stack avec la stack MERN : gestion dynamique des produits, authentification et gestion des commandes."
+            }
+        ]
+    },
+    "facts": {
+        "marquee": "Ouverte à de nouveaux projets * Travaillons ensemble *",
+        "label": "Chiffres clés",
+        "title": "Je conçois des solutions intelligentes",
+        "text": "Passionnée par l’IA et le développement logiciel, je conçois et développe des applications qui intègrent des modèles de machine learning, automatisent les processus et améliorent l’expérience utilisateur.",
+        "stats": [
+            "Expériences <br></br> professionnelles",
+            "Technologies <br></br> utilisées",
+            "Projets <br></br> réalisés",
+            "Certifications <br></br> obtenues"
+        ]
+    },
+    "projects": {
+        "marquee": "Ouverte à de nouveaux projets * Travaillons ensemble.",
+        "label": "Portfolio",
+        "title": "Mes projets récents",
+        "client": "Client",
+        "duration": "Durée",
+        "description": "Description",
+        "keyAchievements": "Résultats clés",
+        "tools": "Outils & Technologies",
+        "close": "Fermer",
+        "items": [
+            {
+                "title": "Lessons Learned Smart Application",
+                "client": "Draexlmaier Group",
+                "duration": "5 mois",
+                "description": [
+                    "Développement d’une plateforme intelligente pour optimiser le partage d’expérience et la gestion des connaissances chez Draexlmaier",
+                    "Intégration d’algorithmes de ML (KNN, Random Forest, arbres de décision) pour prédire les causes des erreurs et leurs solutions dans le processus Ushall",
+                    "Déploiement des modèles d’IA via une interface Gradio interactive pour des analyses et recommandations en temps réel."
+                ],
+                "achievements": [
+                    "Amélioration de l’automatisation et de l’efficacité de la gestion des connaissances.",
+                    "Précision de 95 % dans les prédictions de recommandations personnalisées."
+                ]
+            },
+            {
+                "title": "Système e-commerce full-stack et gestion des commandes",
+                "client": "Tradrly",
+                "duration": "2 mois",
+                "description": [
+                    "Conception et développement d’un front-end responsive pour une navigation et un achat fluides.",
+                    "Mise en place d’un tableau de bord d’administration intuitif pour la gestion des produits et des commandes.",
+                    "Intégration de modèles de régression pour prédire la demande par catégorie et optimiser les stocks."
+                ],
+                "achievements": [
+                    "Précision de 91 % dans les recommandations de produits personnalisées.",
+                    "Une expérience d’achat en ligne fluide qui a amélioré l’efficacité du traitement des commandes"
+                ]
+            },
+            {
+                "title": "Plateforme web de gestion de clinique",
+                "client": "Projet académique",
+                "duration": "2 mois",
+                "description": [
+                    "Développement d’une plateforme dynamique et sécurisée pour gérer les patients, les médecins et le personnel.",
+                    "Mise en place de l’authentification et des opérations CRUD avec Express.js et JWT.",
+                    "Suivi en temps réel des rendez-vous et des dossiers patients."
+                ],
+                "achievements": [
+                    "Simplification de la gestion des données patients et réduction de 35 % de la charge administrative."
+                ]
+            },
+            {
+                "title": "Site de gestion immobilière",
+                "client": "Projet académique",
+                "duration": "2 mois",
+                "description": [
+                    "Développement d’un tableau de bord en temps réel pour gérer les clients et les biens immobiliers.",
+                    "Création d’une interface sécurisée et responsive pour les propriétaires et les locataires."
+                ],
+                "achievements": [
+                    "Gestion locative simplifiée et accessibilité améliorée grâce à une interface intuitive."
+                ]
+            }
+        ]
+    },
+    "education": {
+        "label": "Formation",
+        "title": "Mon parcours",
+        "items": [
+            {
+                "title": "Diplôme d’ingénieur en Réseaux et Systèmes Informatiques",
+                "location": "École Nationale d’Ingénieurs de Gabès",
+                "description": "Spécialisation : Réseaux et Systèmes Informatiques"
+            },
+            {
+                "title": "Cycle préparatoire aux études d’ingénieur",
+                "location": "Institut Préparatoire aux Études d’Ingénieurs de Monastir",
+                "description": "Diplômée avec mention"
+            },
+            {
+                "title": "Baccalauréat en sciences expérimentales",
+                "location": "Lycée Abou El Kacem Echebbi - Ksour Essef",
+                "description": "Obtenu avec mention (16,43/20)"
+            }
+        ]
+    },
+    "contact": {
+        "label": "Contactez-moi",
+        "title": "Parlons-en",
+        "location": "Adresse",
+        "locationValue": "Mahdia, Tunisie",
+        "phone": "Téléphone",
+        "email": "E-mail",
+        "mapPopup": "Ksour Essef, Mahdia <br></br> Tunisie",
+        "form": {
+            "name": "Votre nom",
+            "email": "Votre e-mail",
+            "phone": "Votre téléphone",
+            "subject": "Sujet",
+            "message": "Écrivez votre message ici",
+            "submit": "Envoyer",
+            "nameRequired": "Le nom est obligatoire",
+            "emailRequired": "L’e-mail est obligatoire",
+            "emailInvalid": "E-mail invalide",
+            "phoneRequired": "Le téléphone est obligatoire",
+            "subjectRequired": "Le sujet est obligatoire",
+            "messageRequired": "Le message est obligatoire",
+            "messageMinLength": "10 caractères minimum",
+            "success": "✅ Message envoyé avec succès !",
+            "error": "❌ Erreur lors de l’envoi, veuillez réessayer."
+        }
+    },
+    "certifications": {
+        "label": "Mes certifications",
+        "title": "Certifications",
+        "previous": "Précédent",
+        "next": "Suivant"
+    },
+    "footer": {
+        "rights": "Tous droits réservés",
+        "madeWith": "Fait avec <heart></heart> par <author>Takwa Hafyen</author>",
+        "emailTitle": "Envoyer un e-mail à {email}"
+    },
+    "social": {
+        "email": "Envoyer un e-mail"
+    }
+}

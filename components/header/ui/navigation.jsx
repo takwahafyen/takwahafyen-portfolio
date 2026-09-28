@@ -1,9 +1,12 @@
 import navigation from "@/data/navigation";
 import { Link } from "react-scroll";
+import { useTranslations } from "next-intl";
 
 export default function Navigation() {
+    const t = useTranslations("nav");
+
     return (
-        <nav className="d-none d-lg-block">
+        <nav className="d-none d-xl-block">
             <ul className="d-block">
                 {/* navigation start */}
                 {navigation?.map((item, i) => (
@@ -17,7 +20,7 @@ export default function Navigation() {
                             duration={500}
                             activeClass="ui-nav-active"
                         >
-                            {item.name}
+                            {t(item.key)}
                         </Link>
                     </li>
                 ))}

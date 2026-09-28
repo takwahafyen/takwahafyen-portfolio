@@ -11,9 +11,12 @@ export const poftfolioSlice = createSlice({
         addPortfolioInfo: (state, { payload }) => {
             state.portfolioInfo = payload;
         },
+        clearPortfolioInfo: (state) => {
+            state.portfolioInfo = null;
+        },
     },
 });
 
-export const { addPortfolioInfo } = poftfolioSlice.actions;
+export const { addPortfolioInfo, clearPortfolioInfo } = poftfolioSlice.actions;
 
 export default poftfolioSlice.reducer;
