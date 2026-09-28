@@ -72,8 +72,8 @@ export default function Hero() {
                 <Image
                   height="0"
                   width="0"
-                  src="/images/slider/person.png"
-                  alt="hero image"
+                  src="/images/slider/takwa.png"
+                  alt="Takwa Hafyen"
                   sizes="100vw"
                   className="h-100 w-100"
                 />
