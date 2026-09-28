@@ -1,0 +1,239 @@
+{
+    "metadata": {
+        "title": "Takwa Hafyen - Full-Stack Software Engineer Portfolio",
+        "description": "Full-Stack Software Engineer building production web applications with React, Next.js, TypeScript and Node.js."
+    },
+    "nav": {
+        "home": "Home",
+        "about": "About Me",
+        "skills": "Skills",
+        "experience": "Experience",
+        "projects": "Projects",
+        "education": "Education",
+        "certifications": "Certifications",
+        "contact": "Contact"
+    },
+    "header": {
+        "downloadCv": "Download CV",
+        "language": "Language"
+    },
+    "hero": {
+        "hello": "Hello I’m",
+        "passionate": "A Passionate",
+        "typed": ["Software Engineer", "AI Enthusiast"],
+        "cta": "Let’s Connect"
+    },
+    "about": {
+        "label": "About Me",
+        "title": "Turning Ideas Into Digital Reality",
+        "text": "Full-Stack Software Engineer building and shipping production web applications end-to-end — from React/TypeScript front-ends to Node.js back-ends, REST APIs and real-time integrations with relational databases and AI-driven services."
+    },
+    "services": {
+        "label": "What I do",
+        "title": "Areas of Expertise",
+        "items": [
+            {
+                "title": "Full-Stack Development",
+                "description": "Building scalable web applications from frontend to backend"
+            },
+            {
+                "title": "AI & Machine Learning",
+                "description": "Creating AI-powered systems to enhance decision-making and automation."
+            },
+            {
+                "title": "System Architecture",
+                "description": "Designing robust and maintainable software systems"
+            },
+            {
+                "title": "Security Analysis",
+                "description": "Implementing robust security systems to protect data and infrastructure"
+            }
+        ]
+    },
+    "skills": {
+        "label": "Technical Skills",
+        "title": "My Tech Stack",
+        "background": "Skills",
+        "categories": {
+            "frontend": "Frontend",
+            "backend": "Backend",
+            "databases": "Databases & Integration",
+            "practices": "Engineering Practices",
+            "ai": "AI-Assisted Development"
+        }
+    },
+    "experience": {
+        "label": "Work Experience",
+        "title": "My Experience",
+        "present": "Present",
+        "items": [
+            {
+                "title": "Software Engineer",
+                "description": "Both platforms below live in a shared Dockerized monorepo, with reusable packages for real-time features.",
+                "projects": [
+                    {
+                        "name": "Losange-TN — Multi-Tenant Educational Platform",
+                        "points": [
+                            "Owned full-stack features end-to-end — architecture, implementation, and deployment — for a multi-tenant platform, including a production RAG pipeline connecting course resources to an LLM-based content-generation service.",
+                            "Built real-time integration layers (WebSocket via Centrifugo, LiveKit for video) connecting front-end clients to back-end services under live classroom load, with snapshot persistence in PostgreSQL.",
+                            "Collaborated via Git/GitLab workflows and code reviews; covered features with automated tests (Vitest, Playwright) and shipped through GitLab CI/CD with Docker."
+                        ]
+                    },
+                    {
+                        "name": "Study141 — 1-to-1 Tutoring & Booking Platform",
+                        "points": [
+                            "Built and integrated a payments layer (Stripe) and REST APIs (PostgreSQL) for a booking platform, with role-based access control and a Vitest + Playwright test suite."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "End-of-Studies Internship",
+                "description": "Lessons Learned Smart Application — built AI models for error recognition and corrective-action prediction, integrated into a knowledge-management application used by production teams."
+            },
+            {
+                "title": "Engineering Internship",
+                "description": "Built a full-stack e-commerce application using the MERN stack, with dynamic product management, authentication, and order handling."
+            }
+        ]
+    },
+    "facts": {
+        "marquee": "I’m Open for new projects * Let’s Work Together *",
+        "label": "Highlights & Achievements",
+        "title": "I Build Intelligent Solutions",
+        "text": "Passionate about AI and software development, I design and develop applications that integrate machine learning models, automate workflows, and enhance user experiences.",
+        "stats": [
+            "Professional <br></br> Experiences",
+            "Technologies <br></br> Used",
+            "Projects <br></br> Completed",
+            "Certifications <br></br> Earned"
+        ]
+    },
+    "projects": {
+        "marquee": "I’m Open for new projects * Let’s Work Together.",
+        "label": "Portfolio",
+        "title": "My Recent Works",
+        "client": "Client",
+        "duration": "Duration",
+        "description": "Description",
+        "keyAchievements": "Key Achievements",
+        "tools": "Tools & Technologies",
+        "close": "Close",
+        "items": [
+            {
+                "title": "Lessons Learned Smart Application",
+                "client": "Draexlmaier Group",
+                "duration": "5 months",
+                "description": [
+                    "Developed an intelligent platform to optimize learning experiences and Draexlmaier Knowledge",
+                    "Integrated advanced ML algorithms (KNN, Random Forest, Decision Trees) to predict errors causes and solutions in the Ushall process",
+                    "Deployed AI models through an interactive Gradio interface for real-time insights and recommendations."
+                ],
+                "achievements": [
+                    "Enhanced automation and knowledge management efficiency.",
+                    "Achieved 95% accuracy in personalized recommendation predictions."
+                ]
+            },
+            {
+                "title": "Full-Stack E-Commerce and Order Management System",
+                "client": "Tradrly",
+                "duration": "2 months",
+                "description": [
+                    "Designed and developed a responsive front-end for seamless product browsing and purchasing.",
+                    "Implemented an intuitive admin dashboard for products and order management.",
+                    "Integrated AI regression models to predict customer demand by category and optimize inventory."
+                ],
+                "achievements": [
+                    "Achieved 91% accuracy in personalized product recommendations.",
+                    "Delivered a smooth online shopping experience that improved order efficiency"
+                ]
+            },
+            {
+                "title": "Clinic Management Web Platform",
+                "client": "Academic Project",
+                "duration": "2 months",
+                "description": [
+                    "Built a dynamic and secure platform for managing patients, doctors, and staff.",
+                    "Implemented authentication and CRUD operations using Express.js and JWT.",
+                    "Integrated real-time appointment and patient record tracking."
+                ],
+                "achievements": [
+                    "Streamlined patient data management and reduced administrative workload by 35%."
+                ]
+            },
+            {
+                "title": "Housing Management Website",
+                "client": "Academic Project",
+                "duration": "2 months",
+                "description": [
+                    "Developed a real-time dashboard for managing clients and property data.",
+                    "Built a secure and responsive interface for landlords and tenants."
+                ],
+                "achievements": [
+                    "Simplified property rental management and improved accessibility through an intuitive, user-friendly interface."
+                ]
+            }
+        ]
+    },
+    "education": {
+        "label": "Education",
+        "title": "My Education",
+        "items": [
+            {
+                "title": "Engineering diploma in Networking and Computer Systems",
+                "location": "National Engineering School of Gabes",
+                "description": "Specialization: Network and Computer Systems"
+            },
+            {
+                "title": "Preparatory cycle for Engineering studies",
+                "location": "Preparatory Institute for Engineering Studies of Monastir",
+                "description": "Graduated with honors"
+            },
+            {
+                "title": "Bachelor degree in experimental sciences",
+                "location": "Abou El Kacem Echebbi High School-Ksour Essef",
+                "description": "Graduated with honors (16.43/20)"
+            }
+        ]
+    },
+    "contact": {
+        "label": "Contact Me",
+        "title": "Let’s Talk",
+        "location": "Location",
+        "locationValue": "Mahdia, Tunisia",
+        "phone": "Phone",
+        "email": "Email",
+        "mapPopup": "Ksour Essef, Mahdia <br></br> Tunisia",
+        "form": {
+            "name": "Your Name",
+            "email": "Your Email",
+            "phone": "Your Phone",
+            "subject": "Your Subject",
+            "message": "Start writing message here",
+            "submit": "Submit Now",
+            "nameRequired": "Name is required",
+            "emailRequired": "Email is required",
+            "emailInvalid": "Invalid email",
+            "phoneRequired": "Phone is required",
+            "subjectRequired": "Subject is required",
+            "messageRequired": "Message is required",
+            "messageMinLength": "Minimum length is 10 characters",
+            "success": "✅ Message sent successfully!",
+            "error": "❌ Something went wrong, please try again."
+        }
+    },
+    "certifications": {
+        "label": "Get Updates",
+        "title": "Certifications",
+        "previous": "Previous",
+        "next": "Next"
+    },
+    "footer": {
+        "rights": "All rights reserved",
+        "madeWith": "Made with <heart></heart> by <author>Takwa Hafyen</author>",
+        "emailTitle": "Send an email to {email}"
+    },
+    "social": {
+        "email": "Send an email"
+    }
+}

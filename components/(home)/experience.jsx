@@ -1,7 +1,11 @@
 import { experience2 } from "@/data/site";
 import ExperienceList from "./ui/experience-list";
+import { useTranslations } from "next-intl";
 
 export default function Experience() {
+    const t = useTranslations("experience");
+    const items = t.raw("items");
+
     return (
         <div id="experience" className="experience-area over-hidden pt-130 pb-110">
             <div className="container">
@@ -10,9 +14,9 @@ export default function Experience() {
                         <div className="position-relative">
                             <div className="title text-center mb-50">
                                 <span className="theme-color text-uppercase d-block mb-6">
-                                    Work Experience
+                                    {t("label")}
                                 </span>
-                                <h2 className="text-white">My Experience</h2>
+                                <h2 className="text-white">{t("title")}</h2>
                             </div>
                         </div>
                         <div
@@ -24,7 +28,11 @@ export default function Experience() {
                             <ul className="experience-content">
                                 {/* experience list start */}
                                 {experience2?.map((item, i) => (
-                                    <ExperienceList key={i} data={item} />
+                                    <ExperienceList
+                                        key={i}
+                                        data={item}
+                                        text={items[i]}
+                                    />
                                 ))}
                                 {/* experience list end */}
                             </ul>

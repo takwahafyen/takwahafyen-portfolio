@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import React from "react";
+import { useTranslations } from "next-intl";
 
 const email = "takwa.hafyen@gmail.com";
 
@@ -35,6 +36,8 @@ function openMailFallback(to) {
 }
 
 export default function Footer() {
+  const t = useTranslations("footer");
+
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -49,7 +52,7 @@ export default function Footer() {
             />
           </div>
           <p className="footer-text">
-            © {new Date().getFullYear()} All rights reserved
+            © {new Date().getFullYear()} {t("rights")}
           </p>
         </div>
 
@@ -63,7 +66,7 @@ export default function Footer() {
                     onClick={() => openMailFallback(email)}
                     className="social-btn"
                     aria-label={item.aria}
-                    title={`Envoyer un mail à ${email}`}
+                    title={t("emailTitle", { email })}
                   >
                     <i className={item.icon}></i>
                   </button>
@@ -88,8 +91,10 @@ export default function Footer() {
       {/* Ligne du bas */}
       <div className="footer-bottom">
         <p>
-          Made with <span className="heart">💚</span> by{" "}
-          <span className="author">Takwa Hafyen</span>
+          {t.rich("madeWith", {
+            heart: () => <span className="heart">💚</span>,
+            author: (chunks) => <span className="author">{chunks}</span>,
+          })}
         </p>
       </div>
 

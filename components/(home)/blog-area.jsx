@@ -7,8 +7,11 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper/modules";
+import { useTranslations } from "next-intl";
 
 export default function BlogArea() {
+    const t = useTranslations("certifications");
+
     return (
         <div id="blog" className="blog-area over-hidden">
             <div className="marquee-w mb-45">
@@ -28,9 +31,9 @@ export default function BlogArea() {
                         <div className="col-6">
                             <div className="title">
                                 <span className="theme-color text-uppercase d-block mb-6">
-                                    Get Updates
+                                    {t("label")}
                                 </span>
-                                <h2>Certifications</h2>
+                                <h2>{t("title")}</h2>
                             </div>
                         </div>
                         <div className="col-6 align-self-end">
@@ -38,12 +41,14 @@ export default function BlogArea() {
                                 <button
                                     className="ui-slide-btn"
                                     id="ui-prev-btn"
+                                    aria-label={t("previous")}
                                 >
                                     <i className="l-a fas fa-angle-left"></i>
                                 </button>
                                 <button
                                     className="ui-slide-btn"
                                     id="ui-next-btn"
+                                    aria-label={t("next")}
                                 >
                                     <i className="l-a fas fa-angle-right"></i>
                                 </button>

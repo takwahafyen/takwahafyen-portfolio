@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { useTranslations } from "next-intl";
 
 const email = "takwa.hafyen@gmail.com";
 
@@ -17,7 +18,7 @@ const socialLink = [
   {
     icon: "fas fa-envelope",
     link: "",
-    aria: "Envoyer un e-mail",
+    aria: null, // translated
   },
 ];
 
@@ -37,6 +38,8 @@ function openMailFallback(to, subject = "", body = "") {
 }
 
 export default function HeroSociable() {
+  const t = useTranslations();
+
   return (
     <div className="social-container">
       <ul className="social-list">
@@ -46,8 +49,8 @@ export default function HeroSociable() {
               <button
                 onClick={() => openMailFallback(email)}
                 className="social-button"
-                aria-label={item.aria}
-                title={`Envoyer un mail à ${email}`}
+                aria-label={t("social.email")}
+                title={t("footer.emailTitle", { email })}
               >
                 <i className={item.icon}></i>
               </button>
@@ -70,7 +73,7 @@ export default function HeroSociable() {
       <style jsx>{`
         .social-container {
           position: absolute;
-          right: 20px;
+          inset-inline-end: 20px;
           top: 50%;
           transform: translateY(-50%);
           z-index: 11;

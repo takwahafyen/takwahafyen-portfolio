@@ -3,26 +3,28 @@ import ContactForm from "./ui/contact-form";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import { Icon } from "leaflet";
 import { useEffect } from "react";
-
-const contact = [
-    {
-        icon: "fas fa-map-marker-alt",
-        title: "Location",
-        text: "Mahdia,Tunisia",
-    },
-    {
-        icon: "fas fa-phone-alt",
-        title: "Phone",
-        text: "+216 29 19 66 16",
-    },
-    {
-        icon: "fas fa-envelope",
-        title: "Email",
-        text: "takwa.hafyen@gmail.com",
-    },
-];
+import { useTranslations } from "next-intl";
 
 export default function Contact() {
+    const t = useTranslations("contact");
+    const contact = [
+        {
+            icon: "fas fa-map-marker-alt",
+            title: t("location"),
+            text: t("locationValue"),
+        },
+        {
+            icon: "fas fa-phone-alt",
+            title: t("phone"),
+            text: "+216 29 19 66 16",
+        },
+        {
+            icon: "fas fa-envelope",
+            title: t("email"),
+            text: "takwa.hafyen@gmail.com",
+        },
+    ];
+
     const position = [35.4235037,10.9920057];
 
     // Create custom icon
@@ -50,9 +52,9 @@ export default function Contact() {
                         <div className="col-xl-12 col-lg-12  col-md-12  col-sm-12 col-12">
                             <div className="title text-center">
                                 <span className="theme-color text-uppercase d-block mb-6">
-                                    Contact Me
+                                    {t("label")}
                                 </span>
-                                <h2>Let’s Talk</h2>
+                                <h2>{t("title")}</h2>
                             </div>
                         </div>
                     </div>
@@ -118,8 +120,7 @@ export default function Contact() {
                                         icon={customIcon}
                                     >
                                         <Popup>
-                                            Ksour Essef,Mahdia <br />
-                                            Tunisia
+                                            {t.rich("mapPopup", { br: () => <br /> })}
                                         </Popup>
                                     </Marker>
                                 </MapContainer>

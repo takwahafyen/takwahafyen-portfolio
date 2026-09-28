@@ -3,8 +3,13 @@ import Image from "next/image";
 import HeroSociable from "./ui/hero-sociable";
 import { Link as ScrollLink } from "react-scroll";
 import { TypeAnimation } from "react-type-animation";
+import { useTranslations } from "next-intl";
 
 export default function Hero() {
+  const t = useTranslations("hero");
+  // TypeAnimation expects [text, delay, text, delay, ...]
+  const typedSequence = t.raw("typed").flatMap((text) => [text, 1000]);
+
   return (
     <div id="home" className="slider-area slider-bg-color over-hidden">
       <div
@@ -29,22 +34,17 @@ export default function Hero() {
                 >
                   <h1 className="mb-15 white-text">
                     <span className="sub-heading d-block text-uppercase theme-color mb-0">
-                      Hello I’m
+                      {t("hello")}
                     </span>
                     Takwa Hafyen
                   </h1>
 
                   <h2 className="text-capitalize white-text mb-40">
-                    A Passionate
+                    {t("passionate")}
                     <span className="d-text d-block d-sm-inline-block">
                       <TypeAnimation
                         className="typer theme-color d-inline-block pl-2"
-                        sequence={[
-                          "Software Engineer",
-                          1000,
-                          "AI Enthusiast",
-                          1000,
-                        ]}
+                        sequence={typedSequence}
                         wrapper="span"
                         speed={30}
                         repeat={Infinity}
@@ -60,7 +60,7 @@ export default function Hero() {
                     offset={-50}
                     className="btn position-relative over-hidden theme-bg text-uppercase transition5 cursor-pointer"
                   >
-                    Let’s Connect
+                    {t("cta")}
                   </ScrollLink>
                 </div>
               </div>
