@@ -129,15 +129,15 @@ export const experience = [
   {
     title: (
       <>
-        Years of <br /> Experience
+        Professional <br /> Experiences
       </>
     ),
-    x: 2,
+    x: 3,
   },
   {
     title: (
       <>
-        Technologies <br /> Mastered
+        Technologies <br /> Used
       </>
     ),
     x: 15,
@@ -156,7 +156,7 @@ export const experience = [
         Certifications <br /> Earned
       </>
     ),
-    x: 10,
+    x: 3,
   },
 ];
 
@@ -257,7 +257,7 @@ export const education = [
         location: "National Engineering School of Gabes",
         date: "2025",
         description:
-            "Graduated with High Honors ",
+            "Specialization: Network and Computer Systems",
     },
     {
         icon: "flaticon-graduation-cap",

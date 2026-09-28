@@ -13,10 +13,10 @@ export default function AboutInfo() {
       </div>
 
       <p>
-        I’m a Software Engineer passionate about creating intelligent, scalable,
-        and impactful applications. Currently completing my engineering degree
-        at ENIG, I specialize in full-stack development and AI integration using
-        technologies like React, Node.js, Python, and TensorFlow.
+        Full-Stack Software Engineer building and shipping production web
+        applications end-to-end — from React/TypeScript front-ends to Node.js
+        back-ends, REST APIs and real-time integrations with relational
+        databases and AI-driven services.
       </p>
 
       
