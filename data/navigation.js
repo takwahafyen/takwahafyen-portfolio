@@ -8,7 +8,15 @@ export default [
         path: "about",
     },
     {
-        name: "Experiences",
+        name: "Skills",
+        path: "skills",
+    },
+    {
+        name: "Experience",
+        path: "experience",
+    },
+    {
+        name: "Projects",
         path: "works",
     },
     {

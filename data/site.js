@@ -194,36 +194,59 @@ export const awardInfo = [
 export const experience2 = [
     {
         icon: "flaticon-briefcase",
-        title: "Senior System Engineer",
-        company: "QuboHub",
+        title: "Software Engineer",
+        company: "Originis Solutions",
         date: {
-            start: 2018,
-            end: "Running",
+            start: "02/2025",
+            end: "Present",
         },
         description:
-            "Ludantium totam rem aperia meaque ipsa quae ab illo inven tore veritatis et quasi architecto beatae et vitae ullam molesti quae quasi.",
+            "Both platforms below live in a shared Dockerized monorepo, with reusable packages for real-time features.",
+        projects: [
+            {
+                name: "Losange-TN — Multi-Tenant Educational Platform",
+                link: "https://losange.tn",
+                date: "11/2025 – Present",
+                points: [
+                    "Owned full-stack features end-to-end — architecture, implementation, and deployment — for a multi-tenant platform, including a production RAG pipeline connecting course resources to an LLM-based content-generation service.",
+                    "Built real-time integration layers (WebSocket via Centrifugo, LiveKit for video) connecting front-end clients to back-end services under live classroom load, with snapshot persistence in PostgreSQL.",
+                    "Collaborated via Git/GitLab workflows and code reviews; covered features with automated tests (Vitest, Playwright) and shipped through GitLab CI/CD with Docker.",
+                ],
+                technologies: ["React", "Next.js", "TypeScript", "Node.js", "PostgreSQL", "Centrifugo", "LiveKit", "GitLab CI/CD", "Docker"],
+            },
+            {
+                name: "Study141 — 1-to-1 Tutoring & Booking Platform",
+                date: "02/2025 – 07/2025",
+                points: [
+                    "Built and integrated a payments layer (Stripe) and REST APIs (PostgreSQL) for a booking platform, with role-based access control and a Vitest + Playwright test suite.",
+                ],
+                technologies: ["React", "Next.js", "TypeScript", "Node.js", "PostgreSQL", "Stripe", "Vitest", "Playwright"],
+            },
+        ],
     },
     {
         icon: "flaticon-briefcase",
-        title: "Data Architect",
-        company: "Easy Computers",
+        title: "End-of-Studies Internship",
+        company: "Draexlmaier Group",
         date: {
-            start: 2015,
-            end: 2018,
+            start: "02/2025",
+            end: "06/2025",
         },
         description:
-            "Ludantium totam rem aperia meaque ipsa quae ab illo inven tore veritatis et quasi architecto beatae et vitae ullam molesti quae quasi.",
+            "Lessons Learned Smart Application — built AI models for error recognition and corrective-action prediction, integrated into a knowledge-management application used by production teams.",
+        technologies: ["Python", "KNN", "Random Forest", "Gradio", "HuggingFace"],
     },
     {
         icon: "flaticon-briefcase",
-        title: "Bangla College",
-        company: "Easy Computers",
+        title: "Engineering Internship",
+        company: "Tradrly",
         date: {
-            start: 2021,
-            end: 2015,
+            start: "07/2024",
+            end: "09/2024",
         },
         description:
-            "Ludantium totam rem aperia meaque ipsa quae ab illo inven tore veritatis et quasi architecto beatae et vitae ullam molesti quae quasi.",
+            "Built a full-stack e-commerce application using the MERN stack, with dynamic product management, authentication, and order handling.",
+        technologies: ["MongoDB", "Express.js", "React.js", "Node.js"],
     },
 ];
 
@@ -256,28 +279,29 @@ export const education = [
 
 export const skills = [
     {
-        title: "Web Development",
-        percentage: 80,
+        icon: "fas fa-laptop-code",
+        title: "Frontend",
+        items: ["React.js", "Next.js", "TypeScript", "JavaScript", "HTML5", "CSS3", "Tailwind CSS"],
     },
     {
-        title: "Hardware Development",
-        percentage: 95,
+        icon: "fas fa-server",
+        title: "Backend",
+        items: ["Node.js", "Express.js", "REST APIs", "WebSocket (Centrifugo)", "Payload CMS", "JWT Authentication"],
     },
     {
-        title: "Software Development",
-        percentage: 90,
+        icon: "fas fa-database",
+        title: "Databases & Integration",
+        items: ["PostgreSQL", "MongoDB", "Stripe", "LiveKit", "Third-party API integration"],
     },
     {
-        title: "System Application",
-        percentage: 75,
+        icon: "fas fa-code-branch",
+        title: "Engineering Practices",
+        items: ["Git", "GitLab CI/CD", "Docker", "Vitest", "Playwright", "Code Reviews", "Agile/Scrum"],
     },
     {
-        title: "Project management",
-        percentage: 60,
-    },
-    {
-        title: "Data Administration",
-        percentage: 85,
+        icon: "fas fa-robot",
+        title: "AI-Assisted Development",
+        items: ["Claude Code", "Cursor AI", "LLM integration (OpenAI, Gemini)", "RAG pipelines"],
     },
 ];
 

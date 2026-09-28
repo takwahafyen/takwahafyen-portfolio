@@ -22,7 +22,9 @@ export default function Home() {
             <Hero />
             <About />
             <ServiceArea />
-            
+            <SkillArea />
+            <Experience />
+
 
             <FunFact />
             <PortfolioArea />
