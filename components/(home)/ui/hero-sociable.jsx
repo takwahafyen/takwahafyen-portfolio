@@ -12,7 +12,7 @@ const socialLink = [
   },
   {
     icon: "fab fa-github",
-    link: "https://github.com/takwa6",
+    link: "https://github.com/takwahafyen",
     aria: "GitHub",
   },
   {
