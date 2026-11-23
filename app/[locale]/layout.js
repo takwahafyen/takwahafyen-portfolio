@@ -1,6 +1,6 @@
 import Preloader from "@/components/ui/preloader";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
-import { getTranslations, setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale, getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { jostMedium, openSans } from "../fonts";
@@ -41,6 +41,7 @@ export default async function RootLayout({ children, params }) {
         notFound();
     }
     setRequestLocale(locale);
+    const messages = await getMessages();
 
     return (
         <html lang={locale} dir="ltr">
@@ -48,7 +49,7 @@ export default async function RootLayout({ children, params }) {
                 className={`${jostMedium.className} ${openSans.variable} body-dark-mode`}
             >
                 <Preloader />
-                <NextIntlClientProvider>
+                <NextIntlClientProvider messages={messages}>
                     <Providers>{children}</Providers>
                 </NextIntlClientProvider>
             </body>
