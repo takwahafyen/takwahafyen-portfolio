@@ -36,22 +36,6 @@ export default function ServiceArea() {
                     </div>
                 </div>
             </div>
-
-            <style jsx>{`
-                .letter-spacing-1 {
-                    letter-spacing: 1.5px;
-                    font-size: 13px;
-                }
-                .section-title {
-                    font-size: 36px;
-                    font-weight: 700;
-                }
-                @media (max-width: 768px) {
-                    .section-title {
-                        font-size: 26px;
-                    }
-                }
-            `}</style>
         </section>
     );
 }
