@@ -1,3 +1,5 @@
+"use client";
+import React from "react";
 import ServiceAreaCard from "./ui/service-area-card";
 import { service } from "@/data/site";
 import { useTranslations } from "next-intl";
