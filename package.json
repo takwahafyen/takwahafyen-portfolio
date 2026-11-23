@@ -1,7 +1,14 @@
 {
-  "name": "thames-template",
-  "version": "0.1.0",
+  "name": "takwahafyen-portfolio",
+  "version": "1.0.0",
   "private": true,
+  "description": "Official personal portfolio of Takwa Hafyen — Software Engineer & AI Architect | Full-Stack • Agentic AI • DevOps • QA",
+  "homepage": "https://takwahafyen-portfolio-smim.vercel.app/",
+  "author": "Takwa Hafyen <takwa.hafyen@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/takwahafyen/takwahafyen-portfolio.git"
+  },
   "scripts": {
     "dev": "next dev --turbo",
     "build": "next build",
@@ -16,6 +23,7 @@
     "jquery": "^3.7.1",
     "leaflet": "^1.9.4",
     "next": "^15.5.26",
+    "next-intl": "^4.14.7",
     "popper.js": "^1.16.1",
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.10",
