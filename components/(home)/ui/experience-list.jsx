@@ -1,7 +1,7 @@
 "use client";
 
 export default function ExperienceList({ data }) {
-    const { start, end } = data.date || {};
+    const { start, end } = data?.date || {};
 
     return (
         <li className="mb-50 d-flex align-items-start rotate-hover">
@@ -57,23 +57,23 @@ export default function ExperienceList({ data }) {
             <div className="experience-ser-icon d-inline-block text-center mt-10 mr-30 transition3">
                 <span className="theme-color d-inline-block">
                     <span
-                        className={`d-block rotate flat-family ${data.icon}`}
+                        className={`d-block rotate flat-family ${data?.icon || "flaticon-briefcase"}`}
                     />
                 </span>
             </div>
             <div className="experience-service-text d-inline-block">
-                <h3 className="mb-2">{data.title}</h3>
+                <h3 className="mb-2">{data?.title}</h3>
                 <h4>
-                    {data.company}{" "}
+                    {data?.company}{" "}
                     <span className="meta-text-color openS-font-family">
                         ( {start} - {end} )
                     </span>
                 </h4>
-                {data.description && (
-                    <p className="mb-0 mt-15">{data.description}</p>
+                {data?.description && (
+                    <p className="mb-0 mt-15">{data?.description}</p>
                 )}
 
-                {data.projects?.map((project, i) => (
+                {data?.projects?.map((project, i) => (
                     <div key={i} className="experience-project">
                         <h5>
                             {project.link ? (
@@ -89,25 +89,31 @@ export default function ExperienceList({ data }) {
                                 project.name
                             )}
                         </h5>
-                        <span className="meta-text-color openS-font-family">
-                            {project.date}
-                        </span>
-                        <ul className="experience-points">
-                            {project.points.map((point, j) => (
-                                <li key={j}>{point}</li>
-                            ))}
-                        </ul>
-                        <div>
-                            {project.technologies.map((tech, j) => (
-                                <span key={j} className="tech-badge">
-                                    {tech}
-                                </span>
-                            ))}
-                        </div>
+                        {project.date && (
+                            <span className="meta-text-color openS-font-family">
+                                {project.date}
+                            </span>
+                        )}
+                        {project.points && project.points.length > 0 && (
+                            <ul className="experience-points">
+                                {project.points.map((point, j) => (
+                                    <li key={j}>{point}</li>
+                                ))}
+                            </ul>
+                        )}
+                        {project.technologies && project.technologies.length > 0 && (
+                            <div>
+                                {project.technologies.map((tech, j) => (
+                                    <span key={j} className="tech-badge">
+                                        {tech}
+                                    </span>
+                                ))}
+                            </div>
+                        )}
                     </div>
                 ))}
 
-                {data.technologies && (
+                {data?.technologies && data.technologies.length > 0 && (
                     <div className="mt-10">
                         {data.technologies.map((tech, j) => (
                             <span key={j} className="tech-badge">

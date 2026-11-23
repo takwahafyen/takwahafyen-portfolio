@@ -1,11 +1,15 @@
+"use client";
+import React from "react";
 import navigation from "@/data/navigation";
 import { Link } from "react-scroll";
+import { useTranslations } from "next-intl";
 
 export default function Navigation() {
+    const t = useTranslations("nav");
+
     return (
-        <nav className="d-none d-lg-block">
-            <ul className="d-block">
-                {/* navigation start */}
+        <nav className="d-none d-xl-block">
+            <ul className="d-block m-0 p-0">
                 {navigation?.map((item, i) => (
                     <li key={i}>
                         <Link
@@ -17,11 +21,10 @@ export default function Navigation() {
                             duration={500}
                             activeClass="ui-nav-active"
                         >
-                            {item.name}
+                            {t(item.key)}
                         </Link>
                     </li>
                 ))}
-                {/* navigation end */}
             </ul>
         </nav>
     );

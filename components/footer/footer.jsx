@@ -12,12 +12,17 @@ const social = [
   },
   {
     icon: "fab fa-github",
-    path: "https://github.com/takwa6",
+    path: "https://github.com/takwahafyen",
     aria: "GitHub",
   },
   {
+    icon: "fab fa-whatsapp",
+    path: "https://wa.me/21629196616",
+    aria: "WhatsApp (+216 29 19 66 16)",
+  },
+  {
     icon: "fas fa-envelope",
-    path: "",
+    path: "mailto:takwa.hafyen@gmail.com",
     aria: "Email",
   },
 ];
@@ -38,22 +43,22 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer-container">
-        {/* Logo et droits */}
+        {/* Logo and Copyright */}
         <div className="footer-left">
           <div className="logo-wrapper">
             <Image
               src="/images/logo/logo.png"
-              alt="Logo"
+              alt="Logo Takwa Hafyen"
               fill
               className="footer-logo"
             />
           </div>
           <p className="footer-text">
-            © {new Date().getFullYear()} All rights reserved
+            © {new Date().getFullYear()} Takwa Hafyen • Software Engineer & AI Architect
           </p>
         </div>
 
-        {/* Icônes sociales */}
+        {/* Social Icons */}
         <div className="footer-right">
           <ul className="social-list">
             {social.map((item, i) => (
@@ -63,7 +68,7 @@ export default function Footer() {
                     onClick={() => openMailFallback(email)}
                     className="social-btn"
                     aria-label={item.aria}
-                    title={`Envoyer un mail à ${email}`}
+                    title={`Send email to ${email}`}
                   >
                     <i className={item.icon}></i>
                   </button>
@@ -85,24 +90,24 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Ligne du bas */}
+      {/* Bottom Bar */}
       <div className="footer-bottom">
         <p>
-          Made with <span className="heart">💚</span> by{" "}
-          <span className="author">Takwa Hafyen</span>
+          Architected with <span className="heart">⚡</span> by{" "}
+          <span className="author">Takwa Hafyen</span> • Production-Grade Agentic AI & Full-Stack Systems
         </p>
       </div>
 
-      {/* ✅ CSS intégré */}
+      {/* CSS */}
       <style jsx>{`
         :root {
-          --pistache: #93c572;
+          --pistache: #2e86ab;
         }
 
         .footer {
           color: #333;
           padding: 60px 0 25px 0;
-          border-top: 1px solid rgba(0, 0, 0, 0.05);
+          border-top: 1px solid rgba(0, 0, 0, 0.08);
           font-family: "Montserrat", sans-serif;
         }
 
@@ -155,7 +160,7 @@ export default function Footer() {
           height: 45px;
           border-radius: 10px;
           border: 1px solid rgba(0, 0, 0, 0.1);
-          background: linear-gradient(180deg, var(--bg) 0%, #f1f4f6 100%);
+          background: linear-gradient(180deg, #ffffff 0%, #f1f4f6 100%);
           color: #555;
           font-size: 20px;
           transition: all 0.3s ease;
@@ -164,30 +169,30 @@ export default function Footer() {
 
         .social-btn:hover,
         .social-btn:focus {
-          background-color: var(--pistache);
+          background: #2e86ab;
           color: #fff;
-          border-color: var(--pistache);
-          transform: scale(1.1);
+          border-color: #2e86ab;
+          transform: translateY(-3px) scale(1.05);
+          box-shadow: 0 8px 16px rgba(46, 134, 171, 0.25);
         }
 
         .footer-bottom {
           text-align: center;
           margin-top: 30px;
-          color: #555;
-          font-size: 15px;
+          color: #666;
+          font-size: 14px;
         }
 
         .heart {
-          color: var(--pistache);
-          font-size: 18px;
+          color: #2e86ab;
+          font-size: 16px;
         }
 
         .author {
           font-weight: 600;
-          color: var(--pistache);
+          color: #2e86ab;
         }
 
-        /* ✅ Responsive */
         @media (max-width: 768px) {
           .footer-container {
             flex-direction: column;

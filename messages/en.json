@@ -1,0 +1,352 @@
+{
+    "metadata": {
+        "title": "Takwa Hafyen | Software Engineer & AI Architect — Full-Stack • Agentic AI • DevOps • QA",
+        "description": "Portfolio of Takwa Hafyen: Software Engineer & AI Architect specializing in CrewAI multi-agent systems, LiveKit voice AI, cloud-native full-stack (Next.js, Laravel, MERN), Docker container security, and QA automation."
+    },
+    "nav": {
+        "home": "Home",
+        "about": "About Me",
+        "services": "Expertise",
+        "skills": "Tech Stack",
+        "experience": "Experience",
+        "projects": "Projects",
+        "education": "Education",
+        "analytics": "GitHub",
+        "contact": "Contact"
+    },
+    "header": {
+        "downloadCv": "Download CV",
+        "language": "Language"
+    },
+    "hero": {
+        "hello": "Hello, I'm",
+        "passionate": "Engineering",
+        "typed": [
+            "Production-Grade Agentic AI",
+            "Multi-Agent & Voice AI Systems",
+            "Cloud-Native Full-Stack Architectures",
+            "DevOps + CI/CD + Container Security",
+            "QA Automation & OWASP Hardening",
+            "Enterprise PowerApps & Industry 4.0 ML"
+        ],
+        "cta": "Let's Connect",
+        "explore": "Explore Projects",
+        "statusBadge": "Available for High-Impact Roles • 2026",
+        "terminalTitle": "takwa@production-arch:~/agentic-cluster",
+        "tagline": "Software Engineer & AI Architect | Full-Stack • Agentic AI • DevOps • QA"
+    },
+    "about": {
+        "label": "About Me",
+        "title": "Architecting Scalable Systems & Production-Grade Agentic AI",
+        "text": "Software Engineer & AI Architect designing and shipping end-to-end production systems — from CrewAI multi-agent orchestration and <350ms streaming voice pipelines (LiveKit) to resilient, secure cloud-native web platforms (Laravel 11, MERN, Next.js). Security-first engineering, Docker containerization, Cypress/Jest E2E coverage, and rigorous AI model evaluation.",
+        "quote": "Built with precision, deployed with confidence, evaluated with rigor.",
+        "pillars": [
+            {
+                "icon": "fas fa-robot",
+                "title": "Agentic AI Architect",
+                "desc": "Designing production-grade multi-agent systems with CrewAI, real-time streaming voice pipelines (LiveKit, Deepgram, Silero VAD), hybrid RAG with pgvector, and MCP-standardized tooling."
+            },
+            {
+                "icon": "fas fa-industry",
+                "title": "Industry 4.0 & ML",
+                "desc": "Building Computer Vision + NLP microservices deployed on Hugging Face, integrated with Power Apps for real-world shop-floor machine diagnostics."
+            },
+            {
+                "icon": "fas fa-laptop-code",
+                "title": "Full-Stack Craftsman",
+                "desc": "From Laravel 11 + Elasticsearch 8 to MERN + TypeScript + RBAC, architecting scalable, secure, and resilient platforms."
+            },
+            {
+                "icon": "fas fa-shield-alt",
+                "title": "DevOps & Security First",
+                "desc": "Automated CI/CD with GitHub Actions, containerization with Docker, SAST with CodeQL, vulnerability scanning with Trivy, and OWASP Top 10 hardening."
+            },
+            {
+                "icon": "fas fa-vial",
+                "title": "QA-Driven Rigor",
+                "desc": "E2E testing with Cypress, integration testing with Jest/Supertest, and strict static analysis with PHPStan Level 8."
+            },
+            {
+                "icon": "fas fa-bolt",
+                "title": "Enterprise Automation",
+                "desc": "Streamlining enterprise workflows using Microsoft Power Apps and Power Automate with headless API connectors."
+            }
+        ]
+    },
+    "services": {
+        "label": "What I Do",
+        "title": "Architectural Domains & Core Competencies",
+        "items": [
+            {
+                "title": "Agentic AI & Voice Pipelines",
+                "description": "Production-grade multi-agent orchestration with CrewAI, LiveKit + Silero VAD streaming voice with <350ms barge-in, pgvector hybrid RAG, and MCP tools."
+            },
+            {
+                "title": "Cloud-Native Full-Stack Engineering",
+                "description": "High-throughput responsive platforms built with Next.js 16, TypeScript, Laravel 11, Node.js/Express, Elasticsearch 8, and PostgreSQL/MongoDB."
+            },
+            {
+                "title": "DevOps, Cloud & Container Security",
+                "description": "Hardened multi-stage Dockerfiles, non-root UID 1001 containers, automated GitHub Actions CI/CD to GHCR, CodeQL SAST, and Trivy CVE audits."
+            },
+            {
+                "title": "QA Automation & AI Evaluation",
+                "description": "Full E2E test suites with Cypress, Jest/Supertest API verification, PHPStan Level 8 static analysis, and Ragas evaluation harnesses for AI faithfulness."
+            }
+        ]
+    },
+    "skills": {
+        "label": "Tech Stack",
+        "title": "Full-Stack Engineering & AI Tooling",
+        "background": "Stack",
+        "categories": {
+            "ai": "Agentic AI & Machine Learning",
+            "frontend": "Full-Stack Web Development",
+            "practices": "DevOps, Cloud & Container Security",
+            "backend": "QA Automation & Rigorous Testing",
+            "databases": "Low-Code & Enterprise (Power Platform)"
+        }
+    },
+    "experience": {
+        "label": "Work Experience",
+        "title": "Professional Experience",
+        "present": "Present",
+        "items": [
+            {
+                "title": "Software Engineer & AI Architect",
+                "description": "Both platforms live in a Dockerized monorepo with shared packages for real-time streaming, payments, and multi-tenant isolation.",
+                "projects": [
+                    {
+                        "name": "Losange-TN — Multi-Tenant EdTech Platform",
+                        "points": [
+                            "Full ownership of end-to-end full-stack features — architecture, implementation, and deployment — including a production RAG pipeline connected to an LLM service.",
+                            "Built real-time integration layers (WebSocket via Centrifugo, LiveKit for interactive video) for live classrooms with PostgreSQL persistence.",
+                            "Collaborated through Git/GitLab with peer code reviews; covered features with automated tests (Vitest, Playwright) and continuous delivery via GitLab CI/CD with Docker."
+                        ]
+                    },
+                    {
+                        "name": "Study141 — 1-on-1 Tutoring & Booking Platform",
+                        "points": [
+                            "Payment gateway (Stripe) and REST API integration (PostgreSQL) for an on-demand booking platform with RBAC role guards and Vitest + Playwright test suites."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Graduation Engineering Intern (AI / Industry 4.0)",
+                "description": "Lessons Learned Smart Application — Developed Computer Vision and NLP classification microservices to automate industrial machine error diagnostics at Draexlmaier Group."
+            },
+            {
+                "title": "Software Engineering Intern (Full-Stack Monorepo)",
+                "description": "NovaMart Platform — Designed and engineered a containerized e-commerce monorepo with customer storefront, merchant analytics dashboard, and REST API deployed to GHCR."
+            }
+        ]
+    },
+    "facts": {
+        "marquee": "Open for high-impact roles * Software Engineer & AI Architect * Full-Stack • Agentic AI • DevOps • QA * Let's Build Together *",
+        "label": "Performance Metrics",
+        "title": "Engineered for Speed, Resilience & Precision",
+        "text": "Every system is built to production standards: <350ms voice barge-in, <15ms ML inference, automated CI/CD security pipelines, and zero-compromise code quality.",
+        "stats": [
+            "Years of <br></br> Engineering",
+            "Production <br></br> Technologies",
+            "Flagship <br></br> Architectures",
+            "Security & QA <br></br> Pass Rate %"
+        ]
+    },
+    "projects": {
+        "marquee": "Production AI * Cloud-Native Full-Stack * Hardened DevOps * Rigorous QA *",
+        "label": "Featured Projects",
+        "title": "Production-Grade Architectures",
+        "client": "Scope / Client",
+        "duration": "Duration",
+        "description": "Key Architectural Highlights",
+        "keyAchievements": "Key Technical Metrics",
+        "tools": "Technologies & Tools",
+        "close": "Close",
+        "github": "View on GitHub",
+        "liveDemo": "Live Demo",
+        "video": "Watch Video",
+        "items": [
+            {
+                "title": "Pilot — Agentic AI Architecture",
+                "client": "Pilot TN (Enterprise EdTech)",
+                "duration": "Production Architecture",
+                "tagline": "Production-Grade Multi-Agent Orchestration powering an enterprise EdTech platform in Tunisia",
+                "description": [
+                    "Real-time streaming voice agent: LiveKit SFU + Silero VAD with barge-in interruption in <350ms, Deepgram STT streaming, OpenAI TTS.",
+                    "3-Tier CrewAI multi-agent cluster: Pedagogical Tutor Agent (RAG-grounded) → Fact-Checker Anti-Hallucination Agent → Adaptive Quiz Generator Agent.",
+                    "Hybrid RAG retrieval: Mathematical scoring function Score = 0.75 × CosineSimilarity + 0.25 × BM25Boost on pgvector with markdown-preserving chunking.",
+                    "MCP Standardized Tools with Pydantic v2: KnowledgeSearchInput (prompt-injection sanitized), CalendarToolInput, and HandoffToolInput for human-in-the-loop escalation.",
+                    "Full observability in production: Langfuse distributed tracing (tokens, latency, cost) and Ragas evaluation harness for Faithfulness & Answer Relevance."
+                ],
+                "achievements": [
+                    "<350ms streaming voice barge-in latency under live network conditions.",
+                    "Anti-hallucination fact-checking layer eliminating factual drift in tutoring responses.",
+                    "Prompt-injection sanitized MCP tool schemas designed with Pydantic v2."
+                ]
+            },
+            {
+                "title": "Lessons Learned Smart Application",
+                "client": "Draexlmaier Group (PFE Graduation Project)",
+                "duration": "5 months",
+                "tagline": "Industry 4.0 AI Diagnostic Platform automating machine error diagnostics on factory shop floors",
+                "description": [
+                    "Multi-strategy CV OCR: Central 50% ROI bounding box, bilateral filtering, adaptive Gaussian thresholding vs. Otsu binarization cascade (confidence >25.0 + industrial regex validation).",
+                    "Multi-output NLP classifier: TF-IDF + Random Forest MultiOutputClassifier predicting Root Cause AND Corrective Action simultaneously.",
+                    "Sub-15ms ML inference per prediction — reducing MTTR from 10 minutes of manual lookup to under 5 seconds.",
+                    "Dual enterprise integration: Interactive Gradio launch from Power Apps + headless JSON API (/api/diagnose) via Power Automate."
+                ],
+                "achievements": [
+                    "Sub-15ms ML inference deployed on Hugging Face Spaces with Git LFS.",
+                    "95% accuracy in simultaneous root cause and corrective action predictions.",
+                    "Reduced shop-floor troubleshooting time from 10 minutes to under 5 seconds."
+                ]
+            },
+            {
+                "title": "Clinic Management System",
+                "client": "Production Platform",
+                "duration": "Full Lifecycle",
+                "tagline": "Production MERN Platform with Multi-Role RBAC, Security Hardening & Full CI/CD",
+                "description": [
+                    "Multi-Role RBAC: JWT cookie-auth (sameSite: none), Mongoose discriminator inheritance from single users collection to 3 role models.",
+                    "Hardened security stack: Helmet headers, express-rate-limit, express-mongo-sanitize, GitHub Actions CodeQL SAST, and Aquasec Trivy scanning.",
+                    "Full test automation: Jest + Supertest + mongodb-memory-server, React Testing Library, and Cypress E2E (auth, route guards, patient flows).",
+                    "Production UX: Animated dark mode, zero-dependency bilingual i18n (EN/FR), React ErrorBoundary, and toast notifications."
+                ],
+                "achievements": [
+                    "Clean CodeQL SAST report and zero critical vulnerabilities on Trivy container scans.",
+                    "100% test coverage for critical patient registration and prescription flows.",
+                    "35% administrative overhead reduction through synchronized electronic health records."
+                ]
+            },
+            {
+                "title": "UniStay — Student Housing Platform",
+                "client": "Cloud-Native Platform",
+                "duration": "Full Lifecycle",
+                "tagline": "Cloud-Native Booking Platform with Elasticsearch 8 & OWASP Top 10 Hardening",
+                "description": [
+                    "Elasticsearch 8: French linguistic analyzer, Fuzziness AUTO, geospatial geo_distance campus proximity filtering, and real-time pricing aggregations.",
+                    "OWASP Top 10 Security: Argon2id/Bcrypt hashing, anti-CSRF/XSS, Anti-IDOR resource policies, and pessimistic DB locking (lockForUpdate) against double-booking race conditions.",
+                    "Multilingual UI: Seamless trilingual experience with full internationalization.",
+                    "6-Container orchestration: Nginx + PHP 8.3 FPM + PostgreSQL + Redis + Elasticsearch + Mailpit via Docker Compose.",
+                    "Code quality: PHPStan Level 8 static analysis and Laravel Pint PSR-12 enforcement."
+                ],
+                "achievements": [
+                    "Zero PHPStan Level 8 static analysis errors across entire codebase.",
+                    "Pessimistic database locking guaranteeing zero double-booking collisions.",
+                    "Sub-50ms fuzzy full-text and geospatial campus proximity search queries."
+                ]
+            },
+            {
+                "title": "NovaMart Platform",
+                "client": "E-Commerce Monorepo",
+                "duration": "Full Lifecycle",
+                "tagline": "Full-Stack E-Commerce Monorepo with Hardened Container CI/CD to GHCR",
+                "description": [
+                    "Decoupled monorepo architecture: Customer storefront (Next.js), merchant analytics dashboard, and containerized Express REST API.",
+                    "Hardened containers: Multi-stage Dockerfile, non-root appuser (UID 1001), automated healthcheck endpoint (/api/health).",
+                    "Continuous delivery: GitHub Actions CI/CD with automated Docker builds and releases to GitHub Container Registry (GHCR) on every push to main.",
+                    "Full cart, catalog, and checkout management backed by MongoDB and Vitest tests."
+                ],
+                "achievements": [
+                    "Automated releases to GHCR on every verified commit to main branch.",
+                    "Strict non-root container execution conforming to enterprise security baselines.",
+                    "Sub-millisecond catalog browsing and inventory tracking."
+                ]
+            },
+            {
+                "title": "Facial Emotion Recognition",
+                "client": "Computer Vision AI",
+                "duration": "Research & Prototype",
+                "tagline": "Real-Time CNN Emotion Detector with Psychological Advice System",
+                "description": [
+                    "7-class emotion detection: Angry, Disgust, Fear, Happy, Neutral, Sad, Surprise — in real-time webcam stream via OpenCV with confidence overlays.",
+                    "Psychological advice engine: For every detected emotion, dynamic side-panel delivers 3 actionable wellness tips + an inspirational quote.",
+                    "CNN architecture: 3 Conv2D blocks + BatchNorm + MaxPool + Dropout → Dense(256) → Softmax(7), trained on FER2013 (35,887 grayscale images).",
+                    "Multi-face support: Haar Cascade detector handling multiple faces simultaneously with independent classification."
+                ],
+                "achievements": [
+                    "Real-time 30+ FPS inference on standard consumer CPU/GPU hardware.",
+                    "Empathetic AI interface dedicated to user emotional well-being.",
+                    "Trained on over 35,000 diverse facial expression benchmark images."
+                ]
+            }
+        ]
+    },
+    "githubAnalytics": {
+        "label": "Open Source & Engineering Rigor",
+        "title": "Live GitHub Analytics",
+        "description": "Verifiable track record of continuous delivery, production-grade containerization, and robust software architectures.",
+        "viewProfile": "View GitHub Profile",
+        "statsAlt": "Takwa's GitHub Stats",
+        "langsAlt": "Top Languages",
+        "streakAlt": "GitHub Contribution Streak"
+    },
+    "education": {
+        "label": "Education & Degrees",
+        "title": "Engineering Credentials",
+        "credentials": "Core Competencies",
+        "items": [
+            {
+                "title": "National Engineering Degree in Computer Networks & Telecommunications",
+                "location": "National Engineering School of Gabès (ENIG)",
+                "description": "Specialization in Computer Networks & Systems. Rigorous training in distributed systems, computer architecture, network security, and advanced software engineering."
+            },
+            {
+                "title": "Preparatory Cycle for Engineering Studies",
+                "location": "Preparatory Institute for Engineering Studies of Monastir (IPEIM)",
+                "description": "Intensive national curriculum in advanced mathematics, physics, and algorithmics. Graduated with honors."
+            },
+            {
+                "title": "High School Diploma in Experimental Sciences",
+                "location": "Abou El Kacem Echebbi High School - Ksour Essef",
+                "description": "National Baccalaureate examination completed with High Honors (16.43/20)."
+            }
+        ]
+    },
+    "contact": {
+        "label": "Contact Me",
+        "title": "Let's Talk Architecture",
+        "location": "Location",
+        "locationValue": "Mahdia, Tunisia (Open to Remote & Relocation)",
+        "phone": "Phone",
+        "email": "Email",
+        "whatsapp": "WhatsApp",
+        "github": "GitHub",
+        "linkedin": "LinkedIn",
+        "mapPopup": "Mahdia, Tunisia <br></br> Open to Remote & International Relocation",
+        "form": {
+            "name": "Your Name",
+            "email": "Your Email",
+            "phone": "Your Phone",
+            "subject": "Subject",
+            "message": "Start writing message here",
+            "submit": "Send Message",
+            "nameRequired": "Name is required",
+            "emailRequired": "Email is required",
+            "emailInvalid": "Invalid email address",
+            "phoneRequired": "Phone is required",
+            "subjectRequired": "Subject is required",
+            "messageRequired": "Message is required",
+            "messageMinLength": "Minimum length is 10 characters",
+            "success": "Message sent successfully! I will respond promptly.",
+            "error": "Something went wrong, please try again."
+        }
+    },
+    "certifications": {
+        "label": "Continuous Learning",
+        "title": "Technical Certifications",
+        "previous": "Previous",
+        "next": "Next"
+    },
+    "footer": {
+        "rights": "All rights reserved",
+        "tagline": "Software Engineer & AI Architect | Full-Stack • Agentic AI • DevOps • QA",
+        "madeWith": "Engineered with precision & <heart></heart> by <author>Takwa Hafyen</author>",
+        "emailTitle": "Send an email to {email}"
+    },
+    "social": {
+        "email": "Send an email"
+    }
+}

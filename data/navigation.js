@@ -1,35 +1,11 @@
 export default [
-    {
-        name: "Home",
-        path: "home",
-    },
-    {
-        name: "About Me",
-        path: "about",
-    },
-    {
-        name: "Skills",
-        path: "skills",
-    },
-    {
-        name: "Experience",
-        path: "experience",
-    },
-    {
-        name: "Projects",
-        path: "works",
-    },
-    {
-        name: "Education",
-        path: "education",
-    },
-  
-    {
-        name: "Certifications",
-        path: "blog",
-    },
-      {
-        name: "Contact",
-        path: "contact",
-    },
+    { key: "home", name: "Home", path: "home" },
+    { key: "about", name: "About", path: "about" },
+    { key: "services", name: "Expertise", path: "service" },
+    { key: "skills", name: "Tech Stack", path: "skills" },
+    { key: "projects", name: "Projects", path: "works" },
+    { key: "experience", name: "Experience", path: "experience" },
+    { key: "education", name: "Education", path: "education" },
+    { key: "analytics", name: "GitHub", path: "analytics" },
+    { key: "contact", name: "Contact", path: "contact" },
 ];

@@ -1,0 +1,352 @@
+{
+    "metadata": {
+        "title": "Takwa Hafyen | Ingeniera de Software y Arquitecta de IA — Full-Stack • IA Agéntica • DevOps • QA",
+        "description": "Portafolio de Takwa Hafyen: Ingeniera de Software y Arquitecta de IA especializada en sistemas multiagente CrewAI, IA de voz LiveKit, Full-Stack nativo en la nube (Next.js, Laravel, MERN), seguridad de contenedores Docker y automatización QA."
+    },
+    "nav": {
+        "home": "Inicio",
+        "about": "Sobre Mí",
+        "services": "Especialidades",
+        "skills": "Tecnologías",
+        "experience": "Experiencia",
+        "projects": "Proyectos",
+        "education": "Educación",
+        "analytics": "GitHub",
+        "contact": "Contacto"
+    },
+    "header": {
+        "downloadCv": "Descargar CV",
+        "language": "Idioma"
+    },
+    "hero": {
+        "hello": "Hola, soy",
+        "passionate": "Diseñando",
+        "typed": [
+            "IA Agéntica de Producción",
+            "Sistemas Multiagente y de Voz",
+            "Arquitecturas Full-Stack en la Nube",
+            "DevOps + CI/CD + Seguridad de Contenedores",
+            "Automatización QA y Fortalecimiento OWASP",
+            "PowerApps Empresariales y ML Industria 4.0"
+        ],
+        "cta": "Hablemos",
+        "explore": "Ver Proyectos",
+        "statusBadge": "Disponible para Roles de Alto Impacto • 2026",
+        "terminalTitle": "takwa@production-arch:~/agentic-cluster",
+        "tagline": "Ingeniera de Software y Arquitecta de IA | Full-Stack • IA Agéntica • DevOps • QA"
+    },
+    "about": {
+        "label": "Sobre Mí",
+        "title": "Arquitectando Sistemas Escalables e IA Agéntica en Producción",
+        "text": "Ingeniera de Software y Arquitecta de IA, diseño y despliego sistemas de producción de extremo a extremo — desde orquestación multiagente (CrewAI) y streaming de voz en tiempo real con latencia menor a 350ms (LiveKit) hasta plataformas web nativas en la nube seguras y resilientes (Laravel 11, MERN, Next.js). Enfoque 'Security-First', contenedorización con Docker, cobertura de pruebas Cypress/Jest E2E y evaluación rigurosa de modelos de IA.",
+        "quote": "Construido con precisión, desplegado con confianza, evaluado con rigor.",
+        "pillars": [
+            {
+                "icon": "fas fa-robot",
+                "title": "Arquitecta de IA Agéntica",
+                "desc": "Diseño de sistemas multiagente con CrewAI, pipelines de voz en tiempo real (LiveKit, Deepgram, Silero VAD), RAG híbrido con pgvector y herramientas estandarizadas MCP."
+            },
+            {
+                "icon": "fas fa-industry",
+                "title": "Industria 4.0 y ML",
+                "desc": "Microservicios de Visión por Computadora + NLP desplegados en Hugging Face, integrados con Power Apps para diagnóstico en planta industrial."
+            },
+            {
+                "icon": "fas fa-laptop-code",
+                "title": "Ingeniería Full-Stack",
+                "desc": "Desde Laravel 11 + Elasticsearch 8 hasta MERN + TypeScript + RBAC, arquitectando plataformas de software escalables y seguras."
+            },
+            {
+                "icon": "fas fa-shield-alt",
+                "title": "DevOps y Seguridad",
+                "desc": "CI/CD automatizado con GitHub Actions, contenedores Docker, SAST con CodeQL, escaneo de vulnerabilidades Trivy y protección OWASP Top 10."
+            },
+            {
+                "icon": "fas fa-vial",
+                "title": "Rigor en Calidad (QA)",
+                "desc": "Pruebas E2E con Cypress, pruebas de integración con Jest/Supertest y análisis estático estricto con PHPStan Nivel 8."
+            },
+            {
+                "icon": "fas fa-bolt",
+                "title": "Automatización Empresarial",
+                "desc": "Optimización de flujos de trabajo corporativos con Microsoft Power Apps y Power Automate mediante conectores de API headless."
+            }
+        ]
+    },
+    "services": {
+        "label": "Lo Que Hago",
+        "title": "Áreas de Especialización Arquitectónica",
+        "items": [
+            {
+                "title": "IA Agéntica y Pipelines de Voz",
+                "description": "Orquestación multiagente CrewAI en producción, streaming de voz en tiempo real LiveKit + Silero VAD con interrupción <350ms, RAG híbrido pgvector y MCP."
+            },
+            {
+                "title": "Ingeniería Full-Stack en la Nube",
+                "description": "Arquitectura de plataformas reactivas y de alto rendimiento con Next.js 16, TypeScript, Laravel 11, Node.js/Express, Elasticsearch 8 y PostgreSQL/MongoDB."
+            },
+            {
+                "title": "DevOps, Nube y Seguridad de Contenedores",
+                "description": "Dockerfiles reforzados multietapa, contenedores non-root (UID 1001), CI/CD automatizado vía GitHub Actions hacia GHCR, CodeQL SAST y auditoría Trivy."
+            },
+            {
+                "title": "Automatización QA y Evaluación de IA",
+                "description": "Suites de pruebas E2E con Cypress, APIs verificadas con Jest/Supertest, análisis estático PHPStan Nivel 8 y bancos de prueba Ragas."
+            }
+        ]
+    },
+    "skills": {
+        "label": "Stack Técnico",
+        "title": "Stack Tecnológico Completo",
+        "background": "Stack",
+        "categories": {
+            "ai": "IA Agéntica y Aprendizaje Automático",
+            "frontend": "Desarrollo Full-Stack",
+            "practices": "DevOps, Nube y Seguridad",
+            "backend": "Aseguramiento de Calidad y Pruebas",
+            "databases": "Low-Code y Empresarial (Power Platform)"
+        }
+    },
+    "experience": {
+        "label": "Experiencia Laboral",
+        "title": "Trayectoria Profesional",
+        "present": "Presente",
+        "items": [
+            {
+                "title": "Ingeniera de Software y Arquitecta de IA",
+                "description": "Ambas plataformas residen en un monorepo Dockerizado con paquetes compartidos para streaming en tiempo real, pagos y aislamiento multi-inquilino.",
+                "projects": [
+                    {
+                        "name": "Losange-TN — Plataforma Educativa Multi-Inquilino",
+                        "points": [
+                            "Responsable integral de características full-stack de extremo a extremo — arquitectura, implementación y despliegue — incluyendo un pipeline RAG en producción conectado a un servicio LLM.",
+                            "Desarrollo de capas de integración en tiempo real (WebSocket vía Centrifugo, LiveKit para video interactivo) para aulas en vivo con persistencia en PostgreSQL.",
+                            "Colaboración mediante Git/GitLab y revisiones de código; cobertura con pruebas automatizadas (Vitest, Playwright) y entrega continua vía GitLab CI/CD con Docker."
+                        ]
+                    },
+                    {
+                        "name": "Study141 — Plataforma de Tutoría 1 a 1 y Reservas",
+                        "points": [
+                            "Integración de pasarela de pagos (Stripe) y APIs REST (PostgreSQL) para una plataforma de reservas bajo demanda con control de acceso RBAC y suite de pruebas Vitest + Playwright."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Práctica de Fin de Estudios (IA / Industria 4.0)",
+                "description": "Lessons Learned Smart Application — Desarrollo de microservicios de Visión por Computadora y clasificación NLP para automatizar el diagnóstico de fallas en maquinaria industrial en Draexlmaier Group."
+            },
+            {
+                "title": "Práctica de Ingeniería (Monorepo Full-Stack)",
+                "description": "NovaMart Platform — Diseño y desarrollo de un monorepo de comercio electrónico contenedorizado con tienda para clientes, panel de analíticas para comerciantes y API REST con despliegue automatizado en GHCR."
+            }
+        ]
+    },
+    "facts": {
+        "marquee": "Disponible para nuevas oportunidades * Ingeniera de Software y Arquitecta de IA * Full-Stack • IA Agéntica • DevOps • QA * Construyamos juntos *",
+        "label": "Métricas de Rendimiento",
+        "title": "Diseñado para Velocidad, Resiliencia y Precisión",
+        "text": "Cada sistema se construye según estándares de producción: interrupción de voz <350ms, inferencia ML <15ms, pipelines de seguridad CI/CD automatizados y calidad de código sin concesiones.",
+        "stats": [
+            "Años de <br></br> Ingeniería",
+            "Tecnologías <br></br> en Producción",
+            "Arquitecturas <br></br> Destacadas",
+            "Tasa de Aprobación <br></br> Seguridad y QA %"
+        ]
+    },
+    "projects": {
+        "marquee": "IA de Producción * Full-Stack Escalable * DevOps Blindado * QA Riguroso *",
+        "label": "Proyectos Destacados",
+        "title": "Arquitecturas Recientes en Producción",
+        "client": "Alcance / Cliente",
+        "duration": "Duración",
+        "description": "Puntos Clave de la Arquitectura",
+        "keyAchievements": "Métricas Técnicas Clave",
+        "tools": "Tecnologías y Herramientas",
+        "close": "Cerrar",
+        "github": "Ver en GitHub",
+        "liveDemo": "Demo en Vivo",
+        "video": "Ver Video",
+        "items": [
+            {
+                "title": "Pilot — Agentic AI Architecture",
+                "client": "Pilot TN (EdTech Corporativa)",
+                "duration": "Arquitectura de Producción",
+                "tagline": "Orquestación multiagente en producción para una plataforma EdTech de gran escala",
+                "description": [
+                    "Agente de voz streaming en tiempo real: LiveKit SFU + Silero VAD con interrupción 'barge-in' en <350ms, streaming STT Deepgram y OpenAI TTS.",
+                    "Cluster CrewAI de 3 niveles: Agente Tutor Pedagógico (RAG) → Agente Verificador Anti-Alucinación → Agente Generador de Cuestionarios Adaptativos.",
+                    "Recuperación RAG Híbrida: Función de puntuación matemática Score = 0.75 × CosineSimilarity + 0.25 × BM25Boost en pgvector con chunking que preserva Markdown.",
+                    "Herramientas Estandarizadas MCP con Pydantic v2: KnowledgeSearchInput (protegido contra inyecciones de prompt), CalendarToolInput y HandoffToolInput para escalamiento humano (HITL).",
+                    "Observabilidad completa en producción: Trazabilidad Langfuse (tokens, latencia, costo) y suite de evaluación Ragas para medir Fidelidad y Relevancia."
+                ],
+                "achievements": [
+                    "Latencia de interrupción de voz menor a 350ms bajo carga real de streaming.",
+                    "Capa de fact-checking anti-alucinación que elimina desvíos en respuestas educativas.",
+                    "Esquemas de herramientas MCP desinfectados diseñados con Pydantic v2."
+                ]
+            },
+            {
+                "title": "Lessons Learned Smart Application",
+                "client": "Draexlmaier Group (Proyecto Fin de Carrera)",
+                "duration": "5 meses",
+                "tagline": "Plataforma de IA de diagnóstico Industria 4.0 para resolución de errores en planta de manufactura",
+                "description": [
+                    "OCR Multi-Estrategia: Bounding box central 50% ROI, filtrado bilateral, umbralización gaussiana adaptativa vs. binarización Otsu en cascada (confianza >25.0 + regex industrial).",
+                    "Clasificador NLP Multi-Salida: TF-IDF + Random Forest MultiOutputClassifier prediciendo simultáneamente la Causa Raíz Y la Acción Correctiva.",
+                    "Inferencia de ML menor a 15ms — reduciendo el MTTR de 10 minutos de búsqueda manual a menos de 5 segundos.",
+                    "Doble integración empresarial: Lanzamiento interactivo de Gradio desde Power Apps + API REST JSON headless (/api/diagnose) mediante Power Automate."
+                ],
+                "achievements": [
+                    "Inferencia ML ultrarrápida <15ms desplegada en Hugging Face Spaces con Git LFS.",
+                    "95% de precisión en la predicción simultánea de causas y soluciones.",
+                    "Reducción de tiempos de inactividad de maquinaria y búsqueda administrativa de 10 min a <5 s."
+                ]
+            },
+            {
+                "title": "Clinic Management System",
+                "client": "Plataforma de Producción",
+                "duration": "Ciclo Completo",
+                "tagline": "Plataforma MERN de producción con RBAC, blindaje de seguridad y CI/CD completo",
+                "description": [
+                    "RBAC Multi-Rol: Autenticación por cookie JWT (sameSite: none), herencia de discriminador Mongoose en una sola colección hacia 3 modelos de rol.",
+                    "Stack de seguridad reforzado: Encabezados Helmet, express-rate-limit, express-mongo-sanitize, SAST CodeQL con GitHub Actions y escaneo Aquasec Trivy.",
+                    "Cobertura integral de pruebas automatizadas: Jest + Supertest + mongodb-memory-server, React Testing Library y Cypress E2E (auth, guardias, flujo de pacientes).",
+                    "UX de producción: Modo oscuro animado, i18n bilingüe sin dependencias (EN/FR), React ErrorBoundary y notificaciones toast."
+                ],
+                "achievements": [
+                    "Reporte SAST CodeQL limpio y cero vulnerabilidades críticas en Trivy.",
+                    "100% de cobertura de pruebas automatizadas en flujos críticos de pacientes y recetas.",
+                    "Reducción del 35% de la carga administrativa gracias a registros sincronizados en vivo."
+                ]
+            },
+            {
+                "title": "UniStay — Student Housing Platform",
+                "client": "Plataforma en la Nube",
+                "duration": "Ciclo Completo",
+                "tagline": "Plataforma de reservas en la nube con Elasticsearch 8 y blindaje OWASP Top 10",
+                "description": [
+                    "Elasticsearch 8: Analizador lingüístico francés, Fuzziness AUTO, filtrado de proximidad geográfica geo_distance y agregaciones de precios en tiempo real.",
+                    "Seguridad OWASP Top 10: Hasheo Argon2id/Bcrypt, protecciones anti-CSRF/XSS, políticas Anti-IDOR y bloqueo pesimista en base de datos (lockForUpdate) anti-doble reserva.",
+                    "Interfaz Multilingüe: Soporte fluido de idiomas.",
+                    "Orquestación de microservicios en 6 contenedores: Nginx + PHP 8.3 FPM + PostgreSQL + Redis + Elasticsearch + Mailpit vía Docker Compose.",
+                    "Calidad de código estricta: Análisis estático PHPStan Nivel 8 y cumplimiento de estándares Laravel Pint PSR-12."
+                ],
+                "achievements": [
+                    "Aprobación total de análisis estático estricto con PHPStan Nivel 8.",
+                    "Cero colisiones de reserva gracias a bloqueos pesimistas a nivel de base de datos.",
+                    "Búsqueda geoespacial y de texto difuso ultrarrápida en menos de 50ms con Elasticsearch 8."
+                ]
+            },
+            {
+                "title": "NovaMart Platform",
+                "client": "Monorepo de E-Commerce",
+                "duration": "Ciclo Completo",
+                "tagline": "Monorepo Full-Stack de E-Commerce con CI/CD de contenedores blindados",
+                "description": [
+                    "Monorepo desacoplado: Tienda para clientes en Next.js, panel administrativo con métricas para comerciantes y API REST Express en contenedor.",
+                    "Contenedores blindados: Dockerfile multietapa, usuario non-root (UID 1001), endpoint de verificación de salud automatizado (/api/health).",
+                    "Publicación continua: Pipeline de CI/CD con GitHub Actions con compilación y publicación automática a GitHub Container Registry (GHCR) en cada push a main.",
+                    "Gestión completa de carrito y órdenes con pruebas en Vitest y base de datos MongoDB."
+                ],
+                "achievements": [
+                    "Entregas automatizadas en GHCR en cada despliegue a la rama principal.",
+                    "Cumplimiento con estándares corporativos de contenedores rootless.",
+                    "Navegación de catálogo en submilisegundos y panel de inventario optimizado."
+                ]
+            },
+            {
+                "title": "Facial Emotion Recognition",
+                "client": "IA de Visión por Computadora",
+                "duration": "Proyecto de Investigación",
+                "tagline": "Detector de emociones por CNN en tiempo real con sistema de consejos psicológicos",
+                "description": [
+                    "Detección de emociones de 7 clases: Ira, Asco, Miedo, Alegría, Neutral, Tristeza, Sorpresa — en tiempo real mediante loop de webcam con OpenCV y superposición de confianza.",
+                    "Motor de asesoramiento psicológico: Para cada emoción detectada, un panel lateral muestra 3 consejos prácticos + una cita inspiradora en tiempo real.",
+                    "Arquitectura CNN: 3 bloques Conv2D + BatchNorm + MaxPool + Dropout → Dense(256) → Softmax(7), entrenada en FER2013 (35,887 imágenes en escala de grises).",
+                    "Soporte multi-rostro: Detector Haar Cascade que gestiona múltiples rostros simultáneamente con clasificación independiente."
+                ],
+                "achievements": [
+                    "Pipeline de inferencia en tiempo real a más de 30 FPS en hardware estándar.",
+                    "Sistema de IA empático orientado al bienestar emocional del usuario.",
+                    "Entrenado en más de 35,000 expresiones faciales de referencia."
+                ]
+            }
+        ]
+    },
+    "githubAnalytics": {
+        "label": "Código Abierto y Rigor de Ingeniería",
+        "title": "Estadísticas de GitHub en Tiempo Real",
+        "description": "Historial comprobable de entregas continuas, contenedores de nivel de producción y arquitecturas robustas.",
+        "viewProfile": "Ver Perfil en GitHub",
+        "statsAlt": "Estadísticas de GitHub de Takwa",
+        "langsAlt": "Lenguajes Más Usados",
+        "streakAlt": "Racha de Contribuciones en GitHub"
+    },
+    "education": {
+        "label": "Educación y Títulos",
+        "title": "Cualificaciones de Ingeniería",
+        "credentials": "Competencias Fundamentales",
+        "items": [
+            {
+                "title": "Título Nacional de Ingeniera en Redes y Sistemas Informáticos",
+                "location": "Escuela Nacional de Ingenieros de Gabès (ENIG)",
+                "description": "Especialización en Redes y Sistemas Informáticos. Formación en sistemas distribuidos, arquitectura de computadoras, seguridad de redes e ingeniería de software avanzada."
+            },
+            {
+                "title": "Ciclo Preparatorio para Estudios de Ingeniería",
+                "location": "Instituto Preparatorio para Estudios de Ingeniería de Monastir (IPEIM)",
+                "description": "Formación intensiva nacional en matemáticas avanzadas, física aplicada y algoritmia. Graduada con honores."
+            },
+            {
+                "title": "Bachillerato en Ciencias Experimentales",
+                "location": "Liceo Abou El Kacem Echebbi - Ksour Essef",
+                "description": "Examen nacional de bachillerato aprobado con Matrícula de Honor (16.43/20)."
+            }
+        ]
+    },
+    "contact": {
+        "label": "Contáctame",
+        "title": "Hablemos de Tu Próxima Arquitectura",
+        "location": "Ubicación",
+        "locationValue": "Mahdia, Túnez (Disponible para Remoto y Reubicación)",
+        "phone": "Teléfono",
+        "email": "Correo Electrónico",
+        "whatsapp": "WhatsApp",
+        "github": "GitHub",
+        "linkedin": "LinkedIn",
+        "mapPopup": "Mahdia, Túnez <br></br> Abierta a Trabajo Remoto y Reubicación Internacional",
+        "form": {
+            "name": "Tu Nombre",
+            "email": "Tu Correo Electrónico",
+            "phone": "Tu Teléfono",
+            "subject": "Asunto",
+            "message": "Escribe tu mensaje aquí",
+            "submit": "Enviar Mensaje",
+            "nameRequired": "El nombre es obligatorio",
+            "emailRequired": "El correo electrónico es obligatorio",
+            "emailInvalid": "Dirección de correo electrónico no válida",
+            "phoneRequired": "El teléfono es obligatorio",
+            "subjectRequired": "El asunto es obligatorio",
+            "messageRequired": "El mensaje es obligatorio",
+            "messageMinLength": "Longitud mínima de 10 caracteres",
+            "success": "¡Mensaje enviado con éxito! Responderé a la brevedad.",
+            "error": "Ocurrió un error, por favor intenta nuevamente."
+        }
+    },
+    "certifications": {
+        "label": "Aprendizaje Continuo",
+        "title": "Certificaciones Técnicas",
+        "previous": "Anterior",
+        "next": "Siguiente"
+    },
+    "footer": {
+        "rights": "Todos los derechos reservados",
+        "tagline": "Ingeniera de Software y Arquitecta de IA | Full-Stack • IA Agéntica • DevOps • QA",
+        "madeWith": "Diseñado con precisión y <heart></heart> por <author>Takwa Hafyen</author>",
+        "emailTitle": "Enviar correo electrónico a {email}"
+    },
+    "social": {
+        "email": "Enviar correo"
+    }
+}

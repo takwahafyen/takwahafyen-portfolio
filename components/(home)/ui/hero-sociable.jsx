@@ -1,68 +1,54 @@
 "use client";
 import React from "react";
+import { useTranslations } from "next-intl";
 
 const email = "takwa.hafyen@gmail.com";
 
 const socialLink = [
   {
+    icon: "fab fa-whatsapp",
+    link: "https://wa.me/21629196616",
+    aria: "WhatsApp",
+    color: "#25d366",
+  },
+  {
     icon: "fab fa-linkedin-in",
-    link: "https://www.linkedin.com/in/takwa-hafyen-472264282",
+    link: "https://linkedin.com/in/takwa-hafyen-472264282",
     aria: "LinkedIn",
+    color: "#0a66c2",
   },
   {
     icon: "fab fa-github",
-    link: "https://github.com/takwa6",
+    link: "https://github.com/takwahafyen",
     aria: "GitHub",
+    color: "#ffffff",
   },
   {
     icon: "fas fa-envelope",
-    link: "",
-    aria: "Envoyer un e-mail",
+    link: `mailto:${email}`,
+    aria: "Email",
+    color: "#d14836",
   },
 ];
 
-function openMailFallback(to, subject = "", body = "") {
-  const mailto = `mailto:${to}${subject ? `?subject=${encodeURIComponent(subject)}` : ""}${
-    body ? `${subject ? "&" : "?"}body=${encodeURIComponent(body)}` : ""
-  }`;
-
-  // Essaie d'ouvrir le client mail par défaut
-  window.location.href = mailto;
-
-  // Si aucun client n'est configuré, ouvre Gmail en fallback
-  setTimeout(() => {
-    const gmailCompose = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(to)}`;
-    window.open(gmailCompose, "_blank", "noopener,noreferrer");
-  }, 500);
-}
-
 export default function HeroSociable() {
+  const t = useTranslations();
+
   return (
-    <div className="social-container">
+    <div className="social-container d-none d-xl-block">
       <ul className="social-list">
         {socialLink.map((item, i) => (
           <li key={i} className="social-item">
-            {item.icon === "fas fa-envelope" ? (
-              <button
-                onClick={() => openMailFallback(email)}
-                className="social-button"
-                aria-label={item.aria}
-                title={`Envoyer un mail à ${email}`}
-              >
-                <i className={item.icon}></i>
-              </button>
-            ) : (
-              <a
-                className="social-button"
-                href={item.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={item.aria}
-                title={item.aria}
-              >
-                <i className={item.icon}></i>
-              </a>
-            )}
+            <a
+              className="social-button"
+              href={item.link}
+              target={item.link.startsWith("mailto") ? "_self" : "_blank"}
+              rel="noopener noreferrer"
+              aria-label={item.aria}
+              title={item.aria}
+            >
+              <i className={item.icon}></i>
+            </a>
           </li>
         ))}
       </ul>
@@ -70,7 +56,7 @@ export default function HeroSociable() {
       <style jsx>{`
         .social-container {
           position: absolute;
-          right: 20px;
+          inset-inline-end: 24px;
           top: 50%;
           transform: translateY(-50%);
           z-index: 11;
@@ -80,40 +66,34 @@ export default function HeroSociable() {
           list-style: none;
           padding: 0;
           margin: 0;
-        }
-
-        .social-item {
-          margin: 10px 0;
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
         }
 
         .social-button {
           display: flex;
           align-items: center;
           justify-content: center;
-          width: 48px;
-          height: 48px;
-          background-color: rgba(255, 255, 255, 0.05);
-          border: 1px solid rgba(255, 255, 255, 0.2);
-          border-radius: 8px;
-          color: white;
-          font-size: 20px;
+          width: 44px;
+          height: 44px;
+          background-color: rgba(22, 27, 46, 0.7);
+          backdrop-filter: blur(10px);
+          border: 1px solid rgba(255, 255, 255, 0.12);
+          border-radius: 10px;
+          color: #cbd5e1;
+          font-size: 18px;
           cursor: pointer;
-          transition: all 0.3s ease;
+          transition: all 0.25s ease;
+          text-decoration: none;
         }
 
-        /* 💎 Thème cohérent avec ton template */
-        .social-button:hover,
-        .social-button:focus,
-        .social-button:active {
-          background-color: var(--main-color);
-          border-color: var(--main-color);
-          color: #fff;
+        .social-button:hover {
+          background-color: #9ef01a;
+          border-color: #9ef01a;
+          color: #0c0e1a;
           transform: scale(1.1);
-          box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
-        }
-
-        .social-button i {
-          pointer-events: none;
+          box-shadow: 0 0 16px rgba(158, 240, 26, 0.4);
         }
       `}</style>
     </div>

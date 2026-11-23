@@ -1,81 +1,51 @@
 "use client";
 import { skills } from "@/data/site";
+import { useTranslations } from "next-intl";
 
 export default function SkillArea() {
+    const t = useTranslations("skills");
+
     return (
-        <div id="skills" className="skill-area over-hidden position-relative pt-130 pb-110">
-            <style jsx>{`
-                .skill-card {
-                    height: 100%;
-                    padding: 35px 30px 30px;
-                    border-radius: 10px;
-                    border: 1px solid rgba(255, 255, 255, 0.08);
-                    transition: all 0.3s ease;
-                }
-
-                .skill-card:hover {
-                    transform: translateY(-5px);
-                    border-color: rgba(255, 255, 255, 0.2);
-                }
-
-                .skill-card-icon {
-                    font-size: 26px;
-                    margin-bottom: 15px;
-                }
-
-                .skill-card-title {
-                    font-size: 20px;
-                    font-weight: 600;
-                    color: #fff;
-                    margin-bottom: 15px;
-                }
-
-                .tech-badge {
-                    display: inline-block;
-                    color: #fff;
-                    padding: 6px 14px;
-                    border-radius: 20px;
-                    font-size: 13px;
-                    font-weight: 500;
-                    margin: 5px 5px 0 0;
-                    border: 1px solid rgba(255, 255, 255, 0.2);
-                    background: rgba(255, 255, 255, 0.05);
-                    transition: all 0.3s ease;
-                }
-
-                .tech-badge:hover {
-                    transform: scale(1.05);
-                    background: rgba(255, 255, 255, 0.1);
-                }
-            `}</style>
-
+        <section id="skills" className="skill-area over-hidden position-relative pt-140 pb-120">
             <div className="container position-relative z-index11">
                 <div className="row">
                     <div className="col-12">
                         <div className="title text-center mb-60">
-                            <span className="theme-color text-uppercase d-block mb-6">
-                                Technical Skills
+                            <span className="theme-color text-uppercase font-weight-bold d-block mb-2 letter-spacing-1">
+                                {t("label")}
                             </span>
-                            <h2 className="text-white">My Tech Stack</h2>
+                            <h2 className="text-white section-title">{t("title")}</h2>
                         </div>
                     </div>
                 </div>
                 <div className="row justify-content-center">
-                    {/* skill card start */}
                     {skills?.map((item, i) => (
                         <div
                             key={i}
-                            className="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 mb-30"
+                            className={`${
+                                i < 2 ? "col-xl-6 col-lg-6" : "col-xl-4 col-lg-4"
+                            } col-md-6 col-12 mb-30`}
                             data-aos="fade-up"
-                            data-aos-anchor-placement="top-bottom"
                             data-aos-duration={1000 + i * 150}
                         >
-                            <div className="skill-card primary-bg shadow-hover">
-                                <i className={`${item.icon} skill-card-icon theme-color`} />
-                                <h3 className="skill-card-title">{item.title}</h3>
-                                <div>
+                            <div className="skill-card-2026 h-100">
+                                <div className="d-flex align-items-center mb-20">
+                                    <div
+                                        className="skill-card-icon-box mr-15"
+                                        style={{ borderColor: `${item.accent}44`, background: `${item.accent}18` }}
+                                    >
+                                        <i
+                                            className={`${item.icon} skill-card-icon`}
+                                            style={{ color: item.accent || "#9ef01a" }}
+                                        />
+                                    </div>
+                                    <h3 className="skill-card-title mb-0">
+                                        {t(`categories.${item.key}`)}
+                                    </h3>
+                                </div>
+                                <div className="tech-badge-container">
                                     {item.items.map((tech, j) => (
-                                        <span key={j} className="tech-badge">
+                                        <span key={j} className="tech-badge-2026">
                                             {tech}
                                         </span>
                                     ))}
@@ -83,14 +53,91 @@ export default function SkillArea() {
                             </div>
                         </div>
                     ))}
-                    {/* skill card end */}
                 </div>
             </div>
-            <div className="skill-text-style position-absolute d-none d-md-inline-block">
-                <span className="d-inline-block section-text-color">
-                    Skills
-                </span>
-            </div>
-        </div>
+
+            <style jsx>{`
+                .letter-spacing-1 {
+                    letter-spacing: 1.5px;
+                    font-size: 13px;
+                }
+
+                .section-title {
+                    font-size: 36px;
+                    font-weight: 700;
+                }
+
+                .skill-card-2026 {
+                    background: rgba(22, 27, 46, 0.7);
+                    backdrop-filter: blur(12px);
+                    border: 1px solid rgba(255, 255, 255, 0.08);
+                    border-radius: 14px;
+                    padding: 30px 26px;
+                    transition: all 0.3s ease;
+                }
+
+                .skill-card-2026:hover {
+                    transform: translateY(-5px);
+                    border-color: rgba(158, 240, 26, 0.3);
+                    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4), 0 0 20px rgba(158, 240, 26, 0.08);
+                }
+
+                .skill-card-icon-box {
+                    width: 44px;
+                    height: 44px;
+                    border-radius: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: 1px solid;
+                }
+
+                .skill-card-icon {
+                    font-size: 20px;
+                }
+
+                .skill-card-title {
+                    font-size: 18.5px;
+                    font-weight: 700;
+                    color: #fff;
+                    letter-spacing: -0.2px;
+                }
+
+                .tech-badge-container {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 8px;
+                    margin-top: 10px;
+                }
+
+                .tech-badge-2026 {
+                    display: inline-block;
+                    color: #e2e8f0;
+                    padding: 6px 13px;
+                    border-radius: 20px;
+                    font-size: 12.5px;
+                    font-weight: 500;
+                    border: 1px solid rgba(255, 255, 255, 0.12);
+                    background: rgba(255, 255, 255, 0.04);
+                    transition: all 0.25s ease;
+                }
+
+                .tech-badge-2026:hover {
+                    transform: translateY(-2px);
+                    background: rgba(158, 240, 26, 0.15);
+                    border-color: rgba(158, 240, 26, 0.4);
+                    color: #9ef01a;
+                }
+
+                @media (max-width: 768px) {
+                    .section-title {
+                        font-size: 26px;
+                    }
+                    .skill-card-2026 {
+                        padding: 22px 18px;
+                    }
+                }
+            `}</style>
+        </section>
     );
 }

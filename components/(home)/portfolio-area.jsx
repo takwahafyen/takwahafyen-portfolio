@@ -4,35 +4,46 @@ import { portfolioArea } from "@/data/site";
 import PortfolioLine from "./ui/portfolio-line";
 import PortfolioMarquee from "./ui/portfolio-marquee";
 import PortfolioLineModal from "./ui/portfolio-line-modal";
+import { useTranslations } from "next-intl";
 
 export default function PortfolioArea() {
+  const t = useTranslations("projects");
+  const items = t.raw("items");
+
   return (
-    <div id="works" className="portfolio-area over-hidden pb-165">
+    <section id="works" className="portfolio-area over-hidden pb-140 pt-60">
       <PortfolioMarquee />
-      <div className="portfolio-wrapper position-relative mt--5">
+
+      <div className="portfolio-wrapper position-relative mt-50">
         <div className="container">
           <div className="row">
-            <div className="col-12 text-center">
-              <div className="title">
-                <span className="theme-color text-uppercase d-block mb-2">
-                  Portfolio
-                </span>
-                <h2>My Recent Works</h2>
-              </div>
+            <div className="col-12 text-center mb-60">
+              <span className="theme-color text-uppercase font-weight-bold d-block mb-2 letter-spacing-1">
+                {t("label")}
+              </span>
+              <h2 className="text-white section-title">{t("title")}</h2>
             </div>
           </div>
 
-          <div className="row justify-content-center portfolio mt-80">
-            {portfolioArea?.slice(0, 4).map((item, i) => (
-              <div
-                key={i}
-                className="col-xl-6 col-lg-6 col-md-6 col-sm-12 mb-4 d-flex align-items-stretch"
-              >
-                <div className="portfolio-card w-100">
-                  <PortfolioLine data={item} />
+          {/* Render all 6 flagship projects */}
+          <div className="row g-4 portfolio-grid">
+            {portfolioArea?.map((item, i) => {
+              const itemText = items && items[i] ? items[i] : {};
+              return (
+                <div
+                  key={item.id || i}
+                  className="col-xl-6 col-lg-6 col-md-12 col-12 mb-35 d-flex align-items-stretch"
+                >
+                  <PortfolioLine
+                    data={{
+                      ...item,
+                      ...itemText,
+                      KeyAchievements: itemText.achievements,
+                    }}
+                  />
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           <PortfolioLineModal />
@@ -40,43 +51,22 @@ export default function PortfolioArea() {
       </div>
 
       <style jsx>{`
-        .portfolio-area {
+        .letter-spacing-1 {
+          letter-spacing: 1.5px;
+          font-size: 13px;
         }
 
-        .title h2 {
-          color: #fff;
-          font-size: 32px;
+        .section-title {
+          font-size: 36px;
           font-weight: 700;
-          margin-top: 10px;
-        }
-
-        .portfolio {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
-        }
-
-        .portfolio-card {
-          border-radius: 16px;
-          overflow: hidden;
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .portfolio-card:hover {
-          transform: translateY(-8px);
-          box-shadow: 0 6px 25px rgba(158, 240, 26, 0.3);
         }
 
         @media (max-width: 768px) {
-          .title h2 {
-            font-size: 24px;
-          }
-
-          .portfolio-card {
-            margin-bottom: 20px;
+          .section-title {
+            font-size: 26px;
           }
         }
       `}</style>
-    </div>
+    </section>
   );
 }

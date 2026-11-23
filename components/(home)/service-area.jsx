@@ -1,42 +1,55 @@
-import Image from "next/image";
 import ServiceAreaCard from "./ui/service-area-card";
 import { service } from "@/data/site";
+import { useTranslations } from "next-intl";
 
 export default function ServiceArea() {
+    const t = useTranslations("services");
+    const items = t.raw("items");
+
     return (
-        <div
+        <section
             id="service"
-            className="service-area section-bg over-hidden pt-160 pb-145"
+            className="service-area section-bg over-hidden pt-140 pb-120"
         >
             <div className="service-wrapper position-relative">
                 <div className="container">
                     <div className="row align-items-start">
-                        <div className="col-xl-12 col-lg-12  col-md-12  col-sm-12 col-12">
-                            <div className="title text-center">
-                                <span className="theme-color text-uppercase d-block mb-6">
-                                    What I do
-                                </span>
-                                <h2 className="text-white">Areas of Expertise</h2>
-                            </div>
+                        <div className="col-12 text-center mb-60">
+                            <span className="theme-color text-uppercase font-weight-bold d-block mb-2 letter-spacing-1">
+                                {t("label")}
+                            </span>
+                            <h2 className="text-white section-title">
+                                {t("title")}
+                            </h2>
                         </div>
                     </div>
-                    <div className="row service-wrappers mt-80">
-                        {/* service card start */}
-                        {service?.slice(0, 4).map((item, i) => (
-                            <ServiceAreaCard key={i} data={item} index={i} />
+                    <div className="row service-wrappers">
+                        {service?.map((item, i) => (
+                            <ServiceAreaCard
+                                key={i}
+                                data={{ ...item, ...(items ? items[i] : {}) }}
+                                index={i}
+                            />
                         ))}
-                        {/* service card end */}
                     </div>
                 </div>
-                <div className="about-icon position-absolute d-none d-md-inline-block z-index1 zoom-animation">
-                    <Image
-                        height={44}
-                        width={47}
-                        src="/images/shape/content-shape2.png"
-                        alt="shape 2"
-                    />
-                </div>
             </div>
-        </div>
+
+            <style jsx>{`
+                .letter-spacing-1 {
+                    letter-spacing: 1.5px;
+                    font-size: 13px;
+                }
+                .section-title {
+                    font-size: 36px;
+                    font-weight: 700;
+                }
+                @media (max-width: 768px) {
+                    .section-title {
+                        font-size: 26px;
+                    }
+                }
+            `}</style>
+        </section>
     );
 }

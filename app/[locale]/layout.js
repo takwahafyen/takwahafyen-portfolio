@@ -2,8 +2,8 @@ import Preloader from "@/components/ui/preloader";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
-import { routing, rtlLocales } from "@/i18n/routing";
-import { cairo, jostMedium, openSans } from "../fonts";
+import { routing } from "@/i18n/routing";
+import { jostMedium, openSans } from "../fonts";
 import "../globals.css";
 import Providers from "../providers";
 
@@ -43,9 +43,9 @@ export default async function RootLayout({ children, params }) {
     setRequestLocale(locale);
 
     return (
-        <html lang={locale} dir={rtlLocales.includes(locale) ? "rtl" : "ltr"}>
+        <html lang={locale} dir="ltr">
             <body
-                className={`${jostMedium.className} ${openSans.variable} ${cairo.variable} body-dark-mode`}
+                className={`${jostMedium.className} ${openSans.variable} body-dark-mode`}
             >
                 <Preloader />
                 <NextIntlClientProvider>
