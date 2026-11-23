@@ -107,44 +107,45 @@ export default function Education() {
         }
 
         .credentials-card {
-          background: rgba(22, 27, 46, 0.75);
+          background: var(--bg-secondary, #112240);
           backdrop-filter: blur(14px);
-          border: 1px solid rgba(255, 255, 255, 0.1);
+          border: 1px solid var(--navy-border, rgba(255, 255, 255, 0.1));
           border-radius: 16px;
           padding: 35px 30px;
           transition: all 0.3s ease;
         }
 
         .credentials-card:hover {
-          border-color: rgba(158, 240, 26, 0.35);
-          box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4), 0 0 25px rgba(158, 240, 26, 0.1);
+          border-color: var(--yellow-accent, #facc15);
+          box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3), 0 0 25px var(--yellow-glow, rgba(250, 204, 21, 0.2));
         }
 
         .card-badge {
-          background: rgba(158, 240, 26, 0.12);
-          border: 1px solid rgba(158, 240, 26, 0.3);
+          background: rgba(250, 204, 21, 0.12);
+          border: 1px solid rgba(250, 204, 21, 0.35);
           border-radius: 20px;
           padding: 5px 14px;
           font-size: 12.5px;
-          font-weight: 600;
-          color: #9ef01a;
+          font-weight: 700;
+          color: var(--yellow-accent, #facc15);
         }
 
         .cred-title {
           font-size: 22px;
           font-weight: 700;
           letter-spacing: -0.2px;
+          color: var(--text-primary, #ffffff);
         }
 
         .cred-text {
           font-size: 14.5px;
           line-height: 1.6;
-          color: #cbd5e1 !important;
+          color: var(--text-secondary, #cbd5e1);
         }
 
         .comp-item {
           background: rgba(255, 255, 255, 0.03);
-          border: 1px solid rgba(255, 255, 255, 0.06);
+          border: 1px solid var(--navy-border, rgba(255, 255, 255, 0.06));
           border-radius: 10px;
           padding: 12px 16px;
           transition: all 0.25s ease;
@@ -152,7 +153,7 @@ export default function Education() {
 
         .comp-item:hover {
           background: rgba(255, 255, 255, 0.06);
-          border-color: rgba(158, 240, 26, 0.2);
+          border-color: var(--yellow-accent, #facc15);
           transform: translateX(4px);
         }
 

@@ -202,12 +202,12 @@ export default function PortfolioLineModal() {
 
       <style jsx>{`
         .portfolio-modal-2026 {
-          background: #111628;
+          background: #0d1b2a;
           color: #fff;
           border-radius: 16px;
           padding: 30px;
-          border: 1px solid rgba(158, 240, 26, 0.3);
-          box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 35px rgba(158, 240, 26, 0.15);
+          border: 1px solid rgba(250, 204, 21, 0.3);
+          box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 35px rgba(250, 204, 21, 0.15);
         }
 
         .modal-category-badge {
@@ -221,11 +221,11 @@ export default function PortfolioLineModal() {
         }
 
         .modal-metric-badge {
-          background: rgba(158, 240, 26, 0.12);
-          border: 1px solid rgba(158, 240, 26, 0.3);
-          color: #9ef01a;
+          background: rgba(250, 204, 21, 0.12);
+          border: 1px solid rgba(250, 204, 21, 0.3);
+          color: #facc15;
           font-size: 12px;
-          font-weight: 600;
+          font-weight: 700;
           padding: 4px 12px;
           border-radius: 6px;
         }
@@ -246,15 +246,15 @@ export default function PortfolioLineModal() {
         }
 
         .modal-close-btn:hover {
-          background: #9ef01a;
-          color: #0c0e1a;
-          border-color: #9ef01a;
+          background: #facc15;
+          color: #0a192f;
+          border-color: #facc15;
           transform: rotate(90deg);
         }
 
         .modal-iframe {
           border-radius: 12px;
-          border: 1px solid rgba(158, 240, 26, 0.3);
+          border: 1px solid rgba(250, 204, 21, 0.3);
         }
 
         .modal-title {
@@ -265,9 +265,9 @@ export default function PortfolioLineModal() {
         }
 
         .modal-tagline {
-          color: #9ef01a;
+          color: #facc15;
           font-size: 15.5px;
-          font-weight: 500;
+          font-weight: 600;
         }
 
         .modal-links-group {
@@ -368,13 +368,13 @@ export default function PortfolioLineModal() {
         }
 
         .modal-tech-tag {
-          background: rgba(158, 240, 26, 0.1);
-          color: #9ef01a;
-          border: 1px solid rgba(158, 240, 26, 0.25);
+          background: rgba(250, 204, 21, 0.12);
+          color: #facc15;
+          border: 1px solid rgba(250, 204, 21, 0.3);
           padding: 5px 12px;
           border-radius: 6px;
           font-size: 12.5px;
-          font-weight: 500;
+          font-weight: 600;
         }
 
         @media (max-width: 576px) {

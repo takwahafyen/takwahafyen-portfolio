@@ -8,7 +8,6 @@ import PortfolioArea from "@/components/(home)/portfolio-area";
 import Experience from "@/components/(home)/experience";
 import FunFact from "@/components/(home)/fun-fact";
 import Education from "@/components/(home)/education";
-import GitHubAnalytics from "@/components/(home)/github-analytics";
 import Contact from "@/components/(home)/contact";
 import Footer from "@/components/footer/footer";
 
@@ -27,7 +26,6 @@ export default async function Home({ params }) {
             <Experience />
             <FunFact />
             <Education />
-            <GitHubAnalytics />
             <Contact />
             <Footer />
         </>

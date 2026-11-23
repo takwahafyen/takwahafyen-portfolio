@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import HeroSociable from "./ui/hero-sociable";
 import { Link as ScrollLink } from "react-scroll";
 import { TypeAnimation } from "react-type-animation";
 import { useTranslations } from "next-intl";
@@ -14,15 +13,15 @@ export default function Hero() {
 
   return (
     <div id="home" className="slider-area hero-2026-wrapper position-relative over-hidden">
-      {/* Background ambient lighting effects */}
+      {/* Background ambient lighting effects (Bleu Marine & Jaune) */}
       <div className="hero-glow-1 position-absolute" />
       <div className="hero-glow-2 position-absolute" />
       <div className="hero-grid-pattern position-absolute" />
 
-      <div className="container min-vh-100 d-flex align-items-center position-relative z-index11 pt-120 pb-80">
-        <div className="row align-items-center w-100 mx-0">
+      <div className="container min-vh-100 d-flex align-items-center position-relative z-index11 hero-content-container">
+        <div className="row align-items-center w-100 mx-0 g-4">
           {/* Left Column: Recruiter-Oriented Headline & Actions */}
-          <div className="col-xl-6 col-lg-6 col-md-12 col-12 mb-5 mb-lg-0">
+          <div className="col-xl-6 col-lg-6 col-md-12 col-12 mb-4 mb-lg-0">
             <div className="hero-content-box">
               {/* Status Badge */}
               <div
@@ -36,11 +35,11 @@ export default function Hero() {
 
               {/* Name */}
               <h1
-                className="hero-name white-text mb-15"
+                className="hero-name mb-15"
                 data-aos="fade-up"
                 data-aos-duration="1200"
               >
-                <span className="hero-greeting d-block theme-color">
+                <span className="hero-greeting d-block">
                   {t("hello")}
                 </span>
                 Takwa Hafyen
@@ -52,7 +51,7 @@ export default function Hero() {
                 data-aos="fade-up"
                 data-aos-duration="1400"
               >
-                <h2 className="title-lead text-white mb-10">
+                <h2 className="title-lead mb-10">
                   Software Engineer &amp; AI Architect
                 </h2>
                 <div className="specialty-pills d-flex flex-wrap gap-2 mb-20">
@@ -63,11 +62,11 @@ export default function Hero() {
                 </div>
 
                 <div className="typing-box d-flex align-items-center">
-                  <span className="typing-prefix text-white-50 mr-2">
+                  <span className="typing-prefix mr-2">
                     {t("passionate")}:
                   </span>
                   <TypeAnimation
-                    className="typer-text theme-color font-weight-bold"
+                    className="typer-text font-weight-bold"
                     sequence={typedSequence}
                     wrapper="span"
                     speed={40}
@@ -86,47 +85,71 @@ export default function Hero() {
                   to="works"
                   smooth={true}
                   duration={700}
-                  offset={-60}
-                  className="btn btn-primary-2026 cursor-pointer"
+                  offset={-70}
+                  className="btn btn-primary-yellow cursor-pointer"
                 >
                   <i className="fas fa-layer-group mr-2" />
                   {t("explore")}
                 </ScrollLink>
 
-                <a
-                  href="https://wa.me/21629196616"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn-whatsapp-2026"
-                >
-                  <i className="fab fa-whatsapp mr-2" />
-                  WhatsApp
-                </a>
-
-                <a
-                  href="https://github.com/takwahafyen"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn-secondary-2026"
-                >
-                  <i className="fab fa-github mr-2" />
-                  GitHub
-                </a>
-
                 <ScrollLink
                   to="contact"
                   smooth={true}
                   duration={700}
-                  offset={-60}
-                  className="btn btn-outline-2026 cursor-pointer"
+                  offset={-70}
+                  className="btn btn-outline-navy cursor-pointer"
                 >
+                  <i className="fas fa-paper-plane mr-2" />
                   {t("cta")}
                 </ScrollLink>
+              </div>
+
+              {/* Social Connect Strip directly under CTA (eliminates right-floating overlap!) */}
+              <div className="hero-social-strip d-flex align-items-center gap-2 mt-30 pt-10">
+                <span className="social-strip-label mr-2">Connect:</span>
+                <a
+                  href="https://linkedin.com/in/takwa-hafyen-472264282"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hero-social-icon"
+                  title="LinkedIn"
+                  aria-label="LinkedIn"
+                >
+                  <i className="fab fa-linkedin-in" />
+                </a>
+                <a
+                  href="https://github.com/takwahafyen"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hero-social-icon"
+                  title="GitHub"
+                  aria-label="GitHub"
+                >
+                  <i className="fab fa-github" />
+                </a>
+                <a
+                  href="https://wa.me/21629196616"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hero-social-icon hero-social-wa"
+                  title="WhatsApp"
+                  aria-label="WhatsApp"
+                >
+                  <i className="fab fa-whatsapp" />
+                </a>
+                <a
+                  href="mailto:takwa.hafyen@gmail.com"
+                  className="hero-social-icon"
+                  title="Email"
+                  aria-label="Email"
+                >
+                  <i className="fas fa-envelope" />
+                </a>
               </div>
             </div>
           </div>
 
-          {/* Right Column: 2026 Interactive Architecture & Telemetry HUD (Replaces Personal Photo!) */}
+          {/* Right Column: 2026 Interactive Architecture & Telemetry HUD */}
           <div className="col-xl-6 col-lg-6 col-md-12 col-12">
             <div
               className="terminal-card"
@@ -141,7 +164,7 @@ export default function Hero() {
                   <span className="dot dot-green"></span>
                 </div>
                 <div className="terminal-title">
-                  <i className="fas fa-terminal mr-2 theme-color" />
+                  <i className="fas fa-terminal mr-2 yellow-text" />
                   {t("terminalTitle")}
                 </div>
                 <div className="terminal-status-badge">
@@ -162,10 +185,10 @@ export default function Hero() {
                   <div className="telemetry-item">
                     <div className="telemetry-head d-flex justify-content-between align-items-center">
                       <span className="tel-title">
-                        <i className="fas fa-microphone-alt mr-2 text-cyan" />
+                        <i className="fas fa-microphone-alt mr-2 yellow-text" />
                         LiveKit SFU + Silero VAD
                       </span>
-                      <span className="tel-pill tel-pill-green">&lt;350ms Barge-In</span>
+                      <span className="tel-pill tel-pill-yellow">&lt;350ms Barge-In</span>
                     </div>
                     <div className="tel-desc">
                       Real-time streaming STT (Deepgram) &bull; OpenAI TTS &bull; Sub-second conversational turnaround
@@ -176,7 +199,7 @@ export default function Hero() {
                   <div className="telemetry-item">
                     <div className="telemetry-head d-flex justify-content-between align-items-center">
                       <span className="tel-title">
-                        <i className="fas fa-network-wired mr-2 text-warning" />
+                        <i className="fas fa-network-wired mr-2 text-cyan" />
                         3-Tier CrewAI Cluster
                       </span>
                       <span className="tel-pill tel-pill-cyan">pgvector Hybrid RAG</span>
@@ -204,10 +227,10 @@ export default function Hero() {
                   <div className="telemetry-item">
                     <div className="telemetry-head d-flex justify-content-between align-items-center">
                       <span className="tel-title">
-                        <i className="fas fa-shield-check mr-2 text-success" />
+                        <i className="fas fa-shield-alt mr-2 yellow-text" />
                         Security &amp; QA Pipeline
                       </span>
-                      <span className="tel-pill tel-pill-green">100% Passing</span>
+                      <span className="tel-pill tel-pill-yellow">100% Passing</span>
                     </div>
                     <div className="tel-desc">
                       CodeQL SAST Clean &bull; Trivy Container Scan &bull; Cypress E2E &bull; PHPStan Level 8 &bull; Ragas AI Eval
@@ -216,14 +239,14 @@ export default function Hero() {
                 </div>
 
                 {/* Footer status summary */}
-                <div className="terminal-footer mt-3 pt-3 d-flex flex-wrap justify-content-between align-items-center border-top border-secondary-subtle">
-                  <span className="mono-stat text-white-50">
-                    <i className="fas fa-bolt text-warning mr-1" /> MTTR: &lt;5s
+                <div className="terminal-footer mt-3 pt-3 d-flex flex-wrap justify-content-between align-items-center">
+                  <span className="mono-stat">
+                    <i className="fas fa-bolt yellow-text mr-1" /> MTTR: &lt;5s
                   </span>
-                  <span className="mono-stat text-white-50">
-                    <i className="fas fa-bullseye theme-color mr-1" /> Precision: 95%
+                  <span className="mono-stat">
+                    <i className="fas fa-bullseye yellow-text mr-1" /> Precision: 95%
                   </span>
-                  <span className="mono-stat text-white-50">
+                  <span className="mono-stat">
                     <i className="fas fa-shield-alt text-cyan mr-1" /> OWASP Top 10
                   </span>
                 </div>
@@ -233,15 +256,16 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Floating Sociable Links */}
-      <HeroSociable />
-
-      {/* Modern 2026 Styling */}
       <style jsx>{`
         .hero-2026-wrapper {
           min-height: 100vh;
-          background: #090c15;
+          background: var(--bg-primary, #0a192f);
           position: relative;
+        }
+
+        .hero-content-container {
+          padding-top: 135px;
+          padding-bottom: 70px;
         }
 
         .hero-glow-1 {
@@ -250,7 +274,7 @@ export default function Hero() {
           width: 500px;
           height: 500px;
           border-radius: 50%;
-          background: radial-gradient(circle, rgba(158, 240, 26, 0.12) 0%, rgba(158, 240, 26, 0) 70%);
+          background: radial-gradient(circle, var(--yellow-glow, rgba(250, 204, 21, 0.12)) 0%, transparent 70%);
           filter: blur(60px);
           pointer-events: none;
         }
@@ -261,7 +285,7 @@ export default function Hero() {
           width: 600px;
           height: 600px;
           border-radius: 50%;
-          background: radial-gradient(circle, rgba(0, 210, 255, 0.1) 0%, rgba(0, 210, 255, 0) 70%);
+          background: radial-gradient(circle, rgba(14, 116, 144, 0.15) 0%, transparent 70%);
           filter: blur(70px);
           pointer-events: none;
         }
@@ -275,8 +299,8 @@ export default function Hero() {
         }
 
         .status-pill {
-          background: rgba(158, 240, 26, 0.1);
-          border: 1px solid rgba(158, 240, 26, 0.3);
+          background: rgba(250, 204, 21, 0.1);
+          border: 1px solid rgba(250, 204, 21, 0.35);
           border-radius: 30px;
           padding: 6px 18px;
           backdrop-filter: blur(8px);
@@ -286,247 +310,234 @@ export default function Hero() {
           width: 9px;
           height: 9px;
           border-radius: 50%;
-          background-color: #9ef01a;
-          box-shadow: 0 0 10px #9ef01a;
+          background-color: var(--yellow-accent, #facc15);
+          box-shadow: 0 0 10px var(--yellow-accent, #facc15);
           animation: pulseAnim 2s infinite;
         }
 
         @keyframes pulseAnim {
           0% {
             transform: scale(0.95);
-            box-shadow: 0 0 0 0 rgba(158, 240, 26, 0.7);
+            box-shadow: 0 0 0 0 rgba(250, 204, 21, 0.7);
           }
           70% {
             transform: scale(1.1);
-            box-shadow: 0 0 0 8px rgba(158, 240, 26, 0);
+            box-shadow: 0 0 0 8px rgba(250, 204, 21, 0);
           }
           100% {
             transform: scale(0.95);
-            box-shadow: 0 0 0 0 rgba(158, 240, 26, 0);
+            box-shadow: 0 0 0 0 rgba(250, 204, 21, 0);
           }
         }
 
         .status-text {
           font-size: 13px;
           font-weight: 600;
-          color: #9ef01a;
+          color: var(--yellow-accent, #facc15);
           letter-spacing: 0.5px;
-        }
-
-        .hero-name {
-          font-size: 54px;
-          font-weight: 800;
-          line-height: 1.15;
-          letter-spacing: -0.5px;
         }
 
         .hero-greeting {
           font-size: 20px;
-          font-weight: 500;
+          color: var(--yellow-accent, #facc15);
+          font-weight: 600;
           letter-spacing: 1px;
+          text-transform: uppercase;
+          margin-bottom: 4px;
+        }
+
+        .hero-name {
+          font-size: 52px;
+          font-weight: 800;
+          color: var(--text-primary, #ffffff);
+          line-height: 1.1;
+          letter-spacing: -1px;
         }
 
         .title-lead {
-          font-size: 26px;
+          font-size: 24px;
           font-weight: 700;
-          color: #f1f4f9;
+          color: var(--text-primary, #ffffff);
         }
 
         .specialty-pills {
-          gap: 8px;
+          margin-top: 12px;
         }
 
         .spec-badge {
-          background: rgba(255, 255, 255, 0.05);
-          border: 1px solid rgba(255, 255, 255, 0.12);
-          color: #cbd5e1;
-          font-size: 13px;
-          font-weight: 500;
+          background: var(--bg-secondary, rgba(17, 34, 64, 0.8));
+          border: 1px solid var(--navy-border, rgba(255, 255, 255, 0.12));
+          color: var(--text-secondary, #cbd5e1);
           padding: 4px 12px;
-          border-radius: 6px;
+          border-radius: 20px;
+          font-size: 12px;
+          font-weight: 500;
         }
 
         .spec-highlight {
-          background: rgba(158, 240, 26, 0.15);
-          border-color: rgba(158, 240, 26, 0.4);
-          color: #9ef01a;
-          font-weight: 600;
+          border-color: var(--yellow-accent, #facc15);
+          color: var(--yellow-accent, #facc15);
+          background: rgba(250, 204, 21, 0.08);
         }
 
         .typing-box {
-          font-size: 19px;
-          min-height: 38px;
+          font-size: 18px;
+          min-height: 32px;
         }
 
-        .typer-text {
-          color: #9ef01a;
+        .typing-prefix {
+          color: var(--text-secondary, #94a3b8);
         }
 
-        .hero-cta-group {
-          gap: 14px;
+        :global(.typer-text) {
+          color: var(--yellow-accent, #facc15) !important;
         }
 
-        .btn-primary-2026 {
-          background: #9ef01a;
-          color: #0c0e1a;
+        .btn-primary-yellow {
+          background: var(--yellow-accent, #facc15);
+          color: #0a192f !important;
+          border: 1px solid var(--yellow-accent, #facc15);
+          padding: 12px 26px;
+          border-radius: 30px;
           font-weight: 700;
           font-size: 14px;
-          letter-spacing: 0.5px;
-          text-transform: uppercase;
-          padding: 13px 24px;
-          border-radius: 8px;
           transition: all 0.3s ease;
-          border: 1px solid #9ef01a;
-          text-decoration: none;
         }
 
-        .btn-primary-2026:hover {
-          background: #b7f86a;
+        .btn-primary-yellow:hover {
+          background: #ffd600;
           transform: translateY(-2px);
-          box-shadow: 0 6px 20px rgba(158, 240, 26, 0.35);
-          color: #0c0e1a;
+          box-shadow: 0 8px 20px var(--yellow-glow, rgba(250, 204, 21, 0.35));
         }
 
-        .btn-whatsapp-2026 {
-          background: rgba(37, 211, 102, 0.15);
-          color: #25d366;
-          font-weight: 700;
-          font-size: 14px;
-          padding: 13px 22px;
-          border-radius: 8px;
-          border: 1px solid rgba(37, 211, 102, 0.4);
-          transition: all 0.3s ease;
-          text-decoration: none;
-        }
-
-        .btn-whatsapp-2026:hover {
-          background: #25d366;
-          color: #ffffff;
-          transform: translateY(-2px);
-          box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
-        }
-
-        .btn-secondary-2026 {
-          background: rgba(255, 255, 255, 0.08);
-          color: #ffffff;
-          font-weight: 600;
-          font-size: 14px;
-          padding: 13px 22px;
-          border-radius: 8px;
-          border: 1px solid rgba(255, 255, 255, 0.2);
-          transition: all 0.3s ease;
-          text-decoration: none;
-        }
-
-        .btn-secondary-2026:hover {
-          background: rgba(255, 255, 255, 0.16);
-          border-color: rgba(255, 255, 255, 0.4);
-          transform: translateY(-2px);
-          color: #fff;
-        }
-
-        .btn-outline-2026 {
+        .btn-outline-navy {
           background: transparent;
-          color: #cbd5e1;
+          color: var(--text-primary, #ffffff) !important;
+          border: 1px solid var(--yellow-accent, #facc15);
+          padding: 12px 24px;
+          border-radius: 30px;
           font-weight: 600;
           font-size: 14px;
-          padding: 13px 20px;
-          border-radius: 8px;
-          border: 1px solid rgba(255, 255, 255, 0.15);
           transition: all 0.3s ease;
-          text-decoration: none;
         }
 
-        .btn-outline-2026:hover {
-          border-color: #9ef01a;
-          color: #9ef01a;
+        .btn-outline-navy:hover {
+          background: var(--yellow-accent, #facc15);
+          color: #0a192f !important;
           transform: translateY(-2px);
         }
 
-        /* 2026 Terminal HUD Card */
+        .social-strip-label {
+          font-size: 13px;
+          color: var(--text-muted, #94a3b8);
+          font-weight: 500;
+        }
+
+        .hero-social-icon {
+          width: 38px;
+          height: 38px;
+          border-radius: 50%;
+          background: var(--bg-secondary, rgba(17, 34, 64, 0.8));
+          border: 1px solid var(--navy-border, rgba(255, 255, 255, 0.12));
+          color: var(--text-secondary, #cbd5e1);
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 16px;
+          transition: all 0.25s ease;
+          text-decoration: none;
+        }
+
+        .hero-social-icon:hover {
+          color: var(--yellow-accent, #facc15);
+          border-color: var(--yellow-accent, #facc15);
+          transform: translateY(-2px);
+          box-shadow: 0 4px 12px var(--yellow-glow, rgba(250, 204, 21, 0.3));
+        }
+
+        .hero-social-wa:hover {
+          color: #25d366 !important;
+          border-color: #25d366 !important;
+        }
+
+        /* Terminal styling in Bleu Marine & Jaune */
         .terminal-card {
-          background: rgba(17, 24, 39, 0.85);
-          backdrop-filter: blur(16px);
-          border: 1px solid rgba(255, 255, 255, 0.12);
+          background: var(--bg-secondary, #0d1b2a);
+          border: 1px solid var(--navy-border, rgba(255, 255, 255, 0.1));
           border-radius: 14px;
-          box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5), 0 0 25px rgba(158, 240, 26, 0.08);
           overflow: hidden;
+          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
           transition: all 0.3s ease;
         }
 
         .terminal-card:hover {
-          border-color: rgba(158, 240, 26, 0.35);
-          box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6), 0 0 30px rgba(158, 240, 26, 0.15);
+          border-color: var(--yellow-accent, #facc15);
+          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), 0 0 25px var(--yellow-glow, rgba(250, 204, 21, 0.15));
         }
 
         .terminal-header {
-          background: rgba(26, 34, 53, 0.95);
+          background: rgba(10, 25, 47, 0.95);
           padding: 12px 18px;
-          border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+          border-bottom: 1px solid var(--navy-border, rgba(255, 255, 255, 0.08));
         }
 
         .terminal-dots {
-          gap: 7px;
+          gap: 6px;
         }
 
         .dot {
           width: 11px;
           height: 11px;
           border-radius: 50%;
-          display: inline-block;
         }
 
-        .dot-red {
-          background: #ff5f56;
-        }
-        .dot-yellow {
-          background: #ffbd2e;
-        }
-        .dot-green {
-          background: #27c93f;
-        }
+        .dot-red { background: #ff5f56; }
+        .dot-yellow { background: #ffbd2e; }
+        .dot-green { background: #27c93f; }
 
         .terminal-title {
           font-family: monospace;
           font-size: 13px;
-          color: #94a3b8;
-          font-weight: 500;
+          color: var(--text-secondary, #cbd5e1);
         }
 
         .terminal-status-badge {
+          font-family: monospace;
           font-size: 11px;
           font-weight: 700;
-          color: #27c93f;
-          display: flex;
-          align-items: center;
-          gap: 5px;
-          letter-spacing: 0.5px;
+          color: var(--yellow-accent, #facc15);
+          background: rgba(250, 204, 21, 0.12);
+          border: 1px solid rgba(250, 204, 21, 0.3);
+          border-radius: 12px;
+          padding: 3px 10px;
         }
 
         .live-indicator {
-          width: 7px;
-          height: 7px;
-          border-radius: 50%;
-          background: #27c93f;
           display: inline-block;
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background: var(--yellow-accent, #facc15);
+          margin-right: 4px;
+          animation: pulseAnim 1.5s infinite;
         }
 
         .terminal-body {
-          padding: 22px 24px;
-          font-family: "Fira Code", monospace, sans-serif;
+          padding: 20px 22px;
+          font-family: monospace;
         }
 
         .cmd-line {
-          font-size: 14px;
+          font-size: 13px;
         }
 
         .prompt-path {
-          color: #9ef01a;
-          font-weight: 600;
+          color: var(--yellow-accent, #facc15);
+          font-weight: 700;
         }
 
         .prompt-cmd {
-          color: #e2e8f0;
+          color: var(--text-primary, #ffffff);
         }
 
         .telemetry-grid {
@@ -536,106 +547,93 @@ export default function Hero() {
         }
 
         .telemetry-item {
-          background: rgba(255, 255, 255, 0.03);
-          border: 1px solid rgba(255, 255, 255, 0.07);
+          background: rgba(10, 25, 47, 0.6);
+          border: 1px solid var(--navy-border, rgba(255, 255, 255, 0.06));
           border-radius: 10px;
-          padding: 12px 16px;
+          padding: 12px 14px;
           transition: all 0.25s ease;
         }
 
         .telemetry-item:hover {
-          background: rgba(255, 255, 255, 0.06);
-          border-color: rgba(158, 240, 26, 0.2);
-          transform: translateX(4px);
+          background: rgba(17, 34, 64, 0.85);
+          border-color: rgba(250, 204, 21, 0.3);
         }
 
         .tel-title {
-          font-size: 13.5px;
+          font-size: 13px;
           font-weight: 600;
-          color: #f8fafc;
-        }
-
-        .tel-desc {
-          font-size: 12px;
-          color: #94a3b8;
-          margin-top: 4px;
-          line-height: 1.4;
+          color: var(--text-primary, #ffffff);
         }
 
         .tel-pill {
           font-size: 11px;
           font-weight: 700;
-          padding: 3px 9px;
+          padding: 2px 10px;
           border-radius: 12px;
-          letter-spacing: 0.3px;
         }
 
-        .tel-pill-green {
-          background: rgba(158, 240, 26, 0.15);
-          color: #9ef01a;
-          border: 1px solid rgba(158, 240, 26, 0.35);
+        .tel-pill-yellow {
+          background: rgba(250, 204, 21, 0.15);
+          color: var(--yellow-accent, #facc15);
+          border: 1px solid rgba(250, 204, 21, 0.4);
         }
 
         .tel-pill-cyan {
-          background: rgba(0, 210, 255, 0.15);
-          color: #00d2ff;
-          border: 1px solid rgba(0, 210, 255, 0.35);
+          background: rgba(56, 189, 248, 0.15);
+          color: #38bdf8;
+          border: 1px solid rgba(56, 189, 248, 0.35);
         }
 
         .tel-pill-purple {
-          background: rgba(168, 85, 247, 0.15);
-          color: #c084fc;
-          border: 1px solid rgba(168, 85, 247, 0.35);
+          background: rgba(167, 139, 250, 0.15);
+          color: #a78bfa;
+          border: 1px solid rgba(167, 139, 250, 0.35);
         }
 
-        .text-cyan {
-          color: #00d2ff;
+        .tel-desc {
+          font-size: 11.5px;
+          color: var(--text-muted, #94a3b8);
+          margin-top: 5px;
+          line-height: 1.4;
         }
-        .text-purple {
-          color: #c084fc;
+
+        .terminal-footer {
+          border-top: 1px solid var(--navy-border, rgba(255, 255, 255, 0.08));
         }
 
         .mono-stat {
           font-size: 12px;
+          color: var(--text-secondary, #94a3b8);
           font-weight: 500;
         }
 
-        /* Responsive Breakpoints */
+        .yellow-text {
+          color: var(--yellow-accent, #facc15);
+        }
+
+        .text-cyan {
+          color: #38bdf8;
+        }
+
+        .text-purple {
+          color: #a78bfa;
+        }
+
         @media (max-width: 991px) {
+          .hero-content-container {
+            padding-top: 110px;
+          }
           .hero-name {
-            font-size: 40px;
+            font-size: 38px;
           }
           .title-lead {
-            font-size: 22px;
-          }
-          .typing-box {
-            font-size: 16px;
-          }
-          .terminal-card {
-            margin-top: 35px;
+            font-size: 20px;
           }
         }
 
         @media (max-width: 576px) {
           .hero-name {
-            font-size: 32px;
-          }
-          .title-lead {
-            font-size: 19px;
-          }
-          .btn-primary-2026,
-          .btn-whatsapp-2026,
-          .btn-secondary-2026,
-          .btn-outline-2026 {
-            width: 100%;
-            text-align: center;
-          }
-          .hero-cta-group {
-            flex-direction: column;
-            gap: 10px;
-          }
-          .terminal-body {
-            padding: 16px;
+            font-size: 30px;
           }
         }
       `}</style>

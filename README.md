@@ -44,11 +44,11 @@ Supported Locale Routes:
 Built to demonstrate modern 2026 software engineering rigor, this portfolio serves as a showcase of production systems architecture, cloud-native full-stack engineering, and agentic AI integration.
 
 ### Key Architectural Highlights
+* 🎨 **Navy Blue & Gold-Yellow Theme (`Bleu Marine & Jaune`):** Sophisticated engineering aesthetic with deep luxury navy (`#0a192f`) and vibrant gold-yellow (`#facc15`), equipped with an interactive **Light / Dark mode toggle**.
 * 🤖 **2026 Agentic AI Telemetry Terminal:** Live glassmorphic terminal HUD tracking streaming voice latency (`<350ms`), multi-agent CrewAI clusters, pgvector hybrid RAG status, and automated CI/CD passes.
 * 🌍 **Native Trilingual Localization (`next-intl`):** Full routing-based internationalization across **English (default)**, **French**, and **Spanish** with instantaneous client-side switching.
-* 💬 **Direct WhatsApp Connect:** Seamless mobile and desktop integration with direct WhatsApp connect (`+216 29 19 66 16`).
+* 💬 **Direct WhatsApp Connect:** Direct WhatsApp connect (`+216 29 19 66 16`) embedded in contact channels and footer.
 * 🛡️ **Security-First & Hardened:** Non-root Docker UID 1001 compliance, OWASP Top 10 best practices, CodeQL SAST verification, and Aquasec Trivy container scanning.
-* 📊 **Live GitHub Analytics Integration:** Embedded TokyoNight-styled metrics pulling dynamic GitHub statistics, top language breakdowns, and contribution streaks.
 * 🎓 **Engineering Credentials Panel:** Visual accreditation HUD highlighting national engineering diploma curricula (ENIG), rigorous preparatory mathematics/physics (IPEIM), and distributed systems competencies.
 * 📬 **Production Contact & Delivery:** Responsive contact channel powered by EmailJS, interactive Leaflet geospatial mapping, direct WhatsApp connect, and professional recruiter links.
 

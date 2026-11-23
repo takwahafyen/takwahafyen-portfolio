@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { toggleSidebar } from "@/redux/features/toggle/toggleSlice";
 import { useTranslations } from "next-intl";
 import LanguageSwitcher from "./ui/language-switcher";
+import ThemeToggle from "./ui/theme-toggle";
 
 const social = [
     {
@@ -81,7 +82,10 @@ export default function SidebarNavigation() {
                     ))}
                 </Menu>
 
-                <LanguageSwitcher className="justify-content-center mt-30" />
+                <div className="d-flex align-items-center justify-content-center gap-3 mt-30 px-3">
+                    <LanguageSwitcher />
+                    <ThemeToggle />
+                </div>
 
                 <div className="sidebar-social mt-4 text-center">
                     <div className="d-flex justify-content-center gap-3">
@@ -91,7 +95,7 @@ export default function SidebarNavigation() {
                                 href={s.href}
                                 target={s.href.startsWith("mailto") ? "_self" : "_blank"}
                                 rel="noopener noreferrer"
-                                className="sidebar-social-link text-white p-2"
+                                className="sidebar-social-link p-2"
                                 aria-label={s.name}
                                 style={{ color: s.color }}
                             >
@@ -101,6 +105,25 @@ export default function SidebarNavigation() {
                     </div>
                 </div>
             </Sidebar>
+
+            <style jsx>{`
+                :global(.ps-sidebar-container) {
+                    background: #0a192f !important;
+                    border-right: 1px solid rgba(250, 204, 21, 0.2) !important;
+                }
+                :global(.ps-menu-button) {
+                    color: #e2e8f0 !important;
+                    font-size: 15px;
+                }
+                :global(.ps-menu-button:hover) {
+                    color: #facc15 !important;
+                    background: rgba(250, 204, 21, 0.08) !important;
+                }
+                :global(.ui-sidebar-active) {
+                    color: #facc15 !important;
+                    font-weight: 700;
+                }
+            `}</style>
         </div>
     );
 }

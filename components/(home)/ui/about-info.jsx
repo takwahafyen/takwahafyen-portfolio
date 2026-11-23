@@ -13,10 +13,10 @@ export default function AboutInfo() {
         <span className="theme-color text-uppercase font-weight-bold d-block mb-2 letter-spacing-1">
           {t("label")}
         </span>
-        <h2 className="text-white mb-25 about-main-title">
+        <h2 className="mb-25 about-main-title">
           {t("title")}
         </h2>
-        <p className="lead-text text-light-muted mx-auto">
+        <p className="lead-text mx-auto">
           {t("text")}
         </p>
       </div>
@@ -29,7 +29,7 @@ export default function AboutInfo() {
               <div className="pillar-icon-box mb-20">
                 <i className={`${pillar.icon} pillar-icon`} />
               </div>
-              <h3 className="pillar-title text-white mb-12">
+              <h3 className="pillar-title mb-12">
                 {pillar.title}
               </h3>
               <p className="pillar-desc mb-0">
@@ -42,11 +42,11 @@ export default function AboutInfo() {
 
       {/* Engineering Philosophy Quote Bar */}
       <div className="philosophy-bar mt-40 p-4 rounded-3 text-center">
-        <i className="fas fa-quote-left text-muted mr-3 mb-2" />
-        <span className="philosophy-text font-italic text-white">
+        <i className="fas fa-quote-left mr-3 mb-2 quote-icon" />
+        <span className="philosophy-text font-italic">
           &ldquo;{t("quote")}&rdquo;
         </span>
-        <i className="fas fa-quote-right text-muted ml-3 mt-2" />
+        <i className="fas fa-quote-right ml-3 mt-2 quote-icon" />
       </div>
 
       <style jsx>{`
@@ -61,110 +61,94 @@ export default function AboutInfo() {
           line-height: 1.25;
           max-width: 850px;
           margin-inline: auto;
+          color: var(--text-primary, #ffffff);
         }
 
         .lead-text {
           font-size: 17px;
           line-height: 1.7;
-          color: #cbd5e1;
+          color: var(--text-secondary, #cbd5e1);
           max-width: 820px;
         }
 
         .pillar-card {
-          background: rgba(22, 27, 46, 0.7);
+          background: var(--bg-secondary, #112240);
           backdrop-filter: blur(12px);
-          border: 1px solid rgba(255, 255, 255, 0.08);
+          border: 1px solid var(--navy-border, rgba(255, 255, 255, 0.08));
           border-radius: 14px;
           padding: 30px 26px;
-          transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+          transition: all 0.35s ease;
           position: relative;
-        }
-
-        .pillar-card::before {
-          content: "";
-          position: absolute;
-          inset: 0;
-          border-radius: 14px;
-          padding: 1px;
-          background: linear-gradient(135deg, rgba(158, 240, 26, 0.25), transparent);
-          -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-          -webkit-mask-composite: xor;
-          mask-composite: exclude;
-          pointer-events: none;
-          opacity: 0;
-          transition: opacity 0.35s ease;
         }
 
         .pillar-card:hover {
           transform: translateY(-6px);
-          background: rgba(26, 33, 56, 0.85);
-          border-color: rgba(158, 240, 26, 0.35);
-          box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), 0 0 20px rgba(158, 240, 26, 0.1);
-        }
-
-        .pillar-card:hover::before {
-          opacity: 1;
+          border-color: var(--yellow-accent, #facc15);
+          box-shadow: 0 16px 35px rgba(0, 0, 0, 0.25), 0 0 20px var(--yellow-glow, rgba(250, 204, 21, 0.15));
         }
 
         .pillar-icon-box {
-          width: 52px;
-          height: 52px;
+          width: 56px;
+          height: 56px;
           border-radius: 12px;
-          background: rgba(158, 240, 26, 0.12);
+          background: rgba(250, 204, 21, 0.12);
           display: flex;
           align-items: center;
           justify-content: center;
-          border: 1px solid rgba(158, 240, 26, 0.25);
+          border: 1px solid rgba(250, 204, 21, 0.3);
+          transition: all 0.3s ease;
+        }
+
+        :global(.pillar-icon) {
+          font-size: 24px;
+          color: var(--yellow-accent, #facc15);
           transition: all 0.3s ease;
         }
 
         .pillar-card:hover .pillar-icon-box {
-          background: #9ef01a;
-          transform: scale(1.05);
+          background: var(--yellow-accent, #facc15);
+          transform: scale(1.08);
         }
 
-        .pillar-icon {
-          font-size: 22px;
-          color: #9ef01a;
-          transition: color 0.3s ease;
-        }
-
-        .pillar-card:hover .pillar-icon {
-          color: #0c0e1a;
+        .pillar-card:hover :global(.pillar-icon) {
+          color: #0a192f;
         }
 
         .pillar-title {
           font-size: 19px;
-          font-weight: 600;
-          letter-spacing: -0.2px;
+          font-weight: 700;
+          color: var(--text-primary, #ffffff);
+          letter-spacing: -0.3px;
         }
 
         .pillar-desc {
           font-size: 14.5px;
-          color: #94a3b8;
-          line-height: 1.6;
+          line-height: 1.65;
+          color: var(--text-muted, #94a3b8);
         }
 
         .philosophy-bar {
-          background: rgba(158, 240, 26, 0.05);
-          border: 1px dashed rgba(158, 240, 26, 0.3);
+          background: var(--bg-secondary, #112240);
+          border: 1px solid var(--navy-border, rgba(255, 255, 255, 0.08));
           border-radius: 12px;
         }
 
         .philosophy-text {
-          font-size: 17px;
-          letter-spacing: 0.5px;
+          font-size: 16px;
+          letter-spacing: 0.3px;
+          color: var(--text-primary, #ffffff);
+        }
+
+        .quote-icon {
+          color: var(--yellow-accent, #facc15);
         }
 
         @media (max-width: 768px) {
           .about-main-title {
             font-size: 26px;
           }
-          .lead-text {
-            font-size: 15px;
-          }
           .pillar-card {
-            padding: 24px 20px;
+            padding: 22px 18px;
           }
         }
       `}</style>

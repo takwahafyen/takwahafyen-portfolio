@@ -157,9 +157,9 @@ export default function PortfolioLine({ data }) {
 
       <style jsx>{`
         .portfolio-card-2026 {
-          background: rgba(22, 27, 46, 0.75);
+          background: var(--bg-secondary, #112240);
           backdrop-filter: blur(14px);
-          border: 1px solid rgba(255, 255, 255, 0.09);
+          border: 1px solid var(--navy-border, rgba(255, 255, 255, 0.09));
           border-radius: 16px;
           padding: 30px;
           transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
@@ -168,9 +168,8 @@ export default function PortfolioLine({ data }) {
 
         .portfolio-card-2026:hover {
           transform: translateY(-6px);
-          background: rgba(26, 33, 56, 0.9);
-          border-color: rgba(158, 240, 26, 0.4);
-          box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), 0 0 25px rgba(158, 240, 26, 0.12);
+          border-color: var(--yellow-accent, #facc15);
+          box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35), 0 0 25px var(--yellow-glow, rgba(250, 204, 21, 0.15));
         }
 
         .category-pill {
@@ -189,32 +188,32 @@ export default function PortfolioLine({ data }) {
         }
 
         .metric-chip {
-          background: rgba(158, 240, 26, 0.1);
-          border: 1px solid rgba(158, 240, 26, 0.25);
+          background: rgba(250, 204, 21, 0.12);
+          border: 1px solid rgba(250, 204, 21, 0.3);
           border-radius: 6px;
           padding: 3px 10px;
           font-size: 11.5px;
-          font-weight: 600;
-          color: #9ef01a;
+          font-weight: 700;
+          color: var(--yellow-accent, #facc15);
           letter-spacing: 0.2px;
         }
 
         .project-title-2026 {
           font-size: 22px;
           font-weight: 700;
-          color: #ffffff;
+          color: var(--text-primary, #ffffff);
           letter-spacing: -0.3px;
         }
 
         .client-subtitle {
           font-size: 13px;
-          font-weight: 500;
-          color: #ffda79;
+          font-weight: 600;
+          color: var(--yellow-accent, #facc15);
         }
 
         .project-tagline {
           font-size: 14.5px;
-          color: #cbd5e1;
+          color: var(--text-secondary, #cbd5e1);
           line-height: 1.5;
         }
 
@@ -228,14 +227,14 @@ export default function PortfolioLine({ data }) {
           display: flex;
           align-items: baseline;
           font-size: 13.5px;
-          color: #94a3b8;
+          color: var(--text-muted, #94a3b8);
           line-height: 1.55;
           margin-bottom: 8px;
         }
 
         .highlight-icon {
           font-size: 10px;
-          color: #9ef01a;
+          color: var(--yellow-accent, #facc15);
           flex-shrink: 0;
         }
 
@@ -258,9 +257,9 @@ export default function PortfolioLine({ data }) {
         }
 
         .tech-badge:hover {
-          background: rgba(158, 240, 26, 0.15);
-          color: #9ef01a;
-          border-color: rgba(158, 240, 26, 0.35);
+          background: rgba(250, 204, 21, 0.15);
+          color: var(--yellow-accent, #facc15);
+          border-color: rgba(250, 204, 21, 0.4);
         }
 
         .tech-badge-more {
@@ -318,15 +317,17 @@ export default function PortfolioLine({ data }) {
         }
 
         .action-btn-details {
-          background: rgba(158, 240, 26, 0.12);
-          color: #9ef01a;
-          border: 1px solid rgba(158, 240, 26, 0.3);
+          background: var(--yellow-accent, #facc15);
+          color: #0a192f;
+          border: 1px solid var(--yellow-accent, #facc15);
+          font-weight: 700;
         }
 
         .action-btn-details:hover {
-          background: #9ef01a;
-          color: #0c0e1a;
+          background: #ffd600;
+          color: #0a192f;
           transform: translateX(3px);
+          box-shadow: 0 4px 15px var(--yellow-glow, rgba(250, 204, 21, 0.4));
         }
 
         @media (max-width: 576px) {

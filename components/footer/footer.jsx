@@ -54,7 +54,7 @@ export default function Footer() {
             />
           </div>
           <p className="footer-text">
-            © {new Date().getFullYear()} Takwa Hafyen • Software Engineer & AI Architect
+            © {new Date().getFullYear()} Takwa Hafyen • Software Engineer &amp; AI Architect
           </p>
         </div>
 
@@ -94,21 +94,16 @@ export default function Footer() {
       <div className="footer-bottom">
         <p>
           Architected with <span className="heart">⚡</span> by{" "}
-          <span className="author">Takwa Hafyen</span> • Production-Grade Agentic AI & Full-Stack Systems
+          <span className="author">Takwa Hafyen</span> • Production-Grade Agentic AI &amp; Full-Stack Systems
         </p>
       </div>
 
-      {/* CSS */}
       <style jsx>{`
-        :root {
-          --pistache: #2e86ab;
-        }
-
         .footer {
-          color: #333;
+          background: var(--bg-primary, #0a192f);
+          color: var(--text-secondary, #94a3b8);
           padding: 60px 0 25px 0;
-          border-top: 1px solid rgba(0, 0, 0, 0.08);
-          font-family: "Montserrat", sans-serif;
+          border-top: 1px solid var(--navy-border, rgba(255, 255, 255, 0.08));
         }
 
         .footer-container {
@@ -130,8 +125,8 @@ export default function Footer() {
 
         .logo-wrapper {
           position: relative;
-          width: 180px;
-          height: 40px;
+          width: 160px;
+          height: 38px;
         }
 
         .footer-logo {
@@ -140,12 +135,13 @@ export default function Footer() {
 
         .footer-text {
           font-size: 14px;
-          color: #666;
+          color: var(--text-muted, #94a3b8);
+          margin-bottom: 0;
         }
 
         .social-list {
           display: flex;
-          gap: 15px;
+          gap: 12px;
           justify-content: flex-end;
           list-style: none;
           margin: 0;
@@ -156,41 +152,40 @@ export default function Footer() {
           display: flex;
           align-items: center;
           justify-content: center;
-          width: 45px;
-          height: 45px;
+          width: 42px;
+          height: 42px;
           border-radius: 10px;
-          border: 1px solid rgba(0, 0, 0, 0.1);
-          background: linear-gradient(180deg, #ffffff 0%, #f1f4f6 100%);
-          color: #555;
-          font-size: 20px;
-          transition: all 0.3s ease;
+          border: 1px solid var(--navy-border, rgba(255, 255, 255, 0.12));
+          background: var(--bg-secondary, #112240);
+          color: var(--text-secondary, #cbd5e1);
+          font-size: 18px;
+          transition: all 0.25s ease;
           cursor: pointer;
         }
 
         .social-btn:hover,
         .social-btn:focus {
-          background: #2e86ab;
-          color: #fff;
-          border-color: #2e86ab;
-          transform: translateY(-3px) scale(1.05);
-          box-shadow: 0 8px 16px rgba(46, 134, 171, 0.25);
+          background: var(--yellow-accent, #facc15);
+          color: #0a192f;
+          border-color: var(--yellow-accent, #facc15);
+          transform: translateY(-2px);
+          box-shadow: 0 6px 16px var(--yellow-glow, rgba(250, 204, 21, 0.35));
         }
 
         .footer-bottom {
           text-align: center;
-          margin-top: 30px;
-          color: #666;
-          font-size: 14px;
+          margin-top: 35px;
+          color: var(--text-muted, #94a3b8);
+          font-size: 13.5px;
         }
 
         .heart {
-          color: #2e86ab;
-          font-size: 16px;
+          color: var(--yellow-accent, #facc15);
         }
 
         .author {
-          font-weight: 600;
-          color: #2e86ab;
+          font-weight: 700;
+          color: var(--yellow-accent, #facc15);
         }
 
         @media (max-width: 768px) {
@@ -200,31 +195,12 @@ export default function Footer() {
             gap: 20px;
           }
 
-          .logo-wrapper {
-            width: 130px;
-            height: 30px;
-          }
-
           .footer-text {
-            font-size: 13px;
             text-align: center;
           }
 
           .footer-right {
             justify-content: center;
-          }
-
-          .social-btn {
-            width: 40px;
-            height: 40px;
-            font-size: 18px;
-          }
-        }
-
-        @media (max-width: 480px) {
-          .logo-wrapper {
-            width: 110px;
-            height: 25px;
           }
         }
       `}</style>

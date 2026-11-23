@@ -6,6 +6,5 @@ export default [
     { key: "projects", name: "Projects", path: "works" },
     { key: "experience", name: "Experience", path: "experience" },
     { key: "education", name: "Education", path: "education" },
-    { key: "analytics", name: "GitHub", path: "analytics" },
     { key: "contact", name: "Contact", path: "contact" },
 ];

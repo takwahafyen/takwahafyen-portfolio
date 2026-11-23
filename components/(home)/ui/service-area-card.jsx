@@ -22,7 +22,7 @@ export default function ServiceAreaCard({ data, index }) {
                         <i className={icons[index % icons.length]} />
                     </div>
                     <div className="service-info">
-                        <h3 className="service-title text-white mb-12">
+                        <h3 className="service-title mb-12">
                             {data.title}
                         </h3>
                         <p className="service-desc mb-0">
@@ -34,9 +34,9 @@ export default function ServiceAreaCard({ data, index }) {
 
             <style jsx>{`
                 .service-card-2026 {
-                    background: rgba(22, 27, 46, 0.7);
+                    background: var(--bg-secondary, #112240);
                     backdrop-filter: blur(12px);
-                    border: 1px solid rgba(255, 255, 255, 0.08);
+                    border: 1px solid var(--navy-border, rgba(255, 255, 255, 0.08));
                     border-radius: 14px;
                     padding: 35px 30px;
                     transition: all 0.3s ease;
@@ -44,28 +44,27 @@ export default function ServiceAreaCard({ data, index }) {
 
                 .service-card-2026:hover {
                     transform: translateY(-5px);
-                    background: rgba(28, 35, 58, 0.85);
-                    border-color: rgba(158, 240, 26, 0.35);
-                    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35), 0 0 20px rgba(158, 240, 26, 0.1);
+                    border-color: var(--yellow-accent, #facc15);
+                    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.25), 0 0 20px var(--yellow-glow, rgba(250, 204, 21, 0.15));
                 }
 
                 .service-icon-box {
                     width: 58px;
                     height: 58px;
                     border-radius: 12px;
-                    background: rgba(158, 240, 26, 0.12);
+                    background: rgba(250, 204, 21, 0.12);
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     font-size: 24px;
-                    color: #9ef01a;
-                    border: 1px solid rgba(158, 240, 26, 0.25);
+                    color: var(--yellow-accent, #facc15);
+                    border: 1px solid rgba(250, 204, 21, 0.3);
                     transition: all 0.3s ease;
                 }
 
                 .service-card-2026:hover .service-icon-box {
-                    background: #9ef01a;
-                    color: #0c0e1a;
+                    background: var(--yellow-accent, #facc15);
+                    color: #0a192f;
                     transform: scale(1.08);
                 }
 
@@ -73,11 +72,12 @@ export default function ServiceAreaCard({ data, index }) {
                     font-size: 20px;
                     font-weight: 700;
                     letter-spacing: -0.2px;
+                    color: var(--text-primary, #ffffff);
                 }
 
                 .service-desc {
                     font-size: 15px;
-                    color: #94a3b8;
+                    color: var(--text-muted, #94a3b8);
                     line-height: 1.6;
                 }
 

@@ -68,9 +68,9 @@ export default function SkillArea() {
                 }
 
                 .skill-card-2026 {
-                    background: rgba(22, 27, 46, 0.7);
+                    background: var(--bg-secondary, #112240);
                     backdrop-filter: blur(12px);
-                    border: 1px solid rgba(255, 255, 255, 0.08);
+                    border: 1px solid var(--navy-border, rgba(255, 255, 255, 0.08));
                     border-radius: 14px;
                     padding: 30px 26px;
                     transition: all 0.3s ease;
@@ -78,8 +78,8 @@ export default function SkillArea() {
 
                 .skill-card-2026:hover {
                     transform: translateY(-5px);
-                    border-color: rgba(158, 240, 26, 0.3);
-                    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4), 0 0 20px rgba(158, 240, 26, 0.08);
+                    border-color: var(--yellow-accent, #facc15);
+                    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3), 0 0 20px var(--yellow-glow, rgba(250, 204, 21, 0.15));
                 }
 
                 .skill-card-icon-box {
@@ -99,7 +99,7 @@ export default function SkillArea() {
                 .skill-card-title {
                     font-size: 18.5px;
                     font-weight: 700;
-                    color: #fff;
+                    color: var(--text-primary, #ffffff);
                     letter-spacing: -0.2px;
                 }
 
@@ -112,7 +112,7 @@ export default function SkillArea() {
 
                 .tech-badge-2026 {
                     display: inline-block;
-                    color: #e2e8f0;
+                    color: var(--text-secondary, #e2e8f0);
                     padding: 6px 13px;
                     border-radius: 20px;
                     font-size: 12.5px;
@@ -124,9 +124,9 @@ export default function SkillArea() {
 
                 .tech-badge-2026:hover {
                     transform: translateY(-2px);
-                    background: rgba(158, 240, 26, 0.15);
-                    border-color: rgba(158, 240, 26, 0.4);
-                    color: #9ef01a;
+                    background: rgba(250, 204, 21, 0.15);
+                    border-color: rgba(250, 204, 21, 0.4);
+                    color: var(--yellow-accent, #facc15);
                 }
 
                 @media (max-width: 768px) {

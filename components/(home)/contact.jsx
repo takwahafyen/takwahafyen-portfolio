@@ -54,7 +54,7 @@ export default function Contact() {
 
     const customIcon = new Icon({
         iconUrl: `data:image/svg+xml;utf8,
-        <svg fill="%239ef01a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>`,
+        <svg fill="%23facc15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>`,
         iconSize: [44, 44],
     });
 
@@ -207,7 +207,7 @@ export default function Contact() {
                     display: flex;
                     align-items: center;
                     background: rgba(255, 255, 255, 0.03);
-                    border: 1px solid rgba(255, 255, 255, 0.06);
+                    border: 1px solid var(--navy-border, rgba(255, 255, 255, 0.06));
                     border-radius: 12px;
                     padding: 14px 18px;
                     transition: all 0.25s ease;
@@ -215,7 +215,7 @@ export default function Contact() {
 
                 .contact-item-box:hover {
                     background: rgba(255, 255, 255, 0.06);
-                    border-color: rgba(158, 240, 26, 0.3);
+                    border-color: var(--yellow-accent, #facc15);
                     transform: translateX(4px);
                 }
 
@@ -234,13 +234,13 @@ export default function Contact() {
                     width: 44px;
                     height: 44px;
                     border-radius: 10px;
-                    background: rgba(158, 240, 26, 0.12);
+                    background: rgba(250, 204, 21, 0.12);
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    color: #9ef01a;
+                    color: var(--yellow-accent, #facc15);
                     font-size: 18px;
-                    border: 1px solid rgba(158, 240, 26, 0.25);
+                    border: 1px solid rgba(250, 204, 21, 0.3);
                 }
 
                 .whatsapp-icon-bg {
