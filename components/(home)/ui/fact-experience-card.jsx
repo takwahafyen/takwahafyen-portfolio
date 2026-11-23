@@ -18,7 +18,7 @@ export default function FactExperienceCard({ value, suffix = "+", titleHtml }) {
 
             <style jsx>{`
                 .single-fact {
-                    background: var(--bg-secondary, #112240);
+                    background: var(--bg-secondary, #0b1528);
                     border: 1px solid var(--navy-border, rgba(255, 255, 255, 0.08));
                     border-radius: 12px;
                     transition: all 0.3s ease;

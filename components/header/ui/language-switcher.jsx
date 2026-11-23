@@ -40,7 +40,7 @@ export default function LanguageSwitcher({ className = "" }) {
 
             <style jsx>{`
                 .lang-pill-group {
-                    background: var(--bg-secondary, rgba(17, 34, 64, 0.8));
+                    background: var(--bg-secondary, rgba(11, 21, 40, 0.8));
                     border: 1px solid var(--navy-border, rgba(255, 255, 255, 0.12));
                     border-radius: 20px;
                     padding: 3px;
@@ -65,7 +65,7 @@ export default function LanguageSwitcher({ className = "" }) {
 
                 .lang-btn.active {
                     background: var(--yellow-accent, #facc15);
-                    color: #0a192f;
+                    color: #050c1a;
                     font-weight: 700;
                     box-shadow: 0 0 10px rgba(250, 204, 21, 0.4);
                 }

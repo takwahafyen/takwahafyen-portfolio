@@ -13,7 +13,7 @@ export default function Hero() {
 
   return (
     <div id="home" className="slider-area hero-2026-wrapper position-relative over-hidden">
-      {/* Background ambient lighting effects (Bleu Marine & Jaune) */}
+      {/* Background ambient lighting effects (Bleu Nuit & Jaune) */}
       <div className="hero-glow-1 position-absolute" />
       <div className="hero-glow-2 position-absolute" />
       <div className="hero-grid-pattern position-absolute" />
@@ -104,7 +104,7 @@ export default function Hero() {
                 </ScrollLink>
               </div>
 
-              {/* Social Connect Strip directly under CTA (eliminates right-floating overlap!) */}
+              {/* Social Connect Strip directly under CTA */}
               <div className="hero-social-strip d-flex align-items-center gap-2 mt-30 pt-10">
                 <span className="social-strip-label mr-2">Connect:</span>
                 <a
@@ -259,7 +259,7 @@ export default function Hero() {
       <style jsx>{`
         .hero-2026-wrapper {
           min-height: 100vh;
-          background: var(--bg-primary, #0a192f);
+          background: var(--bg-primary, #050c1a);
           position: relative;
         }
 
@@ -290,12 +290,22 @@ export default function Hero() {
           pointer-events: none;
         }
 
+        /* Subtle Engineering Grid Pattern: Crisp Horizontal & Vertical lines in both modes */
         .hero-grid-pattern {
           inset: 0;
-          background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-          background-size: 50px 50px;
+          background-image: 
+            linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+          background-size: 44px 44px;
           pointer-events: none;
+        }
+
+        :global([data-theme="light"]) .hero-grid-pattern,
+        :global(.body-light-mode) .hero-grid-pattern {
+          background-image: 
+            linear-gradient(rgba(5, 12, 26, 0.08) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(5, 12, 26, 0.08) 1px, transparent 1px) !important;
+          background-size: 44px 44px !important;
         }
 
         .status-pill {
@@ -365,7 +375,7 @@ export default function Hero() {
         }
 
         .spec-badge {
-          background: var(--bg-secondary, rgba(17, 34, 64, 0.8));
+          background: var(--bg-secondary, rgba(11, 21, 40, 0.8));
           border: 1px solid var(--navy-border, rgba(255, 255, 255, 0.12));
           color: var(--text-secondary, #cbd5e1);
           padding: 4px 12px;
@@ -395,7 +405,7 @@ export default function Hero() {
 
         .btn-primary-yellow {
           background: var(--yellow-accent, #facc15);
-          color: #0a192f !important;
+          color: #050c1a !important;
           border: 1px solid var(--yellow-accent, #facc15);
           padding: 12px 26px;
           border-radius: 30px;
@@ -423,7 +433,7 @@ export default function Hero() {
 
         .btn-outline-navy:hover {
           background: var(--yellow-accent, #facc15);
-          color: #0a192f !important;
+          color: #050c1a !important;
           transform: translateY(-2px);
         }
 
@@ -437,7 +447,7 @@ export default function Hero() {
           width: 38px;
           height: 38px;
           border-radius: 50%;
-          background: var(--bg-secondary, rgba(17, 34, 64, 0.8));
+          background: var(--bg-secondary, rgba(11, 21, 40, 0.8));
           border: 1px solid var(--navy-border, rgba(255, 255, 255, 0.12));
           color: var(--text-secondary, #cbd5e1);
           display: inline-flex;
@@ -460,9 +470,9 @@ export default function Hero() {
           border-color: #25d366 !important;
         }
 
-        /* Terminal styling in Bleu Marine & Jaune */
+        /* Terminal styling in Bleu Nuit & Jaune */
         .terminal-card {
-          background: var(--bg-secondary, #0d1b2a);
+          background: var(--bg-secondary, #0b1528);
           border: 1px solid var(--navy-border, rgba(255, 255, 255, 0.1));
           border-radius: 14px;
           overflow: hidden;
@@ -476,7 +486,7 @@ export default function Hero() {
         }
 
         .terminal-header {
-          background: rgba(10, 25, 47, 0.95);
+          background: rgba(5, 12, 26, 0.95);
           padding: 12px 18px;
           border-bottom: 1px solid var(--navy-border, rgba(255, 255, 255, 0.08));
         }
@@ -547,7 +557,7 @@ export default function Hero() {
         }
 
         .telemetry-item {
-          background: rgba(10, 25, 47, 0.6);
+          background: rgba(5, 12, 26, 0.6);
           border: 1px solid var(--navy-border, rgba(255, 255, 255, 0.06));
           border-radius: 10px;
           padding: 12px 14px;
@@ -555,7 +565,7 @@ export default function Hero() {
         }
 
         .telemetry-item:hover {
-          background: rgba(17, 34, 64, 0.85);
+          background: rgba(11, 21, 40, 0.85);
           border-color: rgba(250, 204, 21, 0.3);
         }
 

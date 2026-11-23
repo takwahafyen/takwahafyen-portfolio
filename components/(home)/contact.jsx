@@ -83,7 +83,7 @@ export default function Contact() {
                     <div className="row g-4 align-items-stretch">
                         {/* Contact Information & Channels */}
                         <div className="col-xl-5 col-lg-5 col-md-12 col-12 mb-30 mb-lg-0">
-                            <div className="contact-info-card h-100 d-flex flex-column justify-content-between">
+                            <div className="contact-info-card h-100 d-flex flex-column justify-content-center">
                                 <ul className="contact-info-list list-unstyled p-0 m-0 d-flex flex-column gap-3">
                                     {contact.map((item, i) => (
                                         <li
@@ -106,7 +106,7 @@ export default function Contact() {
                                                     </span>
                                                     {item.highlight && (
                                                         <span className="whatsapp-badge">
-                                                            Quick Connect
+                                                            Direct Connect
                                                         </span>
                                                     )}
                                                 </div>
@@ -131,18 +131,6 @@ export default function Contact() {
                                         </li>
                                     ))}
                                 </ul>
-
-                                <div className="recruiter-badge mt-30 p-3 rounded-3">
-                                    <div className="d-flex align-items-center">
-                                        <span className="recruiter-dot mr-2"></span>
-                                        <span className="text-white font-weight-bold" style={{ fontSize: "13.5px" }}>
-                                            Recruiter Quick Note
-                                        </span>
-                                    </div>
-                                    <p className="recruiter-note-text mb-0 mt-2 text-light-muted" style={{ fontSize: "12.5px" }}>
-                                        Available on WhatsApp at <strong>+216 29 19 66 16</strong> for quick chats, technical screening, and consulting inquiries.
-                                    </p>
-                                </div>
                             </div>
                         </div>
 
@@ -161,7 +149,7 @@ export default function Contact() {
                         >
                             <div
                                 className="map-wrapper over-hidden rounded-4"
-                                style={{ height: "350px", border: "1px solid rgba(255, 255, 255, 0.1)" }}
+                                style={{ height: "350px", border: "1px solid var(--navy-border, rgba(255, 255, 255, 0.1))" }}
                             >
                                 <MapContainer
                                     center={position}
@@ -193,12 +181,13 @@ export default function Contact() {
                 .section-title {
                     font-size: 36px;
                     font-weight: 700;
+                    color: var(--text-primary, #ffffff);
                 }
 
                 .contact-info-card {
-                    background: rgba(22, 27, 46, 0.7);
+                    background: var(--bg-secondary, #0b1528);
                     backdrop-filter: blur(12px);
-                    border: 1px solid rgba(255, 255, 255, 0.08);
+                    border: 1px solid var(--navy-border, rgba(255, 255, 255, 0.08));
                     border-radius: 16px;
                     padding: 30px 26px;
                 }
@@ -252,7 +241,7 @@ export default function Contact() {
 
                 .whatsapp-badge {
                     background: #25d366;
-                    color: #0c0e1a;
+                    color: #050c1a;
                     font-size: 10.5px;
                     font-weight: 700;
                     padding: 2px 8px;
@@ -269,19 +258,20 @@ export default function Contact() {
                 .contact-value {
                     font-size: 14px;
                     font-weight: 600;
+                    color: var(--text-primary, #ffffff);
                 }
 
                 .contact-value-link {
                     font-size: 14px;
                     font-weight: 600;
-                    color: #fff;
+                    color: var(--text-primary, #ffffff);
                     text-decoration: none;
                     transition: color 0.2s ease;
                     word-break: break-all;
                 }
 
                 .contact-value-link:hover {
-                    color: #9ef01a;
+                    color: var(--yellow-accent, #facc15);
                 }
 
                 .whatsapp-link {
@@ -291,19 +281,6 @@ export default function Contact() {
 
                 .whatsapp-link:hover {
                     color: #48e682 !important;
-                }
-
-                .recruiter-badge {
-                    background: rgba(158, 240, 26, 0.08);
-                    border: 1px dashed rgba(158, 240, 26, 0.3);
-                }
-
-                .recruiter-dot {
-                    width: 8px;
-                    height: 8px;
-                    border-radius: 50%;
-                    background: #9ef01a;
-                    display: inline-block;
                 }
 
                 @media (max-width: 768px) {

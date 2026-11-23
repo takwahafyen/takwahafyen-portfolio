@@ -48,8 +48,9 @@ export default function SidebarNavigation() {
         <div className={`ui-sidebar ${isSidebarActive ? "active" : ""}`}>
             <Sidebar>
                 <div className="d-flex justify-content-between align-items-center p-3 border-bottom border-secondary-subtle">
-                    <span className="text-white font-weight-bold" style={{ fontSize: "16px" }}>
-                        Takwa Hafyen
+                    <span className="font-weight-bold" style={{ fontSize: "18px" }}>
+                        <span style={{ color: "var(--yellow-accent, #facc15)", fontWeight: 800 }}>Takwa</span>{" "}
+                        <span style={{ color: "#ffffff", fontWeight: 700 }}>Hafyen</span>
                     </span>
                     <button
                         onClick={() => dispatch(toggleSidebar())}
@@ -107,9 +108,17 @@ export default function SidebarNavigation() {
             </Sidebar>
 
             <style jsx>{`
+                @media (min-width: 1200px) {
+                    .ui-sidebar,
+                    :global(.ui-sidebar) {
+                        display: none !important;
+                        visibility: hidden !important;
+                        pointer-events: none !important;
+                    }
+                }
                 :global(.ps-sidebar-container) {
-                    background: #0a192f !important;
-                    border-right: 1px solid rgba(250, 204, 21, 0.2) !important;
+                    background: #050c1a !important;
+                    border-right: 1px solid rgba(250, 204, 21, 0.25) !important;
                 }
                 :global(.ps-menu-button) {
                     color: #e2e8f0 !important;
@@ -122,6 +131,14 @@ export default function SidebarNavigation() {
                 :global(.ui-sidebar-active) {
                     color: #facc15 !important;
                     font-weight: 700;
+                }
+                .ui-sidebar-close {
+                    background: transparent;
+                    border: none;
+                    color: var(--yellow-accent, #facc15);
+                    font-size: 20px;
+                    cursor: pointer;
+                    padding: 4px 8px;
                 }
             `}</style>
         </div>

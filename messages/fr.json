@@ -39,7 +39,6 @@
         "label": "À Propos de Moi",
         "title": "Architecturer des Systèmes Évolutifs & l'IA Agentique en Production",
         "text": "Ingénieure Logiciel & Architecte IA, je conçois et livre des systèmes de production de bout en bout — de l'orchestration multi-agents avec CrewAI et pipelines vocaux streaming à faible latence <350ms (LiveKit) aux plateformes web résilientes et hautement sécurisées (Laravel 11, MERN, Next.js). Conception axée sur la sécurité dès la conception, conteneurisation Docker, couverture de tests Cypress/Jest et évaluation rigoureuse de modèles d'IA.",
-        "quote": "Bâti avec précision, déployé avec confiance, évalué avec rigueur.",
         "pillars": [
             {
                 "icon": "fas fa-robot",
@@ -158,6 +157,10 @@
         "marquee": "IA en Production * Full-Stack Cloud-Native * DevOps Renforcé * QA Rigoureux *",
         "label": "Projets Phares",
         "title": "Architectures Déployées en Production",
+        "filterAll": "Toutes les Architectures",
+        "filterAi": "IA Agentique & Voix",
+        "filterMl": "Industrie 4.0 & ML",
+        "filterFullstack": "Full-Stack & Cloud",
         "client": "Périmètre / Client",
         "duration": "Durée",
         "description": "Points Clés de l'Architecture",

@@ -202,7 +202,7 @@ export default function PortfolioLineModal() {
 
       <style jsx>{`
         .portfolio-modal-2026 {
-          background: #0d1b2a;
+          background: #050c1a;
           color: #fff;
           border-radius: 16px;
           padding: 30px;
@@ -247,7 +247,7 @@ export default function PortfolioLineModal() {
 
         .modal-close-btn:hover {
           background: #facc15;
-          color: #0a192f;
+          color: #050c1a;
           border-color: #facc15;
           transform: rotate(90deg);
         }
@@ -292,8 +292,8 @@ export default function PortfolioLineModal() {
         }
 
         .modal-link-github:hover {
-          background: #fff;
-          color: #0c0e1a;
+          background: #ffffff;
+          color: #050c1a;
         }
 
         .modal-link-live {
@@ -304,7 +304,7 @@ export default function PortfolioLineModal() {
 
         .modal-link-live:hover {
           background: #00d2ff;
-          color: #0c0e1a;
+          color: #050c1a;
         }
 
         .modal-link-api {
@@ -315,7 +315,7 @@ export default function PortfolioLineModal() {
 
         .modal-link-api:hover {
           background: #c084fc;
-          color: #0c0e1a;
+          color: #050c1a;
         }
 
         .modal-meta-grid {

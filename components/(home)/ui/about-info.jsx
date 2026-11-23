@@ -40,15 +40,6 @@ export default function AboutInfo() {
         ))}
       </div>
 
-      {/* Engineering Philosophy Quote Bar */}
-      <div className="philosophy-bar mt-40 p-4 rounded-3 text-center">
-        <i className="fas fa-quote-left mr-3 mb-2 quote-icon" />
-        <span className="philosophy-text font-italic">
-          &ldquo;{t("quote")}&rdquo;
-        </span>
-        <i className="fas fa-quote-right ml-3 mt-2 quote-icon" />
-      </div>
-
       <style jsx>{`
         .letter-spacing-1 {
           letter-spacing: 1.5px;
@@ -72,7 +63,7 @@ export default function AboutInfo() {
         }
 
         .pillar-card {
-          background: var(--bg-secondary, #112240);
+          background: var(--bg-secondary, #0b1528);
           backdrop-filter: blur(12px);
           border: 1px solid var(--navy-border, rgba(255, 255, 255, 0.08));
           border-radius: 14px;
@@ -84,7 +75,7 @@ export default function AboutInfo() {
         .pillar-card:hover {
           transform: translateY(-6px);
           border-color: var(--yellow-accent, #facc15);
-          box-shadow: 0 16px 35px rgba(0, 0, 0, 0.25), 0 0 20px var(--yellow-glow, rgba(250, 204, 21, 0.15));
+          box-shadow: 0 16px 35px rgba(0, 0, 0, 0.35), 0 0 20px var(--yellow-glow, rgba(250, 204, 21, 0.2));
         }
 
         .pillar-icon-box {
@@ -111,7 +102,7 @@ export default function AboutInfo() {
         }
 
         .pillar-card:hover :global(.pillar-icon) {
-          color: #0a192f;
+          color: #050c1a;
         }
 
         .pillar-title {
@@ -125,22 +116,6 @@ export default function AboutInfo() {
           font-size: 14.5px;
           line-height: 1.65;
           color: var(--text-muted, #94a3b8);
-        }
-
-        .philosophy-bar {
-          background: var(--bg-secondary, #112240);
-          border: 1px solid var(--navy-border, rgba(255, 255, 255, 0.08));
-          border-radius: 12px;
-        }
-
-        .philosophy-text {
-          font-size: 16px;
-          letter-spacing: 0.3px;
-          color: var(--text-primary, #ffffff);
-        }
-
-        .quote-icon {
-          color: var(--yellow-accent, #facc15);
         }
 
         @media (max-width: 768px) {

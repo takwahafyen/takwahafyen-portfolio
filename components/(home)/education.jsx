@@ -30,7 +30,7 @@ export default function Education() {
             </div>
           </div>
 
-          {/* Right Column: 2026 Engineering Credentials & Academic Pillars HUD (Replaces Personal Photo!) */}
+          {/* Right Column: 2026 Engineering Credentials & Academic Pillars HUD */}
           <div className="col-xl-5 col-lg-5 col-md-12 col-12">
             <div
               className="credentials-card"
@@ -63,31 +63,32 @@ export default function Education() {
 
                 <div className="comp-item d-flex align-items-center">
                   <div className="comp-icon mr-12">
-                    <i className="fas fa-shield-alt text-success" />
+                    <i className="fas fa-microchip text-warning" />
                   </div>
                   <div>
-                    <h5 className="comp-name text-white mb-0">System Security &amp; Cryptography</h5>
-                    <span className="comp-sub text-muted">OWASP hardening, SAST, non-root isolation</span>
+                    <h5 className="comp-name text-white mb-0">Computer Architecture &amp; Telecommunications</h5>
+                    <span className="comp-sub text-muted">Data structures, networking protocols, low-level OS</span>
                   </div>
                 </div>
 
                 <div className="comp-item d-flex align-items-center">
                   <div className="comp-icon mr-12">
-                    <i className="fas fa-square-root-alt text-warning" />
+                    <i className="fas fa-shield-alt theme-color" />
                   </div>
                   <div>
-                    <h5 className="comp-name text-white mb-0">Applied Mathematics &amp; Algorithms</h5>
-                    <span className="comp-sub text-muted">Linear algebra, optimization &amp; ML algorithms</span>
+                    <h5 className="comp-name text-white mb-0">Security &amp; QA Engineering</h5>
+                    <span className="comp-sub text-muted">Defensive architecture, SAST scanning, automated verification</span>
                   </div>
                 </div>
               </div>
 
-              <div className="cred-footer mt-30 pt-20 border-top border-secondary-subtle d-flex justify-content-between align-items-center">
+              <div className="credentials-footer mt-25 pt-20 border-top border-secondary-subtle d-flex align-items-center justify-content-between">
                 <span className="footer-stat">
-                  <i className="fas fa-medal theme-color mr-1" /> Honors (16.43/20)
+                  <i className="fas fa-graduation-cap theme-color mr-2" />
+                  National Engineering Degree (ENIG)
                 </span>
-                <span className="footer-stat">
-                  <i className="fas fa-university text-cyan mr-1" /> ENIG &bull; IPEIM
+                <span className="badge bg-secondary-subtle text-white font-weight-bold">
+                  2024
                 </span>
               </div>
             </div>
@@ -107,7 +108,7 @@ export default function Education() {
         }
 
         .credentials-card {
-          background: var(--bg-secondary, #112240);
+          background: var(--bg-secondary, #0b1528);
           backdrop-filter: blur(14px);
           border: 1px solid var(--navy-border, rgba(255, 255, 255, 0.1));
           border-radius: 16px;

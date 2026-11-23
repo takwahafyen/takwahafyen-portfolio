@@ -39,7 +39,6 @@
         "label": "Sobre Mí",
         "title": "Arquitectando Sistemas Escalables e IA Agéntica en Producción",
         "text": "Ingeniera de Software y Arquitecta de IA, diseño y despliego sistemas de producción de extremo a extremo — desde orquestación multiagente (CrewAI) y streaming de voz en tiempo real con latencia menor a 350ms (LiveKit) hasta plataformas web nativas en la nube seguras y resilientes (Laravel 11, MERN, Next.js). Enfoque 'Security-First', contenedorización con Docker, cobertura de pruebas Cypress/Jest E2E y evaluación rigurosa de modelos de IA.",
-        "quote": "Construido con precisión, desplegado con confianza, evaluado con rigor.",
         "pillars": [
             {
                 "icon": "fas fa-robot",
@@ -158,6 +157,10 @@
         "marquee": "IA de Producción * Full-Stack Escalable * DevOps Blindado * QA Riguroso *",
         "label": "Proyectos Destacados",
         "title": "Arquitecturas Recientes en Producción",
+        "filterAll": "Todas las Arquitecturas",
+        "filterAi": "IA Agéntica y Voz",
+        "filterMl": "Industria 4.0 y ML",
+        "filterFullstack": "Full-Stack y Cloud",
         "client": "Alcance / Cliente",
         "duration": "Duración",
         "description": "Puntos Clave de la Arquitectura",

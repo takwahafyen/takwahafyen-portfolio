@@ -330,7 +330,7 @@ export const skills = [
     {
         key: "backend",
         icon: "fas fa-vial",
-        accent: "#69D3A7",
+        accent: "#facc15",
         items: [
             "Cypress (E2E)",
             "Jest",
@@ -347,7 +347,7 @@ export const skills = [
     {
         key: "databases",
         icon: "fas fa-bolt",
-        accent: "#742774",
+        accent: "#a855f7",
         items: [
             "Microsoft Power Apps",
             "Canvas Apps",

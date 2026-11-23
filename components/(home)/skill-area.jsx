@@ -32,11 +32,11 @@ export default function SkillArea() {
                                 <div className="d-flex align-items-center mb-20">
                                     <div
                                         className="skill-card-icon-box mr-15"
-                                        style={{ borderColor: `${item.accent}44`, background: `${item.accent}18` }}
+                                        style={{ borderColor: `${item.accent || "#facc15"}44`, background: `${item.accent || "#facc15"}18` }}
                                     >
                                         <i
                                             className={`${item.icon} skill-card-icon`}
-                                            style={{ color: item.accent || "#9ef01a" }}
+                                            style={{ color: item.accent || "#facc15" }}
                                         />
                                     </div>
                                     <h3 className="skill-card-title mb-0">
@@ -65,10 +65,11 @@ export default function SkillArea() {
                 .section-title {
                     font-size: 36px;
                     font-weight: 700;
+                    color: var(--text-primary, #ffffff);
                 }
 
                 .skill-card-2026 {
-                    background: var(--bg-secondary, #112240);
+                    background: var(--bg-secondary, #0b1528);
                     backdrop-filter: blur(12px);
                     border: 1px solid var(--navy-border, rgba(255, 255, 255, 0.08));
                     border-radius: 14px;

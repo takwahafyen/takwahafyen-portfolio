@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import React from "react";
 
 const email = "takwa.hafyen@gmail.com";
@@ -43,15 +42,12 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer-container">
-        {/* Logo and Copyright */}
+        {/* Brand Logo and Copyright */}
         <div className="footer-left">
-          <div className="logo-wrapper">
-            <Image
-              src="/images/logo/logo.png"
-              alt="Logo Takwa Hafyen"
-              fill
-              className="footer-logo"
-            />
+          <div className="logo-brand-box">
+            <span className="logo-takwa">Takwa</span>
+            <span className="logo-hafyen">Hafyen</span>
+            <span className="logo-dot">.</span>
           </div>
           <p className="footer-text">
             © {new Date().getFullYear()} Takwa Hafyen • Software Engineer &amp; AI Architect
@@ -100,7 +96,7 @@ export default function Footer() {
 
       <style jsx>{`
         .footer {
-          background: var(--bg-primary, #0a192f);
+          background: var(--bg-primary, #050c1a);
           color: var(--text-secondary, #94a3b8);
           padding: 60px 0 25px 0;
           border-top: 1px solid var(--navy-border, rgba(255, 255, 255, 0.08));
@@ -123,14 +119,31 @@ export default function Footer() {
           gap: 10px;
         }
 
-        .logo-wrapper {
-          position: relative;
-          width: 160px;
-          height: 38px;
+        .logo-brand-box {
+          display: flex;
+          align-items: center;
         }
 
-        .footer-logo {
-          object-fit: contain;
+        .logo-takwa {
+          font-size: 24px;
+          font-weight: 800;
+          color: var(--yellow-accent, #facc15);
+          letter-spacing: -0.5px;
+          margin-right: 5px;
+        }
+
+        .logo-hafyen {
+          font-size: 24px;
+          font-weight: 700;
+          color: var(--text-primary, #ffffff);
+          letter-spacing: -0.5px;
+        }
+
+        .logo-dot {
+          font-size: 26px;
+          font-weight: 900;
+          color: var(--yellow-accent, #facc15);
+          line-height: 1;
         }
 
         .footer-text {
@@ -156,7 +169,7 @@ export default function Footer() {
           height: 42px;
           border-radius: 10px;
           border: 1px solid var(--navy-border, rgba(255, 255, 255, 0.12));
-          background: var(--bg-secondary, #112240);
+          background: var(--bg-secondary, #0b1528);
           color: var(--text-secondary, #cbd5e1);
           font-size: 18px;
           transition: all 0.25s ease;
@@ -166,7 +179,7 @@ export default function Footer() {
         .social-btn:hover,
         .social-btn:focus {
           background: var(--yellow-accent, #facc15);
-          color: #0a192f;
+          color: #050c1a;
           border-color: var(--yellow-accent, #facc15);
           transform: translateY(-2px);
           box-shadow: 0 6px 16px var(--yellow-glow, rgba(250, 204, 21, 0.35));

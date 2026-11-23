@@ -55,7 +55,7 @@ export default function ThemeToggle({ className = "" }) {
                     height: 38px;
                     border-radius: 50%;
                     border: 1px solid var(--navy-border, rgba(250, 204, 21, 0.3));
-                    background: var(--bg-secondary, rgba(17, 34, 64, 0.8));
+                    background: var(--bg-secondary, rgba(11, 21, 40, 0.8));
                     display: inline-flex;
                     align-items: center;
                     justify-content: center;
@@ -72,7 +72,7 @@ export default function ThemeToggle({ className = "" }) {
                     color: #facc15;
                 }
                 .navy-text {
-                    color: #0a192f;
+                    color: #050c1a;
                 }
             `}</style>
         </button>

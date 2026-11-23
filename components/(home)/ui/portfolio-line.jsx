@@ -157,7 +157,7 @@ export default function PortfolioLine({ data }) {
 
       <style jsx>{`
         .portfolio-card-2026 {
-          background: var(--bg-secondary, #112240);
+          background: var(--bg-secondary, #0b1528);
           backdrop-filter: blur(14px);
           border: 1px solid var(--navy-border, rgba(255, 255, 255, 0.09));
           border-radius: 16px;
@@ -290,7 +290,7 @@ export default function PortfolioLine({ data }) {
 
         .action-btn-github:hover {
           background: #ffffff;
-          color: #0c0e1a;
+          color: #050c1a;
           border-color: #ffffff;
         }
 
@@ -302,7 +302,7 @@ export default function PortfolioLine({ data }) {
 
         .action-btn-live:hover {
           background: #00d2ff;
-          color: #0c0e1a;
+          color: #050c1a;
         }
 
         .action-btn-video {
@@ -313,19 +313,19 @@ export default function PortfolioLine({ data }) {
 
         .action-btn-video:hover {
           background: #ff6b6b;
-          color: #0c0e1a;
+          color: #050c1a;
         }
 
         .action-btn-details {
           background: var(--yellow-accent, #facc15);
-          color: #0a192f;
+          color: #050c1a;
           border: 1px solid var(--yellow-accent, #facc15);
           font-weight: 700;
         }
 
         .action-btn-details:hover {
           background: #ffd600;
-          color: #0a192f;
+          color: #050c1a;
           transform: translateX(3px);
           box-shadow: 0 4px 15px var(--yellow-glow, rgba(250, 204, 21, 0.4));
         }

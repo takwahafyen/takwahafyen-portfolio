@@ -145,13 +145,13 @@ export default function ContactForm() {
 
             <style jsx>{`
                 .contact-form-box {
-                    background: var(--bg-secondary, #112240);
+                    background: var(--bg-secondary, #0b1528);
                     border: 1px solid var(--navy-border, rgba(255, 255, 255, 0.08));
                     backdrop-filter: blur(12px);
                 }
 
                 .form-control-custom {
-                    background: rgba(10, 25, 47, 0.6);
+                    background: rgba(5, 12, 26, 0.6);
                     border: 1px solid var(--navy-border, rgba(255, 255, 255, 0.12));
                     border-radius: 8px;
                     padding: 12px 16px;
@@ -168,7 +168,7 @@ export default function ContactForm() {
 
                 .btn-submit-yellow {
                     background: var(--yellow-accent, #facc15);
-                    color: #0a192f !important;
+                    color: #050c1a !important;
                     font-weight: 700;
                     font-size: 14px;
                     letter-spacing: 0.5px;

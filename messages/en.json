@@ -39,7 +39,6 @@
         "label": "About Me",
         "title": "Architecting Scalable Systems & Production-Grade Agentic AI",
         "text": "Software Engineer & AI Architect designing and shipping end-to-end production systems — from CrewAI multi-agent orchestration and <350ms streaming voice pipelines (LiveKit) to resilient, secure cloud-native web platforms (Laravel 11, MERN, Next.js). Security-first engineering, Docker containerization, Cypress/Jest E2E coverage, and rigorous AI model evaluation.",
-        "quote": "Built with precision, deployed with confidence, evaluated with rigor.",
         "pillars": [
             {
                 "icon": "fas fa-robot",
@@ -134,7 +133,7 @@
             },
             {
                 "title": "Graduation Engineering Intern (AI / Industry 4.0)",
-                "description": "Lessons Learned Smart Application — Developed Computer Vision and NLP classification microservices to automate industrial machine error diagnostics at Draexlmaier Group."
+                "description": "Lessons Learned Smart Application — Developed Computer Vision and NLP classification microservices to automate industrial machine error diagnostics at Draexlmaier Group.",
             },
             {
                 "title": "Software Engineering Intern (Full-Stack Monorepo)",
@@ -158,6 +157,10 @@
         "marquee": "Production AI * Cloud-Native Full-Stack * Hardened DevOps * Rigorous QA *",
         "label": "Featured Projects",
         "title": "Production-Grade Architectures",
+        "filterAll": "All Flagship Architectures",
+        "filterAi": "Agentic AI & Voice",
+        "filterMl": "Industry 4.0 & ML",
+        "filterFullstack": "Full-Stack & Cloud",
         "client": "Scope / Client",
         "duration": "Duration",
         "description": "Key Architectural Highlights",

@@ -34,7 +34,7 @@ export default function ServiceAreaCard({ data, index }) {
 
             <style jsx>{`
                 .service-card-2026 {
-                    background: var(--bg-secondary, #112240);
+                    background: var(--bg-secondary, #0b1528);
                     backdrop-filter: blur(12px);
                     border: 1px solid var(--navy-border, rgba(255, 255, 255, 0.08));
                     border-radius: 14px;
@@ -64,7 +64,7 @@ export default function ServiceAreaCard({ data, index }) {
 
                 .service-card-2026:hover .service-icon-box {
                     background: var(--yellow-accent, #facc15);
-                    color: #0a192f;
+                    color: #050c1a;
                     transform: scale(1.08);
                 }
 
